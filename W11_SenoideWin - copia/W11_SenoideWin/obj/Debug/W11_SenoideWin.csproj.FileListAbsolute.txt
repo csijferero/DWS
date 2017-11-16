@@ -27,3 +27,6 @@ D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_Senoide
 D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form2.resources
 D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Properties.Resources.resources
 D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.csproj.GenerateResource.Cache
+C:\Users\Salon\Source\Repos\DWS\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe.config
+C:\Users\Salon\Source\Repos\DWS\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.exe
+C:\Users\Salon\Source\Repos\DWS\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.pdb
