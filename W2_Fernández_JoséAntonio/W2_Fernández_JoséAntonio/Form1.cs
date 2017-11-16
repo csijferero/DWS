@@ -12,7 +12,7 @@ namespace W2_Fernández_JoséAntonio
 {
     public partial class Form1 : Form
     {
-        //Comentariofefe
+        //ComentariofefeFinal
         Random generator = new Random();
 
         public Form1()
