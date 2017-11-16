@@ -1,0 +1,66 @@
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\bin\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\bin\Debug\Poligonos.pdb
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\bin\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\bin\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\e_Poligonos\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\bin\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\bin\Debug\Poligonos.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3f1_Poligonos Plus\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\bin\Debug\Poligonos.exe.config
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\bin\Debug\Poligonos.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\bin\Debug\Poligonos.pdb
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.Form1.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W4_Curvas Parametrizadas\W4a1_Poligonos - copia\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache
+D:\2º\Programación\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+D:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.exe
+D:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+F:\2º\Programación\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe.config
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.exe
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.pdb
+F:\2º\Programación\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.exe
+F:\2º\Programación\W4a1_Poligonos\Poligonos\bin\Debug\Poligonos.pdb
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csprojResolveAssemblyReference.cache
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Form1.resources
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.Properties.Resources.resources
+F:\2º\Programación\W4a1_Poligonos\Poligonos\obj\Debug\Poligonos.csproj.GenerateResource.Cache

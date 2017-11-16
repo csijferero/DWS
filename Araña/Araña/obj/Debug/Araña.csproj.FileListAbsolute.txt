@@ -1,0 +1,12 @@
+F:\2º\Programación\Araña\Araña\bin\Debug\Araña.exe.config
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.csprojResolveAssemblyReference.cache
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.Form1.resources
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.Properties.Resources.resources
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.csproj.GenerateResource.Cache
+F:\2º\Programación\Araña\Araña\bin\Debug\Araña.exe
+F:\2º\Programación\Araña\Araña\bin\Debug\Araña.pdb
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.exe
+F:\2º\Programación\Araña\Araña\obj\Debug\Araña.pdb
+D:\2º\Programación\Araña\Araña\bin\Debug\Araña.exe.config
+D:\2º\Programación\Araña\Araña\obj\Debug\Araña.exe
+D:\2º\Programación\Araña\Araña\obj\Debug\Araña.pdb

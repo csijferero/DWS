@@ -1,0 +1,20 @@
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\bin\Debug\DEMO 2.exe
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\bin\Debug\DEMO 2.pdb
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Form1.resources
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Form2.resources
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Properties.Resources.resources
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO 2.csproj.GenerateResource.Cache
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO 2.exe
+C:\Users\Administrador\Documents\Visual Studio 2008\Projects\DEMO 2\DEMO 2\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Form1.resources
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Form2.resources
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO_2.Properties.Resources.resources
+C:\Users\Alberto\Desktop\Curso Avanzado ASP.NET II\Lección 4. Repaso y Dudas I\DEMO 2\DEMO 2\obj\Debug\DEMO 2.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO 2.pdb

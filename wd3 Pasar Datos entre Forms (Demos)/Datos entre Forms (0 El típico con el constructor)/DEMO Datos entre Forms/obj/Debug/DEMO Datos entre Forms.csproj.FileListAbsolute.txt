@@ -1,0 +1,67 @@
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO 2\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Users\Alberto\Desktop\Accesos a Altair\Provisional\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMO 2 (Pasar Datos entre Formularios)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Users\Alberto\Documents\Altair\csi2 DWS\Curso DWS\2 Windows\EstudioAccesoDatos\DEMOS (Pasar Datos entre Formularios)\Datos entre Formularios\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe.config
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\w06 DEMOS (Pasar Datos entre Formularios)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe.config
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.pdb
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form1.resources
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\wd03 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe.config
+C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (0 El típico con el constructor)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb

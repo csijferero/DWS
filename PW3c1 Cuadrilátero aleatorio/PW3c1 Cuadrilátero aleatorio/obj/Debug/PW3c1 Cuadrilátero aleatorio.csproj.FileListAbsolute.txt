@@ -1,0 +1,18 @@
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.exe.config
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.exe
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.pdb
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.csprojResolveAssemblyReference.cache
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1_Cuadrilátero_aleatorio.Form1.resources
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1_Cuadrilátero_aleatorio.Properties.Resources.resources
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.csproj.GenerateResource.Cache
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.exe
+F:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.pdb
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.exe.config
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.exe
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.pdb
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.exe
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\bin\Debug\PW3c1 Cuadrilátero aleatorio.pdb
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.csprojResolveAssemblyReference.cache
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1_Cuadrilátero_aleatorio.Form1.resources
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1_Cuadrilátero_aleatorio.Properties.Resources.resources
+D:\2º\Programación\PW3c1 Cuadrilátero aleatorio\PW3c1 Cuadrilátero aleatorio\obj\Debug\PW3c1 Cuadrilátero aleatorio.csproj.GenerateResource.Cache

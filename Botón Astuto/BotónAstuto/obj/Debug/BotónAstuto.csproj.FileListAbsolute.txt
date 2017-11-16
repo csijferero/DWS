@@ -1,0 +1,40 @@
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.Properties.Resources.resources
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\bin\Debug\BotónAstuto.exe
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\bin\Debug\BotónAstuto.pdb
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.pdb
+C:\Users\Alberto\Desktop\VS proyects\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.Form1.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\bin\Debug\BotónAstuto.exe.config
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.pdb
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\bin\Debug\BotónAstuto.exe
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\bin\Debug\BotónAstuto.pdb
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.Form1.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.Properties.Resources.resources
+C:\Users\Alberto\Documents\Altair\csi2 SRI\Curso SRI\EjerciciosEjemplos de Clase\_1_Windows\02 Botón Astuto\BotónAstuto\BotónAstuto\obj\Debug\BotónAstuto.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe.config
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.pdb
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.pdb
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.Form1.resources
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\_EjerciciosEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe.config
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.pdb
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.pdb
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.Form1.resources
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\_PracticasEjemplos_Windows\02 Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.csproj.GenerateResource.Cache
+F:\2º\Programación\Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe.config
+F:\2º\Programación\Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+F:\2º\Programación\Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.pdb
+D:\2º\Programación\Botón Astuto\BotónAstuto\bin\Debug\BotónAstuto.exe.config
+D:\2º\Programación\Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.exe
+D:\2º\Programación\Botón Astuto\BotónAstuto\obj\Debug\BotónAstuto.pdb

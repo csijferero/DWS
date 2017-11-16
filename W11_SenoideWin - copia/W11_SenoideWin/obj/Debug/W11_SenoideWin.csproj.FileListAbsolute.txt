@@ -1,0 +1,29 @@
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe.config
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\bin\Debug\W11_SenoideWin.pdb
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.csprojResolveAssemblyReference.cache
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form1.resources
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.Properties.Resources.resources
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.csproj.GenerateResource.Cache
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.exe
+F:\2º\Programación\W11_SenoideWin\W11_SenoideWin\obj\Debug\W11_SenoideWin.pdb
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe.config
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.exe
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.pdb
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.pdb
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.csprojResolveAssemblyReference.cache
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form1.resources
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form2.resources
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Properties.Resources.resources
+F:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.csproj.GenerateResource.Cache
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe.config
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.exe
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.pdb
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.exe
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\bin\Debug\W11_SenoideWin.pdb
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.csprojResolveAssemblyReference.cache
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form1.resources
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Form2.resources
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.Properties.Resources.resources
+D:\2º\Programación\W11_SenoideWin - copia\W11_SenoideWin\obj\Debug\W11_SenoideWin.csproj.GenerateResource.Cache

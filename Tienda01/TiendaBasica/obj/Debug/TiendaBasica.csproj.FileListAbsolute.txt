@@ -1,0 +1,28 @@
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\TiendaBasica\TiendaBasica\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\TiendaBasica\TiendaBasica\bin\Debug\TiendaBasica.exe
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\TiendaBasica\TiendaBasica\bin\Debug\TiendaBasica.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.exe
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\a00_TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.exe
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\a00_TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.pdb
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola10_Fin (Tienda10)\a00_TiendaBasica\TiendaBasica\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alberto\Documents\Altair\csi2 DFSI\xDFSI\1xConsola\xConsola11_Fin (Tienda11)\PuntoPartida\a00_TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.pdb
+C:\Altair\PNet1  CONSOLA\xConsola\xConsola11_Fin (Tienda11)\PuntoPartida\a00_TiendaBasica\TiendaBasica\obj\Debug\TiendaBasica.pdb
+E:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe.config
+E:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.pdb
+L:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe.config
+L:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.pdb
+E:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.csprojResolveAssemblyReference.cache
+E:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe
+E:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.pdb
+E:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.exe
+L:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.exe
+L:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe
+L:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.pdb
+L:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.csprojResolveAssemblyReference.cache
+F:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe.config
+F:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.exe
+F:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.pdb
+F:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.exe
+F:\2º\Programación\Tienda01\TiendaBasica\bin\Debug\TiendaBasica.pdb
+F:\2º\Programación\Tienda01\TiendaBasica\obj\Debug\TiendaBasica.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\bin\Debug\GraficaDeTablaDatos.exe.config
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\bin\Debug\GraficaDeTablaDatos.exe
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\bin\Debug\GraficaDeTablaDatos.pdb
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.Form1.resources
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.Properties.Resources.resources
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.exe
+C:\Users\Alberto\Desktop\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.pdb
+F:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\bin\Debug\GraficaDeTablaDatos.exe.config
+F:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.exe
+F:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.pdb
+D:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\bin\Debug\GraficaDeTablaDatos.exe.config
+D:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.exe
+D:\2º\Programación\GraficaDeTablaDatos\GraficaDeTablaDatos\obj\Debug\GraficaDeTablaDatos.pdb

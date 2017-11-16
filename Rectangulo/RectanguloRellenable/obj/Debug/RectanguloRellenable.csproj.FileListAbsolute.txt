@@ -1,0 +1,54 @@
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Form1.resources
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Properties.Resources.resources
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Altair\PNet2 Windows Form\w03_GráficosVectorialesPlus\w03_GráficosVectoriales Por separado\a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2b1_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2b1_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2b1_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Form1.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W2c_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.pdb
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Form1.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PNet2 Windows Form 1617\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\bin\Debug\RectanguloRellenable.pdb
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csprojResolveAssemblyReference.cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Form1.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.Properties.Resources.resources
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+C:\Altair\PNet2 Windows Form\PNet2 Windows Form 1617\W3_Graficos Vectoriales Sencillos\W3a_RectanguloRellenable\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+F:\2º\Programación\Rectangulo\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+F:\2º\Programación\Rectangulo\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe
+F:\2º\Programación\Rectangulo\RectanguloRellenable\bin\Debug\RectanguloRellenable.pdb
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.csprojResolveAssemblyReference.cache
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.Form1.resources
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.Properties.Resources.resources
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.csproj.GenerateResource.Cache
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+F:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb
+D:\2º\Programación\Rectangulo\RectanguloRellenable\bin\Debug\RectanguloRellenable.exe.config
+D:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.exe
+D:\2º\Programación\Rectangulo\RectanguloRellenable\obj\Debug\RectanguloRellenable.pdb

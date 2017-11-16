@@ -1,0 +1,12 @@
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\bin\Debug\PW4b Ondas.exe.config
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\bin\Debug\PW4b Ondas.exe
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\bin\Debug\PW4b Ondas.pdb
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.csprojResolveAssemblyReference.cache
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b_Ondas.Form1.resources
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b_Ondas.Properties.Resources.resources
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.csproj.GenerateResource.Cache
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.exe
+F:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.pdb
+D:\2º\Programación\PW4b Ondas\PW4b Ondas\bin\Debug\PW4b Ondas.exe.config
+D:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.exe
+D:\2º\Programación\PW4b Ondas\PW4b Ondas\obj\Debug\PW4b Ondas.pdb

@@ -1,0 +1,12 @@
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.exe.config
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.exe
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.pdb
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.csprojResolveAssemblyReference.cache
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.Form1.resources
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.Properties.Resources.resources
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.csproj.GenerateResource.Cache
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.exe
+D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.pdb
+F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.exe.config
+F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.exe
+F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.pdb

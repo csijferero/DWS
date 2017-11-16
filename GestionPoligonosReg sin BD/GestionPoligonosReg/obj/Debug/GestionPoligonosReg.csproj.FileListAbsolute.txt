@@ -1,0 +1,33 @@
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.pdb
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.Form1.resources
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.Properties.Resources.resources
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csproj.GenerateResource.Cache
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+C:\Users\Alberto\Desktop\GestionPoligonosReg\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.pdb
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.FormDibujo.resources
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PoligRegBD (OK GiroYposCentro)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csproj.GenerateResource.Cache
+C:\Altair\PNet2 Windows Form\Poligonos Regulares (Sin y Con BD)\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+C:\Altair\PNet2 Windows Form\Poligonos Regulares (Sin y Con BD)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+C:\Altair\PNet2 Windows Form\Poligonos Regulares (Sin y Con BD)\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.pdb
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csprojResolveAssemblyReference.cache
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.FormDibujo.resources
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.Properties.Resources.resources
+F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.csproj.GenerateResource.Cache
+D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
