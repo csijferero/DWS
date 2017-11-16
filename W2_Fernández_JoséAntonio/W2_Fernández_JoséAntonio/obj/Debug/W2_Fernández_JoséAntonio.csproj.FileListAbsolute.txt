@@ -10,3 +10,6 @@ D:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\D
 F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.exe.config
 F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.exe
 F:\2º\Programación\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.pdb
+C:\Users\Salon\Source\Repos\DWS\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\bin\Debug\W2_Fernández_JoséAntonio.exe.config
+C:\Users\Salon\Source\Repos\DWS\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.exe
+C:\Users\Salon\Source\Repos\DWS\W2_Fernández_JoséAntonio\W2_Fernández_JoséAntonio\obj\Debug\W2_Fernández_JoséAntonio.pdb
