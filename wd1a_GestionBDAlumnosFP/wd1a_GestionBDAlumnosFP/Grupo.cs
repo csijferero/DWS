@@ -19,6 +19,13 @@ namespace wd1a_GestionBDAlumnosFP
             this.nombre = nombre;
         }
 
+        public Grupo(DataSet1.GruposRow regGrupo)
+        {
+            this.idGrupo = regGrupo.idGrupo;
+            this.alias = regGrupo.alias;
+            this.nombre = regGrupo.nombre;
+        }
+
         public int IdGrupo
         {
             get
