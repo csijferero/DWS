@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PruebaBBDD.Properties {
+namespace AccesoRapidoBD.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,7 @@ namespace PruebaBBDD.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\ALUM02\\Desktop\\BD_AlumnosF" +
-            "P.accdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\BD_AlumnosFP.accdb")]
         public string BD_AlumnosFPConnectionString {
             get {
                 return ((string)(this["BD_AlumnosFPConnectionString"]));

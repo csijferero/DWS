@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace PruebaBBDD {
+namespace AccesoRapidoBD {
     
     
     /// <summary>
@@ -24,9 +24,9 @@ namespace PruebaBBDD {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private GruposDataTable tableGrupos;
-        
         private AlumnosDataTable tableAlumnos;
+        
+        private GruposDataTable tableGrupos;
         
         private global::System.Data.DataRelation relationGruposAlumnos;
         
@@ -58,11 +58,11 @@ namespace PruebaBBDD {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Grupos"] != null)) {
-                    base.Tables.Add(new GruposDataTable(ds.Tables["Grupos"]));
-                }
                 if ((ds.Tables["Alumnos"] != null)) {
                     base.Tables.Add(new AlumnosDataTable(ds.Tables["Alumnos"]));
+                }
+                if ((ds.Tables["Grupos"] != null)) {
+                    base.Tables.Add(new GruposDataTable(ds.Tables["Grupos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -86,9 +86,9 @@ namespace PruebaBBDD {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GruposDataTable Grupos {
+        public AlumnosDataTable Alumnos {
             get {
-                return this.tableGrupos;
+                return this.tableAlumnos;
             }
         }
         
@@ -96,9 +96,9 @@ namespace PruebaBBDD {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AlumnosDataTable Alumnos {
+        public GruposDataTable Grupos {
             get {
-                return this.tableAlumnos;
+                return this.tableGrupos;
             }
         }
         
@@ -169,11 +169,11 @@ namespace PruebaBBDD {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Grupos"] != null)) {
-                    base.Tables.Add(new GruposDataTable(ds.Tables["Grupos"]));
-                }
                 if ((ds.Tables["Alumnos"] != null)) {
                     base.Tables.Add(new AlumnosDataTable(ds.Tables["Alumnos"]));
+                }
+                if ((ds.Tables["Grupos"] != null)) {
+                    base.Tables.Add(new GruposDataTable(ds.Tables["Grupos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -208,16 +208,16 @@ namespace PruebaBBDD {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGrupos = ((GruposDataTable)(base.Tables["Grupos"]));
-            if ((initTable == true)) {
-                if ((this.tableGrupos != null)) {
-                    this.tableGrupos.InitVars();
-                }
-            }
             this.tableAlumnos = ((AlumnosDataTable)(base.Tables["Alumnos"]));
             if ((initTable == true)) {
                 if ((this.tableAlumnos != null)) {
                     this.tableAlumnos.InitVars();
+                }
+            }
+            this.tableGrupos = ((GruposDataTable)(base.Tables["Grupos"]));
+            if ((initTable == true)) {
+                if ((this.tableGrupos != null)) {
+                    this.tableGrupos.InitVars();
                 }
             }
             this.relationGruposAlumnos = this.Relations["GruposAlumnos"];
@@ -231,10 +231,10 @@ namespace PruebaBBDD {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGrupos = new GruposDataTable();
-            base.Tables.Add(this.tableGrupos);
             this.tableAlumnos = new AlumnosDataTable();
             base.Tables.Add(this.tableAlumnos);
+            this.tableGrupos = new GruposDataTable();
+            base.Tables.Add(this.tableGrupos);
             this.relationGruposAlumnos = new global::System.Data.DataRelation("GruposAlumnos", new global::System.Data.DataColumn[] {
                         this.tableGrupos.idGrupoColumn}, new global::System.Data.DataColumn[] {
                         this.tableAlumnos.idGrupoColumn}, false);
@@ -243,13 +243,13 @@ namespace PruebaBBDD {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeGrupos() {
+        private bool ShouldSerializeAlumnos() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeAlumnos() {
+        private bool ShouldSerializeGrupos() {
             return false;
         }
         
@@ -309,331 +309,10 @@ namespace PruebaBBDD {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void GruposRowChangeEventHandler(object sender, GruposRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void AlumnosRowChangeEventHandler(object sender, AlumnosRowChangeEvent e);
         
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GruposDataTable : global::System.Data.TypedTableBase<GruposRow> {
-            
-            private global::System.Data.DataColumn columnidGrupo;
-            
-            private global::System.Data.DataColumn columnalias;
-            
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columnidTutor;
-            
-            private global::System.Data.DataColumn columnidDpto;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposDataTable() {
-                this.TableName = "Grupos";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GruposDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected GruposDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idGrupoColumn {
-                get {
-                    return this.columnidGrupo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn aliasColumn {
-                get {
-                    return this.columnalias;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idTutorColumn {
-                get {
-                    return this.columnidTutor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idDptoColumn {
-                get {
-                    return this.columnidDpto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRow this[int index] {
-                get {
-                    return ((GruposRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GruposRowChangeEventHandler GruposRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GruposRowChangeEventHandler GruposRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GruposRowChangeEventHandler GruposRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event GruposRowChangeEventHandler GruposRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddGruposRow(GruposRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRow AddGruposRow(string alias, string nombre, string idTutor, string idDpto) {
-                GruposRow rowGruposRow = ((GruposRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        alias,
-                        nombre,
-                        idTutor,
-                        idDpto};
-                rowGruposRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGruposRow);
-                return rowGruposRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRow FindByidGrupo(int idGrupo) {
-                return ((GruposRow)(this.Rows.Find(new object[] {
-                            idGrupo})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                GruposDataTable cln = ((GruposDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new GruposDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnidGrupo = base.Columns["idGrupo"];
-                this.columnalias = base.Columns["alias"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnidTutor = base.Columns["idTutor"];
-                this.columnidDpto = base.Columns["idDpto"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnidGrupo = new global::System.Data.DataColumn("idGrupo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidGrupo);
-                this.columnalias = new global::System.Data.DataColumn("alias", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnalias);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnidTutor = new global::System.Data.DataColumn("idTutor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidTutor);
-                this.columnidDpto = new global::System.Data.DataColumn("idDpto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidDpto);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidGrupo}, true));
-                this.columnidGrupo.AutoIncrement = true;
-                this.columnidGrupo.AutoIncrementSeed = -1;
-                this.columnidGrupo.AutoIncrementStep = -1;
-                this.columnidGrupo.AllowDBNull = false;
-                this.columnidGrupo.Unique = true;
-                this.columnalias.MaxLength = 5;
-                this.columnnombre.MaxLength = 50;
-                this.columnidTutor.MaxLength = 4;
-                this.columnidDpto.MaxLength = 2;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRow NewGruposRow() {
-                return ((GruposRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GruposRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(GruposRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.GruposRowChanged != null)) {
-                    this.GruposRowChanged(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.GruposRowChanging != null)) {
-                    this.GruposRowChanging(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.GruposRowDeleted != null)) {
-                    this.GruposRowDeleted(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.GruposRowDeleting != null)) {
-                    this.GruposRowDeleting(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveGruposRow(GruposRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GruposDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void GruposRowChangeEventHandler(object sender, GruposRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -989,151 +668,323 @@ namespace PruebaBBDD {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents the strongly named DataTable class.
         ///</summary>
-        public partial class GruposRow : global::System.Data.DataRow {
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GruposDataTable : global::System.Data.TypedTableBase<GruposRow> {
             
-            private GruposDataTable tableGrupos;
+            private global::System.Data.DataColumn columnidGrupo;
+            
+            private global::System.Data.DataColumn columnalias;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columnidTutor;
+            
+            private global::System.Data.DataColumn columnidDpto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal GruposRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableGrupos = ((GruposDataTable)(this.Table));
+            public GruposDataTable() {
+                this.TableName = "Grupos";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int idGrupo {
-                get {
-                    return ((int)(this[this.tableGrupos.idGrupoColumn]));
+            internal GruposDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
                 }
-                set {
-                    this[this.tableGrupos.idGrupoColumn] = value;
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected GruposDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idGrupoColumn {
+                get {
+                    return this.columnidGrupo;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string alias {
+            public global::System.Data.DataColumn aliasColumn {
                 get {
+                    return this.columnalias;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idTutorColumn {
+                get {
+                    return this.columnidTutor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idDptoColumn {
+                get {
+                    return this.columnidDpto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRow this[int index] {
+                get {
+                    return ((GruposRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GruposRowChangeEventHandler GruposRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GruposRowChangeEventHandler GruposRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GruposRowChangeEventHandler GruposRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event GruposRowChangeEventHandler GruposRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddGruposRow(GruposRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRow AddGruposRow(string alias, string nombre, string idTutor, string idDpto) {
+                GruposRow rowGruposRow = ((GruposRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        alias,
+                        nombre,
+                        idTutor,
+                        idDpto};
+                rowGruposRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGruposRow);
+                return rowGruposRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRow FindByidGrupo(int idGrupo) {
+                return ((GruposRow)(this.Rows.Find(new object[] {
+                            idGrupo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GruposDataTable cln = ((GruposDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GruposDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnidGrupo = base.Columns["idGrupo"];
+                this.columnalias = base.Columns["alias"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columnidTutor = base.Columns["idTutor"];
+                this.columnidDpto = base.Columns["idDpto"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnidGrupo = new global::System.Data.DataColumn("idGrupo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidGrupo);
+                this.columnalias = new global::System.Data.DataColumn("alias", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnalias);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnidTutor = new global::System.Data.DataColumn("idTutor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidTutor);
+                this.columnidDpto = new global::System.Data.DataColumn("idDpto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidDpto);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidGrupo}, true));
+                this.columnidGrupo.AutoIncrement = true;
+                this.columnidGrupo.AutoIncrementSeed = -1;
+                this.columnidGrupo.AutoIncrementStep = -1;
+                this.columnidGrupo.AllowDBNull = false;
+                this.columnidGrupo.Unique = true;
+                this.columnalias.MaxLength = 5;
+                this.columnnombre.MaxLength = 50;
+                this.columnidTutor.MaxLength = 4;
+                this.columnidDpto.MaxLength = 2;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRow NewGruposRow() {
+                return ((GruposRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GruposRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GruposRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GruposRowChanged != null)) {
+                    this.GruposRowChanged(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GruposRowChanging != null)) {
+                    this.GruposRowChanging(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GruposRowDeleted != null)) {
+                    this.GruposRowDeleted(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GruposRowDeleting != null)) {
+                    this.GruposRowDeleting(this, new GruposRowChangeEvent(((GruposRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveGruposRow(GruposRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet1 ds = new DataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GruposDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
                     try {
-                        return ((string)(this[this.tableGrupos.aliasColumn]));
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'alias\' de la tabla \'Grupos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGrupos.aliasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre {
-                get {
-                    try {
-                        return ((string)(this[this.tableGrupos.nombreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Grupos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGrupos.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string idTutor {
-                get {
-                    try {
-                        return ((string)(this[this.tableGrupos.idTutorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idTutor\' de la tabla \'Grupos\' es DBNull.", e);
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
                     }
                 }
-                set {
-                    this[this.tableGrupos.idTutorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string idDpto {
-                get {
-                    try {
-                        return ((string)(this[this.tableGrupos.idDptoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idDpto\' de la tabla \'Grupos\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGrupos.idDptoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsaliasNull() {
-                return this.IsNull(this.tableGrupos.aliasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetaliasNull() {
-                this[this.tableGrupos.aliasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tableGrupos.nombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tableGrupos.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsidTutorNull() {
-                return this.IsNull(this.tableGrupos.idTutorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetidTutorNull() {
-                this[this.tableGrupos.idTutorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsidDptoNull() {
-                return this.IsNull(this.tableGrupos.idDptoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetidDptoNull() {
-                this[this.tableGrupos.idDptoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AlumnosRow[] GetAlumnosRows() {
-                if ((this.Table.ChildRelations["GruposAlumnos"] == null)) {
-                    return new AlumnosRow[0];
-                }
-                else {
-                    return ((AlumnosRow[])(base.GetChildRows(this.Table.ChildRelations["GruposAlumnos"])));
-                }
+                xs.Add(dsSchema);
+                return type;
             }
         }
         
@@ -1343,35 +1194,150 @@ namespace PruebaBBDD {
         }
         
         /// <summary>
-        ///Row event argument class
+        ///Represents strongly named DataRow class.
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class GruposRowChangeEvent : global::System.EventArgs {
+        public partial class GruposRow : global::System.Data.DataRow {
             
-            private GruposRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
+            private GruposDataTable tableGrupos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRowChangeEvent(GruposRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
+            internal GruposRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGrupos = ((GruposDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GruposRow Row {
+            public int idGrupo {
                 get {
-                    return this.eventRow;
+                    return ((int)(this[this.tableGrupos.idGrupoColumn]));
+                }
+                set {
+                    this[this.tableGrupos.idGrupoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
+            public string alias {
                 get {
-                    return this.eventAction;
+                    try {
+                        return ((string)(this[this.tableGrupos.aliasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'alias\' de la tabla \'Grupos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGrupos.aliasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableGrupos.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Grupos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGrupos.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string idTutor {
+                get {
+                    try {
+                        return ((string)(this[this.tableGrupos.idTutorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idTutor\' de la tabla \'Grupos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGrupos.idTutorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string idDpto {
+                get {
+                    try {
+                        return ((string)(this[this.tableGrupos.idDptoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idDpto\' de la tabla \'Grupos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGrupos.idDptoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsaliasNull() {
+                return this.IsNull(this.tableGrupos.aliasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetaliasNull() {
+                this[this.tableGrupos.aliasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableGrupos.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tableGrupos.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsidTutorNull() {
+                return this.IsNull(this.tableGrupos.idTutorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetidTutorNull() {
+                this[this.tableGrupos.idTutorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsidDptoNull() {
+                return this.IsNull(this.tableGrupos.idDptoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetidDptoNull() {
+                this[this.tableGrupos.idDptoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlumnosRow[] GetAlumnosRows() {
+                if ((this.Table.ChildRelations["GruposAlumnos"] == null)) {
+                    return new AlumnosRow[0];
+                }
+                else {
+                    return ((AlumnosRow[])(base.GetChildRows(this.Table.ChildRelations["GruposAlumnos"])));
                 }
             }
         }
@@ -1409,420 +1375,44 @@ namespace PruebaBBDD {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class GruposRowChangeEvent : global::System.EventArgs {
+            
+            private GruposRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRowChangeEvent(GruposRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public GruposRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
-namespace PruebaBBDD.DataSet1TableAdapters {
+namespace AccesoRapidoBD.DataSet1TableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GruposTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public GruposTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Grupos";
-            tableMapping.ColumnMappings.Add("idGrupo", "idGrupo");
-            tableMapping.ColumnMappings.Add("alias", "alias");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("idTutor", "idTutor");
-            tableMapping.ColumnMappings.Add("idDpto", "idDpto");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Grupos` WHERE ((`idGrupo` = ?) AND ((? = 1 AND `alias` IS NULL) OR (`alias` = ?)) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `idTutor` IS NULL) OR (`idTutor` = ?)) AND ((? = 1 AND `idDpto` IS NULL) OR (`idDpto` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_alias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nombre", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idTutor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idDpto", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Grupos` (`alias`, `nombre`, `idTutor`, `idDpto`) VALUES (?, ?, ?, ?)" +
-                "";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Grupos` SET `alias` = ?, `nombre` = ?, `idTutor` = ?, `idDpto` = ? WHERE ((`idGrupo` = ?) AND ((? = 1 AND `alias` IS NULL) OR (`alias` = ?)) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `idTutor` IS NULL) OR (`idTutor` = ?)) AND ((? = 1 AND `idDpto` IS NULL) OR (`idDpto` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_alias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nombre", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idTutor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idDpto", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, false, null));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PruebaBBDD.Properties.Settings.Default.BD_AlumnosFPConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idGrupo, alias, nombre, idTutor, idDpto FROM Grupos";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.GruposDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.GruposDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.GruposDataTable dataTable = new DataSet1.GruposDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.GruposDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Grupos");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_idGrupo, string Original_alias, string Original_nombre, string Original_idTutor, string Original_idDpto) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idGrupo));
-            if ((Original_alias == null)) {
-                throw new global::System.ArgumentNullException("Original_alias");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_alias));
-            }
-            if ((Original_nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_nombre");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_nombre));
-            }
-            if ((Original_idTutor == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_idTutor));
-            }
-            if ((Original_idDpto == null)) {
-                throw new global::System.ArgumentNullException("Original_idDpto");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_idDpto));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string alias, string nombre, string idTutor, string idDpto) {
-            if ((alias == null)) {
-                throw new global::System.ArgumentNullException("alias");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(alias));
-            }
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            if ((idTutor == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(idTutor));
-            }
-            if ((idDpto == null)) {
-                throw new global::System.ArgumentNullException("idDpto");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(idDpto));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string alias, string nombre, string idTutor, string idDpto, int Original_idGrupo, string Original_alias, string Original_nombre, string Original_idTutor, string Original_idDpto) {
-            if ((alias == null)) {
-                throw new global::System.ArgumentNullException("alias");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(alias));
-            }
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            if ((idTutor == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(idTutor));
-            }
-            if ((idDpto == null)) {
-                throw new global::System.ArgumentNullException("idDpto");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(idDpto));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idGrupo));
-            if ((Original_alias == null)) {
-                throw new global::System.ArgumentNullException("Original_alias");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_alias));
-            }
-            if ((Original_nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_nombre));
-            }
-            if ((Original_idTutor == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_idTutor));
-            }
-            if ((Original_idDpto == null)) {
-                throw new global::System.ArgumentNullException("Original_idDpto");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_idDpto));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -2010,7 +1600,7 @@ namespace PruebaBBDD.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PruebaBBDD.Properties.Settings.Default.BD_AlumnosFPConnectionString;
+            this._connection.ConnectionString = global::AccesoRapidoBD.Properties.Settings.Default.BD_AlumnosFPConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2288,6 +1878,416 @@ namespace PruebaBBDD.DataSet1TableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GruposTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
+        
+        private global::System.Data.OleDb.OleDbConnection _connection;
+        
+        private global::System.Data.OleDb.OleDbTransaction _transaction;
+        
+        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public GruposTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.OleDb.OleDbTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Grupos";
+            tableMapping.ColumnMappings.Add("idGrupo", "idGrupo");
+            tableMapping.ColumnMappings.Add("alias", "alias");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("idTutor", "idTutor");
+            tableMapping.ColumnMappings.Add("idDpto", "idDpto");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Grupos` WHERE ((`idGrupo` = ?) AND ((? = 1 AND `alias` IS NULL) OR (`alias` = ?)) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `idTutor` IS NULL) OR (`idTutor` = ?)) AND ((? = 1 AND `idDpto` IS NULL) OR (`idDpto` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_alias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nombre", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idTutor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idDpto", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Grupos` (`alias`, `nombre`, `idTutor`, `idDpto`) VALUES (?, ?, ?, ?)" +
+                "";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Grupos` SET `alias` = ?, `nombre` = ?, `idTutor` = ?, `idDpto` = ? WHERE ((`idGrupo` = ?) AND ((? = 1 AND `alias` IS NULL) OR (`alias` = ?)) AND ((? = 1 AND `nombre` IS NULL) OR (`nombre` = ?)) AND ((? = 1 AND `idTutor` IS NULL) OR (`idTutor` = ?)) AND ((? = 1 AND `idDpto` IS NULL) OR (`idDpto` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_alias", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_alias", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "alias", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nombre", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nombre", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nombre", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idTutor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idTutor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idTutor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_idDpto", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_idDpto", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idDpto", global::System.Data.DataRowVersion.Original, false, null));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.OleDb.OleDbConnection();
+            this._connection.ConnectionString = global::AccesoRapidoBD.Properties.Settings.Default.BD_AlumnosFPConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT idGrupo, alias, nombre, idTutor, idDpto FROM Grupos";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet1.GruposDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet1.GruposDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet1.GruposDataTable dataTable = new DataSet1.GruposDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet1.GruposDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "Grupos");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_idGrupo, string Original_alias, string Original_nombre, string Original_idTutor, string Original_idDpto) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idGrupo));
+            if ((Original_alias == null)) {
+                throw new global::System.ArgumentNullException("Original_alias");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_alias));
+            }
+            if ((Original_nombre == null)) {
+                throw new global::System.ArgumentNullException("Original_nombre");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_nombre));
+            }
+            if ((Original_idTutor == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_idTutor));
+            }
+            if ((Original_idDpto == null)) {
+                throw new global::System.ArgumentNullException("Original_idDpto");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_idDpto));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string alias, string nombre, string idTutor, string idDpto) {
+            if ((alias == null)) {
+                throw new global::System.ArgumentNullException("alias");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(alias));
+            }
+            if ((nombre == null)) {
+                throw new global::System.ArgumentNullException("nombre");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombre));
+            }
+            if ((idTutor == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(idTutor));
+            }
+            if ((idDpto == null)) {
+                throw new global::System.ArgumentNullException("idDpto");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(idDpto));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string alias, string nombre, string idTutor, string idDpto, int Original_idGrupo, string Original_alias, string Original_nombre, string Original_idTutor, string Original_idDpto) {
+            if ((alias == null)) {
+                throw new global::System.ArgumentNullException("alias");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(alias));
+            }
+            if ((nombre == null)) {
+                throw new global::System.ArgumentNullException("nombre");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombre));
+            }
+            if ((idTutor == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(idTutor));
+            }
+            if ((idDpto == null)) {
+                throw new global::System.ArgumentNullException("idDpto");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(idDpto));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idGrupo));
+            if ((Original_alias == null)) {
+                throw new global::System.ArgumentNullException("Original_alias");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_alias));
+            }
+            if ((Original_nombre == null)) {
+                throw new global::System.ArgumentNullException("Original_nombre");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_nombre));
+            }
+            if ((Original_idTutor == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_idTutor));
+            }
+            if ((Original_idDpto == null)) {
+                throw new global::System.ArgumentNullException("Original_idDpto");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_idDpto));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2299,9 +2299,9 @@ namespace PruebaBBDD.DataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private GruposTableAdapter _gruposTableAdapter;
-        
         private AlumnosTableAdapter _alumnosTableAdapter;
+        
+        private GruposTableAdapter _gruposTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2323,12 +2323,12 @@ namespace PruebaBBDD.DataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public GruposTableAdapter GruposTableAdapter {
+        public AlumnosTableAdapter AlumnosTableAdapter {
             get {
-                return this._gruposTableAdapter;
+                return this._alumnosTableAdapter;
             }
             set {
-                this._gruposTableAdapter = value;
+                this._alumnosTableAdapter = value;
             }
         }
         
@@ -2337,12 +2337,12 @@ namespace PruebaBBDD.DataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public AlumnosTableAdapter AlumnosTableAdapter {
+        public GruposTableAdapter GruposTableAdapter {
             get {
-                return this._alumnosTableAdapter;
+                return this._gruposTableAdapter;
             }
             set {
-                this._alumnosTableAdapter = value;
+                this._gruposTableAdapter = value;
             }
         }
         
@@ -2365,13 +2365,13 @@ namespace PruebaBBDD.DataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._gruposTableAdapter != null) 
-                            && (this._gruposTableAdapter.Connection != null))) {
-                    return this._gruposTableAdapter.Connection;
-                }
                 if (((this._alumnosTableAdapter != null) 
                             && (this._alumnosTableAdapter.Connection != null))) {
                     return this._alumnosTableAdapter.Connection;
+                }
+                if (((this._gruposTableAdapter != null) 
+                            && (this._gruposTableAdapter.Connection != null))) {
+                    return this._gruposTableAdapter.Connection;
                 }
                 return null;
             }
@@ -2386,10 +2386,10 @@ namespace PruebaBBDD.DataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._gruposTableAdapter != null)) {
+                if ((this._alumnosTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._alumnosTableAdapter != null)) {
+                if ((this._gruposTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -2512,13 +2512,13 @@ namespace PruebaBBDD.DataSet1TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._gruposTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._gruposTableAdapter.Connection) == false))) {
+            if (((this._alumnosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._alumnosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
-            if (((this._alumnosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._alumnosTableAdapter.Connection) == false))) {
+            if (((this._gruposTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gruposTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -2554,15 +2554,6 @@ namespace PruebaBBDD.DataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._gruposTableAdapter != null)) {
-                    revertConnections.Add(this._gruposTableAdapter, this._gruposTableAdapter.Connection);
-                    this._gruposTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._gruposTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._gruposTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._gruposTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._gruposTableAdapter.Adapter);
-                    }
-                }
                 if ((this._alumnosTableAdapter != null)) {
                     revertConnections.Add(this._alumnosTableAdapter, this._alumnosTableAdapter.Connection);
                     this._alumnosTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
@@ -2570,6 +2561,15 @@ namespace PruebaBBDD.DataSet1TableAdapters {
                     if (this._alumnosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._alumnosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._alumnosTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gruposTableAdapter != null)) {
+                    revertConnections.Add(this._gruposTableAdapter, this._gruposTableAdapter.Connection);
+                    this._gruposTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._gruposTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._gruposTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gruposTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gruposTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -2630,13 +2630,13 @@ namespace PruebaBBDD.DataSet1TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._gruposTableAdapter != null)) {
-                    this._gruposTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._gruposTableAdapter]));
-                    this._gruposTableAdapter.Transaction = null;
-                }
                 if ((this._alumnosTableAdapter != null)) {
                     this._alumnosTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._alumnosTableAdapter]));
                     this._alumnosTableAdapter.Transaction = null;
+                }
+                if ((this._gruposTableAdapter != null)) {
+                    this._gruposTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._gruposTableAdapter]));
+                    this._gruposTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
