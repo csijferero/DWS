@@ -23,5 +23,10 @@ namespace AccesoRapidoBD
             this.alumnosTableAdapter.Fill(this.dataSet1.Alumnos);
 
         }
+
+        private void tsBtnSalvar_Click(object sender, EventArgs e)
+        {
+            alumnosTableAdapter.Update(this.dataSet1.Alumnos);
+        }
     }
 }
