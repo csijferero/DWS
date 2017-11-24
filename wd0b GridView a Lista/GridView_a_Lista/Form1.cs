@@ -40,6 +40,22 @@ namespace GridView_a_Lista
 
         private void btnCargarFichero_Click(object sender, EventArgs e)
         {
+            
+        }
+        private string CuadraTexto(Equipo equipo)
+        {
+            string nombre = equipo.Nombre;
+            for (int i = equipo.Nombre.Length; i < 13; i++)
+            {
+                nombre += " ";
+            }
+            return (nombre + "\t" + equipo.Puntos.ToString("D2") + ";" + equipo.Pg.ToString("D2") + ";" + equipo.Pe.ToString("D2") + ";" + equipo.Pp.ToString("D2") + ";" + equipo.Gf.ToString("D2") + ";" + equipo.Gc.ToString("D2"));
+        }
+
+        private void btnCargarFichero_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons.Left == e.Button)
+                return;
             string line;
             listaEquipos.Clear();
             Stream myStream = null;
@@ -54,19 +70,20 @@ namespace GridView_a_Lista
             {
                 if ((myStream = openFileDialog1.OpenFile()) != null)
                 {
-                    try { 
-                    clbAnadidos.Items.Clear();
-                    file = new StreamReader(openFileDialog1.FileName, Encoding.Default);
-                    while ((line = file.ReadLine()) != null)
+                    try
                     {
-                        Equipo equipo = new Equipo(line);
+                        clbAnadidos.Items.Clear();
+                        file = new StreamReader(openFileDialog1.FileName, Encoding.Default);
+                        while ((line = file.ReadLine()) != null)
+                        {
+                            Equipo equipo = new Equipo(line);
 
-                        clbAnadidos.Items.Add(CuadraTexto(equipo));
-                        listaEquipos.Add(equipo);
-                    }
-                    file.Close();
-                    dgv.DataSource = null;
-                    dgv.DataSource = listaEquipos;
+                            clbAnadidos.Items.Add(CuadraTexto(equipo));
+                            listaEquipos.Add(equipo);
+                        }
+                        file.Close();
+                        dgv.DataSource = null;
+                        dgv.DataSource = listaEquipos;
                     }
                     catch
                     {
@@ -75,15 +92,6 @@ namespace GridView_a_Lista
                     }
                 }
             }
-        }
-        private string CuadraTexto(Equipo equipo)
-        {
-            string nombre = equipo.Nombre;
-            for (int i = equipo.Nombre.Length; i < 13; i++)
-            {
-                nombre += " ";
-            }
-            return (nombre + "\t" + equipo.Puntos.ToString("D2") + ";" + equipo.Pg.ToString("D2") + ";" + equipo.Pe.ToString("D2") + ";" + equipo.Pp.ToString("D2") + ";" + equipo.Gf.ToString("D2") + ";" + equipo.Gc.ToString("D2"));
         }
     }
 }

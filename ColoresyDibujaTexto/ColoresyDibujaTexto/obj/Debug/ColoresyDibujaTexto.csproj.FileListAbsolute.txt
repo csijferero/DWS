@@ -16,3 +16,6 @@ F:\2º\Programación\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyD
 F:\2º\Programación\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.Form1.resources
 F:\2º\Programación\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.Properties.Resources.resources
 F:\2º\Programación\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.csproj.GenerateResource.Cache
+C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\bin\Debug\ColoresyDibujaTexto.exe.config
+C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.exe
+C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.pdb

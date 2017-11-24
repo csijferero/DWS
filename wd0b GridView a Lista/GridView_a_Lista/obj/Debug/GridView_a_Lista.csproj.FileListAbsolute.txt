@@ -55,3 +55,12 @@ F:\2º\Programación\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a
 F:\2º\Programación\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.Form1.resources
 F:\2º\Programación\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.Properties.Resources.resources
 F:\2º\Programación\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.csproj.GenerateResource.Cache
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\bin\Debug\GridView_a_Lista.exe.config
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.exe
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.pdb
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\bin\Debug\GridView_a_Lista.exe
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\bin\Debug\GridView_a_Lista.pdb
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.csprojResolveAssemblyReference.cache
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.Form1.resources
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.Properties.Resources.resources
+C:\Users\ALUM02\Source\Repos\DWS\wd0b GridView a Lista\GridView_a_Lista\obj\Debug\GridView_a_Lista.csproj.GenerateResource.Cache

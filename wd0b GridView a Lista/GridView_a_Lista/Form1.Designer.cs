@@ -66,6 +66,7 @@
             this.btnCargarFichero.Text = "Cargar desde fichero";
             this.btnCargarFichero.UseVisualStyleBackColor = true;
             this.btnCargarFichero.Click += new System.EventHandler(this.btnCargarFichero_Click);
+            this.btnCargarFichero.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCargarFichero_MouseClick);
             // 
             // dgv
             // 
