@@ -17,13 +17,21 @@ namespace wd1a_GestionBDAlumnosFP
         GruposTableAdapter gruposAdapt = new GruposTableAdapter();
         DataSet1.GruposDataTable gruposTabla = new DataSet1.GruposDataTable();
 
+        
+
         public Form1()
         {
             InitializeComponent();
 
+
             //cargamos la tabla de Grupos
             //gruposAdapt.Fill(gruposTabla);
             gruposTabla = gruposAdapt.GetData();
+
+            Grupo grupos = new Grupo(gruposTabla);
+
+
+            cbGrupos.DataSource = gruposTabla;
 
 
         }
