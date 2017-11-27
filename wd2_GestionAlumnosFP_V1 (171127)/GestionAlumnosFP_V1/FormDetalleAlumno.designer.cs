@@ -56,6 +56,7 @@
             this.btnAceptar.TabIndex = 47;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -66,6 +67,7 @@
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cbGruposDetalle
             // 
@@ -203,6 +205,7 @@
             this.Controls.Add(this.label3);
             this.Name = "FormDetalleAlumno";
             this.Text = "FormDetalleAlumno";
+            this.Load += new System.EventHandler(this.FormDetalleAlumno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +215,6 @@
 
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox cbGruposDetalle;
         private System.Windows.Forms.TextBox txbMail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbMovil;
@@ -225,5 +227,6 @@
         private System.Windows.Forms.TextBox txbIndice;
         private System.Windows.Forms.TextBox txbApellNom;
         private System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.ComboBox cbGruposDetalle;
     }
 }
