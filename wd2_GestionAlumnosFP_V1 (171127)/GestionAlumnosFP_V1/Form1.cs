@@ -36,12 +36,7 @@ namespace GestionAlumnosFP_V1
             // Cargamos la tabla de alumnos
             CargaAlumnosGrupo();
 
-            // Asociamos esa tabla al DataGridView
-            dgv.DataSource = alumnosTabla;
 
-            // ocultábamos las columnas de id's
-            //dgv.Columns[0].Visible = false;
-            //dgv.Columns["idGrupo"].Visible = false;
         }
 
         private void CargaCombos()
@@ -91,69 +86,23 @@ namespace GestionAlumnosFP_V1
                     // ahora la uso
                     alumnosTabla = alumnosAdapter.GetDataByIdGrupo(idGrupo);
                 }
+                // Asociamos esa tabla al DataGridView
                 dgv.DataSource = alumnosTabla;
+
+                // Vamos a añadir el botón de borrar
+                DataGridViewButtonColumn btnBorrar = new DataGridViewButtonColumn();
+
+                btnBorrar.Width = 40;
+                btnBorrar.HeaderText = "Del";
+                btnBorrar.Text = "X";
+                btnBorrar.UseColumnTextForButtonValue = true;
+                dgv.Columns.Add(btnBorrar);
+                // ocultábamos las columnas de id's
+                //dgv.Columns[0].Visible = false;
+                //dgv.Columns["idGrupo"].Visible = false;
 
                 lbCabecera.Text = String.Format("Alumnos de {0} ({1} alumnos)", cbGrupos.Text, dgv.RowCount);
             }
-        }
-
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            if (dgv.SelectedRows.Count < 1)
-            {
-                MessageBox.Show("Debe seleccionar el registro a eliminar", "Seleccione un registro", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                return;
-            }
-            // obtengo el id del alumno que quiero eliminar
-            int idAlumno = Convert.ToInt32(dgv.SelectedRows[0].Cells[0].Value);
-
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
-
-            // elimino el registro
-            regAlumno.Delete();
-
-            // actualizo la BD
-            alumnosAdapter.Update(regAlumno);
-
-            //** Otra forma: borramos el registro en la BD y recargamos la tabla
-            //alumnosAdapter.DeleteByIdAlumno(idAlumno);
-            //// cargar de nuevo la tabla del dgv
-            //CargaAlumnosGrupo();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (dgv.SelectedRows.Count < 1)
-            {
-                MessageBox.Show("Debe seleccionar el registro a editar", "Seleccione un registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            // obtengo el id del alumno que quiero eliminar
-            int idAlumno = Convert.ToInt32(dgv.SelectedRows[0].Cells[0].Value);
-
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
-
-            // Construimos el alumnos a editar
-            Alumno alum = new Alumno(regAlumno);
-
-            
-            fDetalle.Alum = alum;
-            if (fDetalle.ShowDialog() == DialogResult.OK)
-            {
-                // actualizo el registro
-                regAlumno.apellidosNombre = alum.ApellidosNombre;
-                regAlumno.dni = alum.Dni;
-                regAlumno.movil = alum.Movil;
-                regAlumno.telefono = alum.Telefono;
-                regAlumno.email = alum.Email;
-                regAlumno.idGrupo = alum.IdGrupo;
-
-                // actualizo la bd
-                alumnosAdapter.Update(regAlumno);
-            }
-
         }
 
         private void btnAnadir_Click(object sender, EventArgs e)
@@ -180,6 +129,70 @@ namespace GestionAlumnosFP_V1
                 alumnosAdapter.Update(regAlumno);
                 // Para que aparezca el idAlumno real de la BD volvemos a cargar la tabla
                 CargaAlumnosGrupo();
+            }
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int colum = e.ColumnIndex;
+            int fila = e.RowIndex;
+            if (colum == 0)
+                EditarRegistro(fila);
+            else if (dgv.Columns[colum].HeaderText == "Del")
+                BorrarRegistro(fila);
+            else
+                return;
+        }
+
+        private void BorrarRegistro(int fila)
+        {
+            if (DialogResult.No == MessageBox.Show("Esta seguro de borrar la fila\n" + dgv.Rows[fila].Cells[3].Value.ToString(), "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+                return;
+
+            // obtengo el id del alumno que quiero eliminar
+            int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[1].Value);
+
+            // Obtengo el registro correspondiente a dicho alumno
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
+
+            // elimino el registro
+            regAlumno.Delete();
+
+            // actualizo la BD
+            alumnosAdapter.Update(regAlumno);
+
+            //** Otra forma: borramos el registro en la BD y recargamos la tabla
+            //alumnosAdapter.DeleteByIdAlumno(idAlumno);
+            //// cargar de nuevo la tabla del dgv
+            //CargaAlumnosGrupo();
+
+        }
+
+        private void EditarRegistro(int fila)
+        {
+            // obtengo el id del alumno que quiero eliminar
+            int idAlumno = Convert.ToInt32(dgv.Rows[0].Cells[1].Value);
+
+            // Obtengo el registro correspondiente a dicho alumno
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
+
+            // Construimos el alumnos a editar
+            Alumno alum = new Alumno(regAlumno);
+
+
+            fDetalle.Alum = alum;
+            if (fDetalle.ShowDialog() == DialogResult.OK)
+            {
+                // actualizo el registro
+                regAlumno.apellidosNombre = alum.ApellidosNombre;
+                regAlumno.dni = alum.Dni;
+                regAlumno.movil = alum.Movil;
+                regAlumno.telefono = alum.Telefono;
+                regAlumno.email = alum.Email;
+                regAlumno.idGrupo = alum.IdGrupo;
+
+                // actualizo la bd
+                alumnosAdapter.Update(regAlumno);
             }
         }
     }
