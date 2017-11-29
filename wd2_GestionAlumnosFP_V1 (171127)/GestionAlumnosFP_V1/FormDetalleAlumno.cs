@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GestionAlumnosFP_V1
 {
@@ -72,7 +73,32 @@ namespace GestionAlumnosFP_V1
 
         private bool HayErrorEnFormulario()
         {
-            return false;
+            errorProvider1.Clear();
+            bool error = false;
+
+
+            if (txbApellNom.Text == String.Empty || (txbTelefono.Text == String.Empty && txbMovil.Text == String.Empty) || cbGruposDetalle.Text == String.Empty)
+            {
+                error = true;
+            }
+            if ((txbMovil.Text.Length != 9 || (txbMovil.Text.Substring(0, 1) != "6" && txbMovil.Text.Substring(0, 1) != "7")) && txbMovil.Text.Length != 0)
+            {
+                error = true;
+                errorProvider1.SetError(txbMovil, "Error de formato");
+            }
+            if ((txbTelefono.Text.Length != 9 || (txbTelefono.Text.Substring(0, 3) != "954" && txbTelefono.Text.Substring(0, 3) != "955")) && txbTelefono.Text.Length != 0)
+            {
+                error = true;
+                errorProvider1.SetError(txbTelefono, "Error de formato");
+            }
+            if (!Regex.IsMatch(txbMail.Text, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
+            {
+                error = true;
+                errorProvider1.SetError(txbMail, "Error de formato");
+            }
+
+
+            return error;
         }
     }
 }

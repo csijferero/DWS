@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbGruposDetalle = new System.Windows.Forms.ComboBox();
@@ -43,6 +44,8 @@
             this.txbIndice = new System.Windows.Forms.TextBox();
             this.txbApellNom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -71,6 +74,7 @@
             // 
             // cbGruposDetalle
             // 
+            this.cbGruposDetalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGruposDetalle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGruposDetalle.FormattingEnabled = true;
             this.cbGruposDetalle.Location = new System.Drawing.Point(588, 97);
@@ -82,6 +86,7 @@
             // 
             this.txbMail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMail.Location = new System.Drawing.Point(506, 203);
+            this.txbMail.MaxLength = 50;
             this.txbMail.Name = "txbMail";
             this.txbMail.Size = new System.Drawing.Size(357, 29);
             this.txbMail.TabIndex = 44;
@@ -182,6 +187,10 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Apellidos,Nombre";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormDetalleAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +215,7 @@
             this.Name = "FormDetalleAlumno";
             this.Text = "FormDetalleAlumno";
             this.Load += new System.EventHandler(this.FormDetalleAlumno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +238,6 @@
         private System.Windows.Forms.TextBox txbApellNom;
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.ComboBox cbGruposDetalle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
