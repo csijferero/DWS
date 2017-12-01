@@ -86,7 +86,6 @@
             // 
             this.txbMail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMail.Location = new System.Drawing.Point(506, 203);
-            this.txbMail.MaxLength = 50;
             this.txbMail.Name = "txbMail";
             this.txbMail.Size = new System.Drawing.Size(357, 29);
             this.txbMail.TabIndex = 44;

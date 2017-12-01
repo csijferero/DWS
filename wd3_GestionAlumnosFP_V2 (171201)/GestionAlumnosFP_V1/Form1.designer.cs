@@ -32,13 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbCabecera = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panelControles = new System.Windows.Forms.Panel();
+            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cbGrupos = new System.Windows.Forms.ComboBox();
             this.btnAnadir = new System.Windows.Forms.Button();
+            this.btnGrupo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            this.panelControles.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbCabecera
@@ -60,7 +59,7 @@
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Editar});
+            this.Edit});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,30 +78,23 @@
             this.dgv.TabIndex = 10;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
-            // Editar
+            // Edit
             // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Text = "-->";
-            this.Editar.Width = 56;
-            // 
-            // panelControles
-            // 
-            this.panelControles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panelControles.Controls.Add(this.label1);
-            this.panelControles.Controls.Add(this.cbGrupos);
-            this.panelControles.Controls.Add(this.btnAnadir);
-            this.panelControles.Location = new System.Drawing.Point(35, 420);
-            this.panelControles.Name = "panelControles";
-            this.panelControles.Size = new System.Drawing.Size(925, 107);
-            this.panelControles.TabIndex = 24;
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Edit.Text = "►";
+            this.Edit.ToolTipText = "Editar Registro";
+            this.Edit.UseColumnTextForButtonValue = true;
+            this.Edit.Width = 40;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(618, 20);
+            this.label1.Location = new System.Drawing.Point(351, 433);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 23;
@@ -111,7 +103,7 @@
             // cbGrupos
             // 
             this.cbGrupos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGrupos.Location = new System.Drawing.Point(614, 42);
+            this.cbGrupos.Location = new System.Drawing.Point(347, 455);
             this.cbGrupos.Name = "cbGrupos";
             this.cbGrupos.Size = new System.Drawing.Size(284, 30);
             this.cbGrupos.TabIndex = 12;
@@ -120,31 +112,44 @@
             // btnAnadir
             // 
             this.btnAnadir.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnadir.Location = new System.Drawing.Point(242, 27);
+            this.btnAnadir.Location = new System.Drawing.Point(35, 440);
             this.btnAnadir.Name = "btnAnadir";
-            this.btnAnadir.Size = new System.Drawing.Size(140, 45);
+            this.btnAnadir.Size = new System.Drawing.Size(225, 45);
             this.btnAnadir.TabIndex = 21;
-            this.btnAnadir.Text = "Añadir";
+            this.btnAnadir.Text = "Añadir Registro";
             this.btnAnadir.UseVisualStyleBackColor = true;
             this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
+            // 
+            // btnGrupo
+            // 
+            this.btnGrupo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrupo.Location = new System.Drawing.Point(736, 433);
+            this.btnGrupo.Name = "btnGrupo";
+            this.btnGrupo.Size = new System.Drawing.Size(225, 45);
+            this.btnGrupo.TabIndex = 24;
+            this.btnGrupo.Text = "Gestionar Grupos";
+            this.btnGrupo.UseVisualStyleBackColor = true;
+            this.btnGrupo.Click += new System.EventHandler(this.btnGrupo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 551);
-            this.Controls.Add(this.panelControles);
+            this.Controls.Add(this.btnGrupo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbGrupos);
             this.Controls.Add(this.dgv);
+            this.Controls.Add(this.btnAnadir);
             this.Controls.Add(this.lbCabecera);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Gestión de Alumnos de FP (V1. básico)";
+            this.Text = "Gestión de Alumnos de FP (V2)";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
-            this.panelControles.ResumeLayout(false);
-            this.panelControles.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,11 +157,11 @@
 
         private System.Windows.Forms.Label lbCabecera;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Panel panelControles;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbGrupos;
         private System.Windows.Forms.Button btnAnadir;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.Button btnGrupo;
     }
 }
 

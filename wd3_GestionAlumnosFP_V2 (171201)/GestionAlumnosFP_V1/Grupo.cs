@@ -13,8 +13,18 @@ namespace GestionAlumnosFP_V1
         int idgrupo;
         string alias;
         string nombre;
+        string idtutor;
+        string iddpto;
 
         //Constructor
+        public Grupo()
+        {
+            this.idgrupo = -1;
+            this.alias = String.Empty;
+            this.nombre = String.Empty;
+            this.idtutor = String.Empty;
+            this.iddpto = String.Empty;
+        }
 
         public Grupo(int idgrupo, string alias, string nombre)
         {
@@ -28,6 +38,17 @@ namespace GestionAlumnosFP_V1
             this.idgrupo = regGrupo.idGrupo;
             this.alias = regGrupo.alias;
             this.nombre = regGrupo.nombre;
+            this.idtutor = regGrupo.idTutor;
+            this.iddpto = regGrupo.idDpto;
+        }
+
+        public Grupo(int idgrupo, string alias, string nombre, string idtutor, string iddpto)
+        {
+            this.idgrupo = idgrupo;
+            this.alias = alias;
+            this.nombre = nombre;
+            this.idtutor = idtutor;
+            this.iddpto = iddpto;
         }
 
         //Propiedades
@@ -48,6 +69,32 @@ namespace GestionAlumnosFP_V1
         {
             set { nombre = value; }
             get { return nombre; }
+        }
+
+        public string Idtutor
+        {
+            get
+            {
+                return idtutor;
+            }
+
+            set
+            {
+                idtutor = value;
+            }
+        }
+
+        public string Iddpto
+        {
+            get
+            {
+                return iddpto;
+            }
+
+            set
+            {
+                iddpto = value;
+            }
         }
     }
 }

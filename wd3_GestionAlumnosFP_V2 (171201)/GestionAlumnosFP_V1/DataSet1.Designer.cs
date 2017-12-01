@@ -325,6 +325,8 @@ namespace GestionAlumnosFP_V1 {
             
             private global::System.Data.DataColumn columnidGrupo;
             
+            private global::System.Data.DataColumn columnGrupo;
+            
             private global::System.Data.DataColumn columnapellidosNombre;
             
             private global::System.Data.DataColumn columntelefono;
@@ -381,6 +383,14 @@ namespace GestionAlumnosFP_V1 {
             public global::System.Data.DataColumn idGrupoColumn {
                 get {
                     return this.columnidGrupo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn GrupoColumn {
+                get {
+                    return this.columnGrupo;
                 }
             }
             
@@ -461,11 +471,12 @@ namespace GestionAlumnosFP_V1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AlumnosRow AddAlumnosRow(GruposRow parentGruposRowByGruposAlumnos, string apellidosNombre, string telefono, string movil, string dni, string email) {
+            public AlumnosRow AddAlumnosRow(GruposRow parentGruposRowByGruposAlumnos, string Grupo, string apellidosNombre, string telefono, string movil, string dni, string email) {
                 AlumnosRow rowAlumnosRow = ((AlumnosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
+                        Grupo,
                         apellidosNombre,
                         telefono,
                         movil,
@@ -505,6 +516,7 @@ namespace GestionAlumnosFP_V1 {
             internal void InitVars() {
                 this.columnidAlumno = base.Columns["idAlumno"];
                 this.columnidGrupo = base.Columns["idGrupo"];
+                this.columnGrupo = base.Columns["Grupo"];
                 this.columnapellidosNombre = base.Columns["apellidosNombre"];
                 this.columntelefono = base.Columns["telefono"];
                 this.columnmovil = base.Columns["movil"];
@@ -519,6 +531,8 @@ namespace GestionAlumnosFP_V1 {
                 base.Columns.Add(this.columnidAlumno);
                 this.columnidGrupo = new global::System.Data.DataColumn("idGrupo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidGrupo);
+                this.columnGrupo = new global::System.Data.DataColumn("Grupo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrupo);
                 this.columnapellidosNombre = new global::System.Data.DataColumn("apellidosNombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnapellidosNombre);
                 this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
@@ -536,6 +550,7 @@ namespace GestionAlumnosFP_V1 {
                 this.columnidAlumno.AutoIncrementStep = -1;
                 this.columnidAlumno.AllowDBNull = false;
                 this.columnidAlumno.Unique = true;
+                this.columnGrupo.MaxLength = 5;
                 this.columnapellidosNombre.MaxLength = 50;
                 this.columntelefono.MaxLength = 10;
                 this.columnmovil.MaxLength = 10;
@@ -1031,6 +1046,22 @@ namespace GestionAlumnosFP_V1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Grupo {
+                get {
+                    try {
+                        return ((string)(this[this.tableAlumnos.GrupoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Grupo\' de la tabla \'Alumnos\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAlumnos.GrupoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string apellidosNombre {
                 get {
                     try {
@@ -1130,6 +1161,18 @@ namespace GestionAlumnosFP_V1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetidGrupoNull() {
                 this[this.tableAlumnos.idGrupoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGrupoNull() {
+                return this.IsNull(this.tableAlumnos.GrupoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGrupoNull() {
+                this[this.tableAlumnos.GrupoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1606,7 +1649,7 @@ namespace GestionAlumnosFP_V1.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[4];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idAlumno, idGrupo, apellidosNombre, telefono, movil, dni, email FROM Alumn" +
@@ -1623,6 +1666,12 @@ namespace GestionAlumnosFP_V1.DataSet1TableAdapters {
                 "os\r\nWHERE idGrupo=?";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[3] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        Alumnos.idAlumno, Alumnos.idGrupo, Grupos.alias AS Grupo, Alumnos.a" +
+                "pellidosNombre, Alumnos.telefono, Alumnos.movil, Alumnos.dni, Alumnos.email\r\nFRO" +
+                "M Alumnos, Grupos\r\nWHERE Alumnos.idGrupo = Grupos.idGrupo\r\n";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1656,6 +1705,17 @@ namespace GestionAlumnosFP_V1.DataSet1TableAdapters {
         public virtual DataSet1.AlumnosDataTable GetDataByIdGrupo(int idGrupo) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idGrupo));
+            DataSet1.AlumnosDataTable dataTable = new DataSet1.AlumnosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet1.AlumnosDataTable GetDataConAliasGrupo() {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             DataSet1.AlumnosDataTable dataTable = new DataSet1.AlumnosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

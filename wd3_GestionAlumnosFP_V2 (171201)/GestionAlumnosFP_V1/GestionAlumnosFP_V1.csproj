@@ -64,6 +64,18 @@
     <Compile Include="FormDetalleAlumno.designer.cs">
       <DependentUpon>FormDetalleAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDetalleGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetalleGrupos.Designer.cs">
+      <DependentUpon>FormDetalleGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrupos.Designer.cs">
+      <DependentUpon>FormGrupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grupo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetalleAlumno.resx">
       <DependentUpon>FormDetalleAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetalleGrupos.resx">
+      <DependentUpon>FormDetalleGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGrupos.resx">
+      <DependentUpon>FormGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

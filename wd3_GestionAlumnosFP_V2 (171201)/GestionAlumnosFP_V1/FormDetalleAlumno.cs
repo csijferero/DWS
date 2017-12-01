@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
 namespace GestionAlumnosFP_V1
 {
     public partial class FormDetalleAlumno : Form
@@ -56,10 +55,7 @@ namespace GestionAlumnosFP_V1
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (HayErrorEnFormulario())
-            {
-                errorProvider1.Clear();
                 return;
-            }
 
 
             // actualizo el alumno
