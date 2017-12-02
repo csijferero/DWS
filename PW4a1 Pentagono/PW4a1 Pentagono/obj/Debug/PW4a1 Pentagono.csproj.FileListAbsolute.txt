@@ -10,3 +10,6 @@ F:\2º\Programación\PW4a1 Pentagono\PW4a1 Pentagono\obj\Debug\PW4a1 Pentagono.p
 D:\2º\Programación\PW4a1 Pentagono\PW4a1 Pentagono\bin\Debug\PW4a1 Pentagono.exe.config
 D:\2º\Programación\PW4a1 Pentagono\PW4a1 Pentagono\obj\Debug\PW4a1 Pentagono.exe
 D:\2º\Programación\PW4a1 Pentagono\PW4a1 Pentagono\obj\Debug\PW4a1 Pentagono.pdb
+C:\Users\JoseAntonio\Source\Repos\DWS\PW4a1 Pentagono\PW4a1 Pentagono\bin\Debug\PW4a1 Pentagono.exe.config
+C:\Users\JoseAntonio\Source\Repos\DWS\PW4a1 Pentagono\PW4a1 Pentagono\obj\Debug\PW4a1 Pentagono.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\PW4a1 Pentagono\PW4a1 Pentagono\obj\Debug\PW4a1 Pentagono.pdb

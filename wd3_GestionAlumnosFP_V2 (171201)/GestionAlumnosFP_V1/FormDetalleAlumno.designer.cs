@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cbGruposDetalle = new System.Windows.Forms.ComboBox();
-            this.txbMail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txbMovil = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txbTelefono = new System.Windows.Forms.TextBox();
             this.txbDni = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txbIndice = new System.Windows.Forms.TextBox();
             this.txbApellNom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbMail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbGruposDetalle = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,33 +71,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // cbGruposDetalle
-            // 
-            this.cbGruposDetalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGruposDetalle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGruposDetalle.FormattingEnabled = true;
-            this.cbGruposDetalle.Location = new System.Drawing.Point(588, 97);
-            this.cbGruposDetalle.Name = "cbGruposDetalle";
-            this.cbGruposDetalle.Size = new System.Drawing.Size(275, 30);
-            this.cbGruposDetalle.TabIndex = 45;
-            // 
-            // txbMail
-            // 
-            this.txbMail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMail.Location = new System.Drawing.Point(506, 203);
-            this.txbMail.Name = "txbMail";
-            this.txbMail.Size = new System.Drawing.Size(357, 29);
-            this.txbMail.TabIndex = 44;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(503, 169);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 13);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Email";
             // 
             // txbMovil
             // 
@@ -141,15 +114,6 @@
             this.txbDni.Size = new System.Drawing.Size(125, 29);
             this.txbDni.TabIndex = 38;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(585, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Grupo";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -190,6 +154,42 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(503, 169);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Email";
+            // 
+            // txbMail
+            // 
+            this.txbMail.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbMail.Location = new System.Drawing.Point(506, 203);
+            this.txbMail.Name = "txbMail";
+            this.txbMail.Size = new System.Drawing.Size(357, 29);
+            this.txbMail.TabIndex = 44;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(585, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Grupo";
+            // 
+            // cbGruposDetalle
+            // 
+            this.cbGruposDetalle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGruposDetalle.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGruposDetalle.FormattingEnabled = true;
+            this.cbGruposDetalle.Location = new System.Drawing.Point(588, 97);
+            this.cbGruposDetalle.Name = "cbGruposDetalle";
+            this.cbGruposDetalle.Size = new System.Drawing.Size(275, 30);
+            this.cbGruposDetalle.TabIndex = 45;
+            // 
             // FormDetalleAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,19 +224,19 @@
 
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txbMail;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbMovil;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbTelefono;
         private System.Windows.Forms.TextBox txbDni;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbIndice;
         private System.Windows.Forms.TextBox txbApellNom;
         private System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.ComboBox cbGruposDetalle;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        internal System.Windows.Forms.ComboBox cbGruposDetalle;
+        private System.Windows.Forms.TextBox txbMail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
     }
 }

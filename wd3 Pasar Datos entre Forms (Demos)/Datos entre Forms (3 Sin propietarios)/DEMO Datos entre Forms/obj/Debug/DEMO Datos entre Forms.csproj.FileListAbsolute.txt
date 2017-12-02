@@ -91,3 +91,5 @@ C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3
 C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3 Sin propietarios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Form2.resources
 C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3 Sin propietarios)\DEMO Datos entre Forms\obj\Debug\DEMO_Datos_entre_Forms.Properties.Resources.resources
 C:\Users\ALUM02\Desktop\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3 Sin propietarios)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
+C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3 Sin propietarios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (3 Sin propietarios)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb

@@ -23,7 +23,7 @@ namespace GestionAlumnosFP_V1
         // Construyo el formulario detalle que voy a usar en toda la aplicación
         FormDetalleAlumno fDetalle = new FormDetalleAlumno();
         // Construyo el formulario Grupos que voy a usar en toda la aplicación
-        FormGrupos fGrupos = new FormGrupos();
+        FormGrupos fGrupo = new FormGrupos();
 
         bool comboCargado = false;
         public Form1()
@@ -46,7 +46,7 @@ namespace GestionAlumnosFP_V1
             btnBorrar.Text = "X";
             btnBorrar.UseColumnTextForButtonValue = true;
             //La coloco detrás de el botón Edit...
-            dgv.Columns.Insert(1,btnBorrar);
+            dgv.Columns.Insert(1, btnBorrar);
             //... pero la muestro al final del dgv.
             dgv.Columns[1].DisplayIndex = dgv.Columns.Count - 1;
         }
@@ -76,7 +76,6 @@ namespace GestionAlumnosFP_V1
             fDetalle.cbGruposDetalle.DataSource = listaGrupos;
             fDetalle.cbGruposDetalle.DisplayMember = "Nombre"; // <-- Indicamos qué propiedad se va a mostrar
             fDetalle.cbGruposDetalle.ValueMember = "IdGrupo";// <-- Indicamos qué propiedad se va a guardar en Value
-
         }
 
         private void cbGrupos_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,7 +84,7 @@ namespace GestionAlumnosFP_V1
                 CargaAlumnosGrupo();
         }
 
-        void CargaAlumnosGrupo()
+        internal void CargaAlumnosGrupo()
         {
             int idGrupo = Convert.ToInt32(cbGrupos.SelectedValue);
 
@@ -150,7 +149,7 @@ namespace GestionAlumnosFP_V1
                 BorarRegistro(fila);
             else
                 return; // <-- No he pulsado ninguno de los botones que me iteresan
-            
+
         }
 
         private void BorarRegistro(int fila)
@@ -179,35 +178,38 @@ namespace GestionAlumnosFP_V1
 
         private void EditarRegistro(int fila)
         {
-            // obtengo el id del alumno que quiero eliminar
-            int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
-
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
-
-            // Construimos el alumnos a editar
-            Alumno alum = new Alumno(regAlumno);
-
-
-            fDetalle.Alum = alum;
-            if (fDetalle.ShowDialog() == DialogResult.OK)
+            if (fila >= 0)
             {
-                // actualizo el registro
-                regAlumno.apellidosNombre = alum.ApellidosNombre;
-                regAlumno.dni = alum.Dni;
-                regAlumno.movil = alum.Movil;
-                regAlumno.telefono = alum.Telefono;
-                regAlumno.email = alum.Email;
-                regAlumno.idGrupo = alum.IdGrupo;
+                // obtengo el id del alumno que quiero eliminar
+                int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
 
-                // actualizo la bd
-                alumnosAdapter.Update(regAlumno);
+                // Obtengo el registro correspondiente a dicho alumno
+                DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
+
+                // Construimos el alumnos a editar
+                Alumno alum = new Alumno(regAlumno);
+
+
+                fDetalle.Alum = alum;
+                if (fDetalle.ShowDialog() == DialogResult.OK)
+                {
+                    // actualizo el registro
+                    regAlumno.apellidosNombre = alum.ApellidosNombre;
+                    regAlumno.dni = alum.Dni;
+                    regAlumno.movil = alum.Movil;
+                    regAlumno.telefono = alum.Telefono;
+                    regAlumno.email = alum.Email;
+                    regAlumno.idGrupo = alum.IdGrupo;
+
+                    // actualizo la bd
+                    alumnosAdapter.Update(regAlumno);
+                }
             }
         }
 
         private void btnGrupo_Click(object sender, EventArgs e)
         {
-            fGrupos.ShowDialog();
+            fGrupo.Show();
         }
     }
 }

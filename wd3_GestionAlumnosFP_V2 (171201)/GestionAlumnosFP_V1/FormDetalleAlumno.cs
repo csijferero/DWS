@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 namespace GestionAlumnosFP_V1
 {
-    public partial class FormDetalleAlumno : Form
+    public partial class 
+        FormDetalleAlumno : Form
     {
         Alumno alum;
         public FormDetalleAlumno()
@@ -50,6 +51,7 @@ namespace GestionAlumnosFP_V1
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+            errorProvider1.Clear();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

@@ -57,14 +57,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv2.Location = new System.Drawing.Point(38, 50);
+            this.dgv2.Location = new System.Drawing.Point(25, 50);
             this.dgv2.MultiSelect = false;
             this.dgv2.Name = "dgv2";
             this.dgv2.ReadOnly = true;
             this.dgv2.RowHeadersVisible = false;
             this.dgv2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv2.Size = new System.Drawing.Size(563, 239);
-            this.dgv2.TabIndex = 26;
+            this.dgv2.TabIndex = 33;
             this.dgv2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellClick);
             // 
             // Edit
@@ -82,18 +82,18 @@
             // lbCabecera
             // 
             this.lbCabecera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCabecera.Location = new System.Drawing.Point(38, 20);
+            this.lbCabecera.Location = new System.Drawing.Point(25, 20);
             this.lbCabecera.Name = "lbCabecera";
             this.lbCabecera.Size = new System.Drawing.Size(520, 23);
-            this.lbCabecera.TabIndex = 25;
+            this.lbCabecera.TabIndex = 32;
             // 
             // btnAnadirRegistro
             // 
             this.btnAnadirRegistro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnadirRegistro.Location = new System.Drawing.Point(200, 325);
+            this.btnAnadirRegistro.Location = new System.Drawing.Point(187, 325);
             this.btnAnadirRegistro.Name = "btnAnadirRegistro";
             this.btnAnadirRegistro.Size = new System.Drawing.Size(225, 45);
-            this.btnAnadirRegistro.TabIndex = 28;
+            this.btnAnadirRegistro.TabIndex = 34;
             this.btnAnadirRegistro.Text = "Añadir Registro";
             this.btnAnadirRegistro.UseVisualStyleBackColor = true;
             this.btnAnadirRegistro.Click += new System.EventHandler(this.btnAnadirRegistro_Click);
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 413);
+            this.ClientSize = new System.Drawing.Size(614, 385);
             this.Controls.Add(this.dgv2);
             this.Controls.Add(this.lbCabecera);
             this.Controls.Add(this.btnAnadirRegistro);
@@ -115,6 +115,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.DataGridView dgv2;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.Label lbCabecera;

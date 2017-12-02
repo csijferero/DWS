@@ -31,3 +31,6 @@ F:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\Ge
 D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
 D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
 D:\2º\Programación\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb
+C:\Users\JoseAntonio\Source\Repos\DWS\GestionPoligonosReg sin BD\GestionPoligonosReg\bin\Debug\GestionPoligonosReg.exe.config
+C:\Users\JoseAntonio\Source\Repos\DWS\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\GestionPoligonosReg sin BD\GestionPoligonosReg\obj\Debug\GestionPoligonosReg.pdb

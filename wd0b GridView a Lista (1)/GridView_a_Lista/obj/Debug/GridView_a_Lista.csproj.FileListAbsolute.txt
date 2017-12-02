@@ -54,3 +54,6 @@ D:\2º\Programación\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridVi
 D:\2º\Programación\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridView_a_Lista.csproj.GenerateResource.Cache
 D:\2º\Programación\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridView_a_Lista.Form2.resources
 F:\2º\Programación\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridView_a_Lista.Form2.resources
+C:\Users\JoseAntonio\Source\Repos\DWS\wd0b GridView a Lista (1)\GridView_a_Lista\bin\Debug\GridView_a_Lista.exe.config
+C:\Users\JoseAntonio\Source\Repos\DWS\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridView_a_Lista.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\wd0b GridView a Lista (1)\GridView_a_Lista\obj\Debug\GridView_a_Lista.pdb

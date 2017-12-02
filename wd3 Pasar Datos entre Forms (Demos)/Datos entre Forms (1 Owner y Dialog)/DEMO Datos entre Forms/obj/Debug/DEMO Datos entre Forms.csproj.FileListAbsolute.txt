@@ -73,3 +73,6 @@ F:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Ow
 D:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe.config
 D:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
 D:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\bin\Debug\DEMO 2.exe.config
+C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (1 Owner y Dialog)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb

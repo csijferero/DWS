@@ -156,12 +156,12 @@
         #endregion
 
         private System.Windows.Forms.Label lbCabecera;
-        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbGrupos;
         private System.Windows.Forms.Button btnAnadir;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.Button btnGrupo;
+        internal System.Windows.Forms.DataGridView dgv;
     }
 }
 

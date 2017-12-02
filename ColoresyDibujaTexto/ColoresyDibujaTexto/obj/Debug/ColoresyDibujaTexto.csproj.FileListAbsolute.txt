@@ -19,3 +19,6 @@ F:\2º\Programación\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyD
 C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\bin\Debug\ColoresyDibujaTexto.exe.config
 C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.exe
 C:\Users\ALUM02\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.pdb
+C:\Users\JoseAntonio\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\bin\Debug\ColoresyDibujaTexto.exe.config
+C:\Users\JoseAntonio\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.exe
+C:\Users\JoseAntonio\Source\Repos\DWS\ColoresyDibujaTexto\ColoresyDibujaTexto\obj\Debug\ColoresyDibujaTexto.pdb
