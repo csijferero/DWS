@@ -134,6 +134,11 @@ namespace GestionAlumnosFP_V1
                 error = true;
                 errorProvider1.SetError(txbApellNom, "Error de formato");
             }
+            if ((txbTelefono.Text == alum.Telefono && txbMovil.Text == alum.Movil && txbMail.Text == alum.Email && txbDni.Text == alum.Dni && txbApellNom.Text == alum.ApellidosNombre && (int)cbGruposDetalle.SelectedValue == alum.IdGrupo) && !error)
+            {
+                text += "No se han realizado cambios";
+                error = true;
+            }
             if (error)
                 MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -90,36 +90,44 @@ namespace GestionAlumnosFP_V1
 
             if (txbAlias.Text == String.Empty)
             {
-                text += "Campo Alias vacio";
+                text += "Campo Alias vacio\n";
                 error = true;
                 errorProvider1.SetError(txbAlias, "Vacio");
             }
-            if (txbIndiceGrupo.Text == String.Empty)
-            {
-                text += "Campo Indice vacio";
-                error = true;
-                errorProvider1.SetError(txbIndiceGrupo, "Vacio");
-            }
             if (txbDpto.Text == String.Empty)
             {
-                text += "Campo Departamento vacio";
+                text += "Campo Departamento vacio\n";
                 error = true;
                 errorProvider1.SetError(txbDpto, "Vacio");
             }
             if (txbNombre.Text == String.Empty)
             {
-                text += "Campo Nombre vacio";
+                text += "Campo Nombre vacio\n";
                 error = true;
                 errorProvider1.SetError(txbNombre, "Vacio");
             }
             if (tabla.Contains(txbAlias.Text))
             {
-                text += "Alias repetido";
+                text += "Alias repetido\n";
                 error = true;
                 errorProvider1.SetError(txbAlias, "Vacio");
             }
+            if (txbTutor.Text == String.Empty)
+            {
+                text += "Campo Tutor vacio\n";
+                error = true;
+                errorProvider1.SetError(txbTutor, "Vacio");
+            }
+            if ((txbAlias.Text == grupo.Alias && txbDpto.Text == grupo.Iddpto && txbNombre.Text == grupo.Nombre && txbTutor.Text == grupo.Idtutor) && !error)
+            {
+                text += "No se han realizado cambios";
+                error = true;
+            }
             if (error)
                 MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //Compruebo si hay cambios, si no, mando error para que no actualice
+            
 
             return error;
         }

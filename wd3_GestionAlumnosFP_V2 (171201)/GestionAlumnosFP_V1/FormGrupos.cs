@@ -21,8 +21,9 @@ namespace GestionAlumnosFP_V1
         DataSet1.AlumnosDataTable alumnosTabla2 = new DataSet1.AlumnosDataTable();
         // Construyo el formulario detalle que voy a usar en toda la aplicación
         FormDetalleGrupos fDetalleGrupo = new FormDetalleGrupos();
+        // FormAlumno formulario = new FormAlumno();
 
-
+        internal bool cambio;
 
         public FormGrupos()
         {
@@ -69,6 +70,7 @@ namespace GestionAlumnosFP_V1
             fDetalleGrupo.Grupo = grupo;
             if (fDetalleGrupo.ShowDialog() == DialogResult.OK)
             {
+                cambio = true;
                 // actualizo el registro
                 regGrupo.nombre = grupo.Nombre;
                 regGrupo.alias = grupo.Alias;
@@ -100,41 +102,44 @@ namespace GestionAlumnosFP_V1
 
         private void BorarRegistro(int fila)
         {
-            if (DialogResult.No == MessageBox.Show("¿está seguro de eliminar a:\n" + dgv2.Rows[fila].Cells["nombre"].Value.ToString() + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
-                return;
-            // obtengo el id del alumno que quiero eliminar
-            int idGrupo = Convert.ToInt32(dgv2.Rows[fila].Cells[2].Value);
-
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.GruposRow regGrupo = gruposTabla2.FindByidGrupo(idGrupo);
-
-            alumnosTabla2 = alumnosAdapter2.GetDataConIdGrupo();
-            int[] tabla = new int[alumnosTabla2.Count];
-
-
-            for (int i = 0; i < alumnosTabla2.Count; i++)
+            if (fila >= 0)
             {
-               tabla[i] = alumnosTabla2[i].idGrupo;
-            }
+                if (DialogResult.No == MessageBox.Show("¿está seguro de eliminar a:\n" + dgv2.Rows[fila].Cells["nombre"].Value.ToString() + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+                    return;
+                // obtengo el id del alumno que quiero eliminar
+                int idGrupo = Convert.ToInt32(dgv2.Rows[fila].Cells[2].Value);
 
-            if (!tabla.Contains(idGrupo))
-            {
+                // Obtengo el registro correspondiente a dicho alumno
+                DataSet1.GruposRow regGrupo = gruposTabla2.FindByidGrupo(idGrupo);
+
+                alumnosTabla2 = alumnosAdapter2.GetDataConIdGrupo();
+                int[] tabla = new int[alumnosTabla2.Count];
 
 
-                // elimino el registro
-                regGrupo.Delete();
+                for (int i = 0; i < alumnosTabla2.Count; i++)
+                {
+                    tabla[i] = alumnosTabla2[i].idGrupo;
+                }
 
-                // actualizo la BD
-                gruposAdapter2.Update(regGrupo);
+                if (!tabla.Contains(idGrupo))
+                {
 
-                //** Otra forma: borramos el registro en la BD y recargamos la tabla
-                //alumnosAdapter.DeleteByIdAlumno(idAlumno);
-                //// cargar de nuevo la tabla del dgv
-                //CargaAlumnosGrupo();
-            }
-            else
-            {
-                MessageBox.Show("Hay usuarios asignados a este grupo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cambio = true;
+                    // elimino el registro
+                    regGrupo.Delete();
+
+                    // actualizo la BD
+                    gruposAdapter2.Update(regGrupo);
+
+                    //** Otra forma: borramos el registro en la BD y recargamos la tabla
+                    //alumnosAdapter.DeleteByIdAlumno(idAlumno);
+                    //// cargar de nuevo la tabla del dgv
+                    //CargaAlumnosGrupo();
+                }
+                else
+                {
+                    MessageBox.Show("Hay usuarios asignados a este grupo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -154,6 +159,7 @@ namespace GestionAlumnosFP_V1
                 fDetalleGrupo.Grupo = grupo;
                 if (fDetalleGrupo.ShowDialog() == DialogResult.OK)
                 {
+                    cambio = true;
                     // actualizo el registro
                     regGrupo.nombre = grupo.Nombre;
                     regGrupo.alias = grupo.Alias;

@@ -11,7 +11,7 @@ using GestionAlumnosFP_V1.DataSet1TableAdapters;
 
 namespace GestionAlumnosFP_V1
 {
-    public partial class Form1 : Form
+    public partial class FormAlumno : Form
     {
         // Construimos los adaptadores y tablas que necesitamos
         GruposTableAdapter gruposAdapter = new GruposTableAdapter();
@@ -26,7 +26,7 @@ namespace GestionAlumnosFP_V1
         FormGrupos fGrupo = new FormGrupos();
 
         bool comboCargado = false;
-        public Form1()
+        public FormAlumno()
         {
             InitializeComponent();
         }
@@ -154,26 +154,29 @@ namespace GestionAlumnosFP_V1
 
         private void BorarRegistro(int fila)
         {
-            if (DialogResult.No == MessageBox.Show("¿está seguro de eliminar a:\n" + dgv.Rows[fila].Cells["apellidosNombre"].Value.ToString() + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
-                return;
-            // obtengo el id del alumno que quiero eliminar
-            int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
+            if (fila >= 0)
+            {
+                if (DialogResult.No == MessageBox.Show("¿está seguro de eliminar a:\n" + dgv.Rows[fila].Cells["apellidosNombre"].Value.ToString() + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+                    return;
+                // obtengo el id del alumno que quiero eliminar
+                int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
 
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
+                // Obtengo el registro correspondiente a dicho alumno
+                DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
 
-            // elimino el registro
-            regAlumno.Delete();
+                // elimino el registro
+                regAlumno.Delete();
 
-            // actualizo la BD
-            alumnosAdapter.Update(regAlumno);
+                // actualizo la BD
+                alumnosAdapter.Update(regAlumno);
 
-            lbCabecera.Text = String.Format("Alumnos de {0} ({1} alumnos)", cbGrupos.Text, dgv.RowCount);
+                lbCabecera.Text = String.Format("Alumnos de {0} ({1} alumnos)", cbGrupos.Text, dgv.RowCount);
 
-            //** Otra forma: borramos el registro en la BD y recargamos la tabla
-            //alumnosAdapter.DeleteByIdAlumno(idAlumno);
-            //// cargar de nuevo la tabla del dgv
-            //CargaAlumnosGrupo();
+                //** Otra forma: borramos el registro en la BD y recargamos la tabla
+                //alumnosAdapter.DeleteByIdAlumno(idAlumno);
+                //// cargar de nuevo la tabla del dgv
+                //CargaAlumnosGrupo();
+            }
         }
 
         private void EditarRegistro(int fila)
@@ -209,8 +212,9 @@ namespace GestionAlumnosFP_V1
 
         private void btnGrupo_Click(object sender, EventArgs e)
         {
-            fGrupo.Refresh();
+            fGrupo.cambio = false;
             fGrupo.ShowDialog();
+            if (fGrupo.cambio)
             CargaCombos();
         }
     }

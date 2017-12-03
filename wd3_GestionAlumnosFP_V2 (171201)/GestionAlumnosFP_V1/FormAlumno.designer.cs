@@ -1,6 +1,6 @@
 ﻿namespace GestionAlumnosFP_V1
 {
-    partial class Form1
+    partial class FormAlumno
     {
         /// <summary>
         /// Variable del diseñador necesaria.
