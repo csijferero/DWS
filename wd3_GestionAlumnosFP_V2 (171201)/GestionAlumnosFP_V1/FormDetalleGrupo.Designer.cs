@@ -140,7 +140,7 @@
             // 
             this.txbTutor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTutor.Location = new System.Drawing.Point(22, 153);
-            this.txbTutor.MaxLength = 5;
+            this.txbTutor.MaxLength = 4;
             this.txbTutor.Name = "txbTutor";
             this.txbTutor.Size = new System.Drawing.Size(44, 29);
             this.txbTutor.TabIndex = 86;

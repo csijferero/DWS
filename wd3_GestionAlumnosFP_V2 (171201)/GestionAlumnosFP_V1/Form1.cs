@@ -209,7 +209,9 @@ namespace GestionAlumnosFP_V1
 
         private void btnGrupo_Click(object sender, EventArgs e)
         {
-            fGrupo.Show();
+            fGrupo.Refresh();
+            fGrupo.ShowDialog();
+            CargaCombos();
         }
     }
 }

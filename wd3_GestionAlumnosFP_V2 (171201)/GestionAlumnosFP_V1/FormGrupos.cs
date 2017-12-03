@@ -66,7 +66,7 @@ namespace GestionAlumnosFP_V1
             // Construimos un registro nuevo
             DataSet1.GruposRow regGrupo = gruposTabla2.NewGruposRow();
 
-            //fDetalleGrupo.Grupo = grupo;
+            fDetalleGrupo.Grupo = grupo;
             if (fDetalleGrupo.ShowDialog() == DialogResult.OK)
             {
                 // actualizo el registro
@@ -74,6 +74,7 @@ namespace GestionAlumnosFP_V1
                 regGrupo.alias = grupo.Alias;
                 regGrupo.idGrupo = grupo.Idgrupo;
                 regGrupo.idTutor = grupo.Idtutor;
+                regGrupo.idDpto = grupo.Iddpto;
 
                 gruposTabla2.AddGruposRow(regGrupo);
                 // actualizo la bd

@@ -78,10 +78,13 @@ namespace GestionAlumnosFP_V1
 
             gruposTabla2 = gruposAdapter2.GetDataAlias();
             string[] tabla = new string[gruposTabla2.Count];
-            for (int i = 0; i < gruposTabla2.Count; i++)
+            if (grupo != null)
             {
-                if(gruposTabla2[i].alias != grupo.Alias)
-                tabla[i] = gruposTabla2[i].alias;
+                for (int i = 0; i < gruposTabla2.Count; i++)
+                {
+                    if (gruposTabla2[i].alias != grupo.Alias)
+                        tabla[i] = gruposTabla2[i].alias;
+                }
             }
 
 
