@@ -81,10 +81,16 @@ namespace GestionAlumnosFP_V1
             string[] tabla = txbApellNom.Text.Split(',');
 
 
-            if ((txbTelefono.Text == String.Empty && txbMovil.Text == String.Empty) || cbGruposDetalle.Text == String.Empty)
+            if (txbTelefono.Text == String.Empty && txbMovil.Text == String.Empty)
             {
                 text += "Debe haber un numero de contacto\n";
                 error = true;
+            }
+            if (cbGruposDetalle.SelectedItem == null)
+            {
+                text += "Debe seleccionar un grupo\n";
+                error = true;
+                errorProvider1.SetError(cbGruposDetalle, "Vacio");
             }
             if ((txbMovil.Text.Length != 9 || (txbMovil.Text.Substring(0, 1) != "6" && txbMovil.Text.Substring(0, 1) != "7")) && txbMovil.Text.Length != 0)
             {
@@ -100,7 +106,7 @@ namespace GestionAlumnosFP_V1
             }
             if (!Regex.IsMatch(txbMail.Text, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
             {
-                text += "Formato de correo electronico incorrecto";
+                text += "Formato de correo electronico incorrecto\n";
                 error = true;
                 errorProvider1.SetError(txbMail, "Error de formato");
             }
@@ -108,14 +114,14 @@ namespace GestionAlumnosFP_V1
             {
                 if (txbDni.Text[8] != '-' || (txbDni.Text[9] > 'Z' || txbDni.Text[9] < 'A'))
                 {
-                    text += "Formato de DNI incorrecto";
+                    text += "Formato de DNI incorrecto\n";
                     error = true;
                     errorProvider1.SetError(txbDni, "Error de formato");
                 }
             }
             else
             {
-                text += "Formato de DNI incorrecto";
+                text += "Formato de DNI incorrecto\n";
                 error = true;
                 errorProvider1.SetError(txbDni, "Error de formato");
             }
@@ -123,18 +129,18 @@ namespace GestionAlumnosFP_V1
             {
                 if (tabla[1][0] != ' ')
                 {
-                    text += "Formato de appelidos y nombre incorrecto";
+                    text += "Formato de appelidos y nombre incorrecto\n";
                     error = true;
                     errorProvider1.SetError(txbApellNom, "Error de formato");
                 }
             }
             else
             {
-                text += "Formato de appelidos y nombre incorrecto";
+                text += "Formato de apelidos y nombre incorrecto\n";
                 error = true;
                 errorProvider1.SetError(txbApellNom, "Error de formato");
             }
-            if ((txbTelefono.Text == alum.Telefono && txbMovil.Text == alum.Movil && txbMail.Text == alum.Email && txbDni.Text == alum.Dni && txbApellNom.Text == alum.ApellidosNombre && (int)cbGruposDetalle.SelectedValue == alum.IdGrupo) && !error)
+            if ((txbTelefono.Text == alum.Telefono && txbMovil.Text == alum.Movil && txbMail.Text == alum.Email && txbDni.Text == alum.Dni && txbApellNom.Text == alum.ApellidosNombre && Convert.ToInt32(cbGruposDetalle.SelectedValue) == alum.IdGrupo) && !error)
             {
                 text += "No se han realizado cambios";
                 error = true;

@@ -73,6 +73,8 @@ namespace GestionAlumnosFP_V1
 
         private bool HayErrorEnFormulario()
         {
+            errorProvider1.Clear();
+
             string text = "";
             bool error = false;
 
