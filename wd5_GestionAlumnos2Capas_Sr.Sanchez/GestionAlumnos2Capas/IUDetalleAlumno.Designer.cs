@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbGruposDetalle = new System.Windows.Forms.ComboBox();
@@ -43,6 +44,8 @@
             this.txbIndice = new System.Windows.Forms.TextBox();
             this.txbApellNom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -182,6 +185,10 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Apellidos,Nombre";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // IUDetalleAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +213,7 @@
             this.Name = "IUDetalleAlumno";
             this.Text = "FormDetalleAlumno";
             this.Load += new System.EventHandler(this.IUDetalleAlumno_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +235,7 @@
         private System.Windows.Forms.TextBox txbIndice;
         private System.Windows.Forms.TextBox txbApellNom;
         private System.Windows.Forms.Label label3;
-        internal System.Windows.Forms.ComboBox cbGruposDetalle;
+        protected internal System.Windows.Forms.ComboBox cbGruposDetalle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

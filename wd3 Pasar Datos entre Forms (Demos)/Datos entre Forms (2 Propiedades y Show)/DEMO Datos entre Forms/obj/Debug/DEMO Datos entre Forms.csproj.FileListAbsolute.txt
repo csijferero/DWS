@@ -75,3 +75,5 @@ D:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Pr
 D:\2º\Programación\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Propiedades y Show)\DEMO Datos entre Forms\obj\Debug\DEMO Datos entre Forms.csproj.GenerateResource.Cache
 C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Propiedades y Show)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
 C:\Users\JoseAntonio\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Propiedades y Show)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb
+C:\Users\ALUM02\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Propiedades y Show)\DEMO Datos entre Forms\obj\Debug\DEMO 2.exe
+C:\Users\ALUM02\Source\Repos\DWS\wd3 Pasar Datos entre Forms (Demos)\Datos entre Forms (2 Propiedades y Show)\DEMO Datos entre Forms\obj\Debug\DEMO 2.pdb

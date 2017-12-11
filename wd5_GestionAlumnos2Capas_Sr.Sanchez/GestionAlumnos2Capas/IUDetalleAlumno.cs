@@ -7,12 +7,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace InterfazUsuario
 {
     public partial class IUDetalleAlumno : Form
     {
+        IUAlumnos IUAlumnos;
         Alumno alum;
         public IUDetalleAlumno()
         {
@@ -34,6 +36,10 @@ namespace InterfazUsuario
 
         private void IUDetalleAlumno_Load(object sender, EventArgs e)
         {
+            IUAlumnos = ((IUAlumnos)(this.Owner));
+            //Si se elige añadir Alumno sin recibir alumno lo tendré que crear aquí
+            if (alum==null)
+                alum = new Alumno();
             // si indice es negativo oculto el textBox, en caso contrario lo muestro
             txbIndice.Visible = (alum.IdAlumno >= 0);
 
@@ -72,7 +78,81 @@ namespace InterfazUsuario
 
         private bool HayErrorEnFormulario()
         {
-            return false;
+            errorProvider1.Clear();
+
+            string text = "";
+            bool error = false;
+            string[] tabla = txbApellNom.Text.Split(',');
+
+
+            if (txbTelefono.Text == String.Empty && txbMovil.Text == String.Empty)
+            {
+                text += "Debe haber un numero de contacto\n";
+                error = true;
+            }
+            if (cbGruposDetalle.SelectedItem == null)
+            {
+                text += "Debe seleccionar un grupo\n";
+                error = true;
+                errorProvider1.SetError(cbGruposDetalle, "Vacio");
+            }
+            if ((txbMovil.Text.Length != 9 || (txbMovil.Text.Substring(0, 1) != "6" && txbMovil.Text.Substring(0, 1) != "7")) && txbMovil.Text.Length != 0)
+            {
+                text += "El movil debe tener 9 digitos y empezar por 6 o 7\n";
+                error = true;
+                errorProvider1.SetError(txbMovil, "Error de formato");
+            }
+            if ((txbTelefono.Text.Length != 9 || (txbTelefono.Text.Substring(0, 3) != "954" && txbTelefono.Text.Substring(0, 3) != "955")) && txbTelefono.Text.Length != 0)
+            {
+                text += "El telefono debe tener 9 digitos y empezar por 954 o 955\n";
+                error = true;
+                errorProvider1.SetError(txbTelefono, "Error de formato");
+            }
+            if (!Regex.IsMatch(txbMail.Text, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
+            {
+                text += "Formato de correo electronico incorrecto\n";
+                error = true;
+                errorProvider1.SetError(txbMail, "Error de formato");
+            }
+            if (txbDni.Text.Length == 10)
+            {
+                if (txbDni.Text[8] != '-' || (txbDni.Text[9] > 'Z' || txbDni.Text[9] < 'A'))
+                {
+                    text += "Formato de DNI incorrecto\n";
+                    error = true;
+                    errorProvider1.SetError(txbDni, "Error de formato");
+                }
+            }
+            else
+            {
+                text += "Formato de DNI incorrecto\n";
+                error = true;
+                errorProvider1.SetError(txbDni, "Error de formato");
+            }
+            if (tabla.Length == 2)
+            {
+                if (tabla[1][0] != ' ')
+                {
+                    text += "Formato de appelidos y nombre incorrecto\n";
+                    error = true;
+                    errorProvider1.SetError(txbApellNom, "Error de formato");
+                }
+            }
+            else
+            {
+                text += "Formato de apelidos y nombre incorrecto\n";
+                error = true;
+                errorProvider1.SetError(txbApellNom, "Error de formato");
+            }
+            if ((txbTelefono.Text == alum.Telefono && txbMovil.Text == alum.Movil && txbMail.Text == alum.Email && txbDni.Text == alum.Dni && txbApellNom.Text == alum.ApellidosNombre && Convert.ToInt32(cbGruposDetalle.SelectedValue) == alum.IdGrupo) && !error)
+            {
+                text += "No se han realizado cambios";
+                error = true;
+            }
+            if (error)
+                MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            return error;
         }
     }
 }
