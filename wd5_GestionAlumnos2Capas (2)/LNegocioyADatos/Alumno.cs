@@ -38,25 +38,25 @@ namespace LNegocioyADatos
             this.email = email;
         }
 
-        //public Alumno(DataSet1.AlumnosRow regAlumno)
-        //{
-        //    this.idAlumno = regAlumno.idAlumno;
-        //    this.idGrupo = regAlumno.idGrupo;
-        //    this.apellidosNombre = regAlumno.apellidosNombre;
-        //    this.dni = regAlumno.dni;
-        //    if (regAlumno.IsmovilNull())
-        //        this.movil = String.Empty;
-        //    else
-        //        this.movil = regAlumno.movil;
-        //    if (regAlumno.IstelefonoNull())
-        //        this.telefono = String.Empty;
-        //    else
-        //        this.telefono = regAlumno.telefono;
-        //    if (regAlumno.IsemailNull())
-        //        this.email = String.Empty;
-        //    else
-        //        this.email = regAlumno.email;
-        //}
+        public Alumno(DataSet1.AlumnosRow regAlumno)
+        {
+            this.idAlumno = regAlumno.idAlumno;
+            this.idGrupo = regAlumno.idGrupo;
+            this.apellidosNombre = regAlumno.apellidosNombre;
+            this.dni = regAlumno.dni;
+            if (regAlumno.IsmovilNull())
+                this.movil = String.Empty;
+            else
+                this.movil = regAlumno.movil;
+            if (regAlumno.IstelefonoNull())
+                this.telefono = String.Empty;
+            else
+                this.telefono = regAlumno.telefono;
+            if (regAlumno.IsemailNull())
+                this.email = String.Empty;
+            else
+                this.email = regAlumno.email;
+        }
 
         #region Propiedades
 

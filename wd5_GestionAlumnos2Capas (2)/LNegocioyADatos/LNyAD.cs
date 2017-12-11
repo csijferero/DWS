@@ -44,5 +44,47 @@ namespace LNegocioyADatos
 
             return alumnosTabla;
         }
+
+        public static void BorarRegistro(int idAlumno)
+        {
+            // Obtengo el registro correspondiente a dicho alumno
+            DataSet1.AlumnosRow regAlumno = LNyAD.alumnosTabla.FindByidAlumno(idAlumno);
+
+            // elimino el registro
+            regAlumno.Delete();
+
+            // actualizo la BD
+            LNyAD.alumnosAdapter.Update(regAlumno);
+
+        }
+
+        public static Alumno ObtenerRegistro(int idAlumno)
+        {
+            // Obtengo el registro correspondiente a dicho alumno
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
+
+            // Construimos el alumnos a editar
+            Alumno alum = new Alumno(regAlumno);
+
+            return alum;
+        }
+
+        public static void EditRegistro(Alumno alum)
+        {
+            // Obtengo el registro correspondiente a dicho alumno
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(alum.IdAlumno);
+
+
+            // actualizo el registro
+            regAlumno.apellidosNombre = alum.ApellidosNombre;
+            regAlumno.dni = alum.Dni;
+            regAlumno.movil = alum.Movil;
+            regAlumno.telefono = alum.Telefono;
+            regAlumno.email = alum.Email;
+            regAlumno.idGrupo = alum.IdGrupo;
+
+            // actualizo la bd
+            alumnosAdapter.Update(regAlumno);
+        }
     }
 }

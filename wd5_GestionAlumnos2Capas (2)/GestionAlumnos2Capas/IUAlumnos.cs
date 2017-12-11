@@ -49,7 +49,7 @@ namespace InterfazUsuario
             cbGrupos.DisplayMember = "Nombre"; // <-- Indicamos qué propiedad se va a mostrar
             cbGrupos.ValueMember = "IdGrupo";// <-- Indicamos qué propiedad se va a guardar en Value
             comboCargado = true;
-            
+
             // Y la lista básica del combo del formDetalle
             fDetalle.cbGruposDetalle.DataSource = listaGrupos;
             fDetalle.cbGruposDetalle.DisplayMember = "Nombre"; // <-- Indicamos qué propiedad se va a mostrar
@@ -79,5 +79,61 @@ namespace InterfazUsuario
             if (comboCargado)
                 CargaAlumnosGrupo();
         }
+
+
+        ///--------------------------------------------------------------------------------//
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int colum = e.ColumnIndex;
+            int fila = e.RowIndex;
+
+            if (colum == 0) // <-- he pulsado el botón Editar
+                EditarRegistro(fila);
+            else if (dgv.Columns[colum].HeaderText == "Del")// <-- he pulsado el botón Borrar
+                BorarRegistro(fila);
+            else
+                return; // <-- No he pulsado ninguno de los botones que me iteresan
+
+        }
+
+        private void BorarRegistro(int fila)
+        {
+            if (fila >= 0)
+            {
+                if (DialogResult.No == MessageBox.Show("¿está seguro de eliminar a:\n" + dgv.Rows[fila].Cells["apellidosNombre"].Value.ToString() + "?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+                    return;
+                // obtengo el id del alumno que quiero eliminar
+                int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
+
+                LNyAD.BorarRegistro(idAlumno);
+
+                lbCabecera.Text = String.Format("Alumnos de {0} ({1} alumnos)", cbGrupos.Text, dgv.RowCount);
+
+                //** Otra forma: borramos el registro en la BD y recargamos la tabla
+                //alumnosAdapter.DeleteByIdAlumno(idAlumno);
+                //// cargar de nuevo la tabla del dgv
+                //CargaAlumnosGrupo();
+            }
+        }
+
+        private void EditarRegistro(int fila)
+        {
+            if (fila >= 0)
+            {
+                // obtengo el id del alumno que quiero eliminar
+                int idAlumno = Convert.ToInt32(dgv.Rows[fila].Cells[2].Value);
+
+                // Construimos un alumno nuevo
+                Alumno alum = LNyAD.ObtenerRegistro(idAlumno);
+
+                fDetalle.Alum = alum;
+                if (fDetalle.ShowDialog() == DialogResult.OK)
+                {
+                    LNyAD.EditRegistro(alum);
+                }
+            }
+        }
+
+
     }
 }
