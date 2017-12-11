@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfazUsuario", "GestionAlumnos2Capas\InterfazUsuario.csproj", "{BCB7653E-78DA-41D1-9169-92F0AB442A99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LNegocioyADatos", "LNegocioyADatos\LNegocioyADatos.csproj", "{B70613F9-E9C8-4150-9766-1B090D461110}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCB7653E-78DA-41D1-9169-92F0AB442A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB7653E-78DA-41D1-9169-92F0AB442A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB7653E-78DA-41D1-9169-92F0AB442A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB7653E-78DA-41D1-9169-92F0AB442A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70613F9-E9C8-4150-9766-1B090D461110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70613F9-E9C8-4150-9766-1B090D461110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70613F9-E9C8-4150-9766-1B090D461110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70613F9-E9C8-4150-9766-1B090D461110}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
