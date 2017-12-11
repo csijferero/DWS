@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD_AlumnosFPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD_AlumnosFPConnectionString (Settings)" PropertyReference="ApplicationSettings.LNegocioyADatos.Properties.Settings.GlobalReference.Default.BD_AlumnosFPConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD_AlumnosFPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD_AlumnosFPConnectionString (Settings)" PropertyReference="ApplicationSettings.LNegocioyAdatos.Properties.Settings.GlobalReference.Default.BD_AlumnosFPConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AlumnosTableAdapter" GeneratorDataComponentClassName="AlumnosTableAdapter" Name="Alumnos" UserDataComponentName="AlumnosTableAdapter">
@@ -101,7 +101,7 @@ WHERE idGrupo=?</CommandText>
               <DbSource ConnectionRef="BD_AlumnosFPConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataConAliasGrupo" GetMethodModifier="Public" GetMethodName="GetDataConAliasGrupo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataConAliasGrupo" UserSourceName="GetDataConAliasGrupo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  Alumnos.idAlumno, Alumnos.idGrupo, Grupos.alias AS Grupo, Alumnos.apellidosNombre, Alumnos.telefono, Alumnos.movil, Alumnos.dni, Alumnos.email
+                    <CommandText>SELECT        Alumnos.idAlumno, Alumnos.idGrupo, Grupos.alias AS Grupo, Alumnos.apellidosNombre, Alumnos.telefono, Alumnos.movil, Alumnos.dni, Alumnos.email
 FROM Alumnos, Grupos
 WHERE Alumnos.idGrupo = Grupos.idGrupo
 </CommandText>

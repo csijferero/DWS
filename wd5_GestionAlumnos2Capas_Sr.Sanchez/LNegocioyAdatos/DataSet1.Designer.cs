@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace LNegocioyADatos {
+namespace LNegocioyAdatos {
     
     
     /// <summary>
@@ -1453,7 +1453,7 @@ namespace LNegocioyADatos {
         }
     }
 }
-namespace LNegocioyADatos.DataSet1TableAdapters {
+namespace LNegocioyAdatos.DataSet1TableAdapters {
     
     
     /// <summary>
@@ -1642,7 +1642,7 @@ namespace LNegocioyADatos.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.BD_AlumnosFPConnectionString;
+            this._connection.ConnectionString = global::LNegocioyAdatos.Properties.Settings.Default.BD_AlumnosFPConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1662,9 +1662,9 @@ namespace LNegocioyADatos.DataSet1TableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("idGrupo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "idGrupo", global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT  Alumnos.idAlumno, Alumnos.idGrupo, Grupos.alias AS Grupo, Alumnos.apellid" +
-                "osNombre, Alumnos.telefono, Alumnos.movil, Alumnos.dni, Alumnos.email\r\nFROM Alum" +
-                "nos, Grupos\r\nWHERE Alumnos.idGrupo = Grupos.idGrupo\r\n";
+            this._commandCollection[2].CommandText = "SELECT        Alumnos.idAlumno, Alumnos.idGrupo, Grupos.alias AS Grupo, Alumnos.a" +
+                "pellidosNombre, Alumnos.telefono, Alumnos.movil, Alumnos.dni, Alumnos.email\r\nFRO" +
+                "M Alumnos, Grupos\r\nWHERE Alumnos.idGrupo = Grupos.idGrupo\r\n";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2126,7 +2126,7 @@ namespace LNegocioyADatos.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.BD_AlumnosFPConnectionString;
+            this._connection.ConnectionString = global::LNegocioyAdatos.Properties.Settings.Default.BD_AlumnosFPConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

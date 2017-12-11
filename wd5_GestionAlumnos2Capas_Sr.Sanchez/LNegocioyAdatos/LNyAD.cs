@@ -1,12 +1,11 @@
-﻿using System;
+﻿using LNegocioyAdatos.DataSet1TableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using LNegocioyADatos.DataSet1TableAdapters;
-
-namespace LNegocioyADatos
+namespace LNegocioyAdatos
 {
     public class LNyAD
     {
@@ -17,16 +16,15 @@ namespace LNegocioyADatos
         static AlumnosTableAdapter alumnosAdapter = new AlumnosTableAdapter();
         static DataSet1.AlumnosDataTable alumnosTabla = new DataSet1.AlumnosDataTable();
 
-        static public List<Grupo> ListaGrupos()
+        static public List<Grupo> ListaGrupo()
         {
             List<Grupo> listaGrupos = new List<Grupo>();
-            // cargamos la tabla de Grupos
-            // gruposAdapt.Fill(gruposTabla);
+           // cargamos la tabla de Grupos
+           // gruposAdapt.Fill(gruposTabla);
             gruposTabla = gruposAdapter.GetData();
 
             foreach (DataSet1.GruposRow regGrupo in gruposTabla)
                 listaGrupos.Add(new Grupo(regGrupo));
-
             return listaGrupos;
         }
 
@@ -41,40 +39,48 @@ namespace LNegocioyADatos
                 // ahora la uso
                 alumnosTabla = alumnosAdapter.GetDataByIdGrupo(idGrupo);
             }
-
             return alumnosTabla;
+
         }
 
-        public static void BorarRegistro(int idAlumno)
+        public static void BorrarRegistroAlumno(int idAlumno)
         {
+
             // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = LNyAD.alumnosTabla.FindByidAlumno(idAlumno);
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
 
             // elimino el registro
             regAlumno.Delete();
 
             // actualizo la BD
-            LNyAD.alumnosAdapter.Update(regAlumno);
-
+            alumnosAdapter.Update(regAlumno);
         }
-
-        public static Alumno ObtenerRegistro(int idAlumno)
+        public static Alumno ObtenerAlumnoPorId(int idAlumno)
         {
             // Obtengo el registro correspondiente a dicho alumno
             DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(idAlumno);
-
             // Construimos el alumnos a editar
             Alumno alum = new Alumno(regAlumno);
-
             return alum;
         }
 
-        public static void EditRegistro(Alumno alum)
+        public static void ActualizarAlumno(Alumno alum)
         {
-            // Obtengo el registro correspondiente a dicho alumno
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(alum.IdAlumno);
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.FindByidAlumno(alum.IdAlumno); ;
+            regAlumno.apellidosNombre = alum.ApellidosNombre;
+            regAlumno.dni = alum.Dni;
+            regAlumno.movil = alum.Movil;
+            regAlumno.telefono = alum.Telefono;
+            regAlumno.email = alum.Email;
+            regAlumno.idGrupo = alum.IdGrupo;
+            // actualizo la bd
+            alumnosAdapter.Update(regAlumno);
+        }
 
-
+        public static void InsertarAlumno(Alumno alum)
+        {
+            // Construimos un registro nuevo
+            DataSet1.AlumnosRow regAlumno = alumnosTabla.NewAlumnosRow();
             // actualizo el registro
             regAlumno.apellidosNombre = alum.ApellidosNombre;
             regAlumno.dni = alum.Dni;
@@ -83,6 +89,7 @@ namespace LNegocioyADatos
             regAlumno.email = alum.Email;
             regAlumno.idGrupo = alum.IdGrupo;
 
+            alumnosTabla.AddAlumnosRow(regAlumno);
             // actualizo la bd
             alumnosAdapter.Update(regAlumno);
         }

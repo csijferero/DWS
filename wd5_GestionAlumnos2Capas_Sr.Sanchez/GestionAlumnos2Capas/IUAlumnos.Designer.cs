@@ -94,19 +94,17 @@
             // 
             // Del
             // 
-            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Del.DefaultCellStyle = dataGridViewCellStyle2;
             this.Del.HeaderText = "Del";
             this.Del.Name = "Del";
             this.Del.ReadOnly = true;
             this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Del.Text = "X";
-            this.Del.ToolTipText = "Eliminar";
-            this.Del.UseColumnTextForButtonValue = true;
-            this.Del.Width = 40;
+            this.Del.ToolTipText = "Borrar";
+            this.Del.Width = 38;
             // 
             // label1
             // 
@@ -136,6 +134,7 @@
             this.btnAnadir.TabIndex = 21;
             this.btnAnadir.Text = "Añadir Registro";
             this.btnAnadir.UseVisualStyleBackColor = true;
+            this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
             // 
             // IUAlumnos
             // 
@@ -150,7 +149,7 @@
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IUAlumnos";
-            this.Text = "Gestión de Alumnos de FP (V5) Por capas";
+            this.Text = "Gestión de Alumnos de FP (V5 Por Capas)";
             this.Load += new System.EventHandler(this.IUAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
