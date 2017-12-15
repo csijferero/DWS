@@ -93,24 +93,5 @@ namespace LNegocioyAdatos
             // actualizo la bd
             alumnosAdapter.Update(regAlumno);
         }
-
-        //Añadir alumno sin recibir alumno
-        public static void InsertarAlumno()
-        {
-            Alumno alum = new Alumno();
-            // Construimos un registro nuevo
-            DataSet1.AlumnosRow regAlumno = alumnosTabla.NewAlumnosRow();
-            // actualizo el registro
-            regAlumno.apellidosNombre = alum.ApellidosNombre;
-            regAlumno.dni = alum.Dni;
-            regAlumno.movil = alum.Movil;
-            regAlumno.telefono = alum.Telefono;
-            regAlumno.email = alum.Email;
-            regAlumno.idGrupo = alum.IdGrupo;
-
-            alumnosTabla.AddAlumnosRow(regAlumno);
-            // actualizo la bd
-            alumnosAdapter.Update(regAlumno);
-        }
     }
 }

@@ -116,11 +116,16 @@ namespace InterfazUsuario
 
         private void btnAnadir_Click(object sender, EventArgs e)
         {
+            // Construimos un alumno nuevo
+            Alumno alum = new Alumno();
+
+            // Asigno el alumno vacío a la propiedad correspondiente del formulario...
+            fDetalle.Alum = alum;
             //... y muestro el formulario para poder modificar
             if (fDetalle.ShowDialog() == DialogResult.OK)
             {
                 // si he salido con OK, inserto
-                LNyAD.InsertarAlumno();
+                LNyAD.InsertarAlumno(alum);
                 // Para que aparezca el idAlumno real de la BD volvemos a cargar la tabla
                 CargaAlumnosGrupo();
             }
