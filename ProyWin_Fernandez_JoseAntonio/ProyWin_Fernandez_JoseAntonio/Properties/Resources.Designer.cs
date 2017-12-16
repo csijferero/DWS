@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyWin_Fernandez_JoseAntonio.Properties
+namespace InterfazUsuario.Properties
 {
 
 

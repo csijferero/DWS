@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ProyWin_Fernandez_JoseAntonio {
+namespace LNegocioyADatos {
     
     
     /// <summary>
@@ -3712,7 +3712,7 @@ namespace ProyWin_Fernandez_JoseAntonio {
         }
     }
 }
-namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
+namespace LNegocioyADatos.taxiDataSetTableAdapters {
     
     
     /// <summary>
@@ -3936,7 +3936,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4486,7 +4486,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5023,7 +5023,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5652,7 +5652,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6157,7 +6157,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6603,7 +6603,7 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7006,18 +7006,39 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::ProyWin_Fernandez_JoseAntonio.Properties.Settings.Default.taxiConnectionString;
+            this._connection.ConnectionString = global::LNegocioyADatos.Properties.Settings.Default.taxiConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idUsuario`, `nombreUsuario`, `claveUsuario`, `accesoUsuario` FROM `usuari" +
                 "os`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT `idUsuario`, `nombreUsuario`, `claveUsuario`, `accesoUsuario` FROM `usuari" +
+                "os` WHERE nombreUsuario=? AND claveUsuario=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "nombreUsuario";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param2";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 45;
+            param.IsNullable = true;
+            param.SourceColumn = "claveUsuario";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7039,6 +7060,29 @@ namespace ProyWin_Fernandez_JoseAntonio.taxiDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual taxiDataSet.usuariosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            taxiDataSet.usuariosDataTable dataTable = new taxiDataSet.usuariosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.usuariosDataTable BuscarPorNombreClave(string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((Param2 == null)) {
+                throw new global::System.ArgumentNullException("Param2");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
+            }
             taxiDataSet.usuariosDataTable dataTable = new taxiDataSet.usuariosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

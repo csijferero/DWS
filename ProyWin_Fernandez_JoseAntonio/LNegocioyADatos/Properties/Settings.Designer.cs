@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace InterfazUsuario.Properties {
+namespace LNegocioyADatos.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
