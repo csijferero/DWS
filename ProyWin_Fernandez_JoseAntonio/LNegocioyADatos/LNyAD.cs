@@ -16,6 +16,15 @@ namespace LNegocioyADatos
         static usuariosTableAdapter usuariosAdapter = new usuariosTableAdapter();
         static taxiDataSet.usuariosDataTable usuariosTabla = new taxiDataSet.usuariosDataTable();
 
+        static conductoresTableAdapter conductoresAdapter = new conductoresTableAdapter();
+        static taxiDataSet.conductoresDataTable conductoresTabla = new taxiDataSet.conductoresDataTable();
+
+        static tarifasTableAdapter tarifasAdapter = new tarifasTableAdapter();
+        static taxiDataSet.tarifasDataTable tarifasTabla = new taxiDataSet.tarifasDataTable();
+
+        static carrerasTableAdapter carrerasAdapter = new carrerasTableAdapter();
+        static taxiDataSet.carrerasDataTable carrerasTabla = new taxiDataSet.carrerasDataTable();
+
         static public List<Clientes> listaClientes()
         {
             List<Clientes> listaClientes = new List<Clientes>();
@@ -30,6 +39,24 @@ namespace LNegocioyADatos
         {
             clientesTabla = clientesAdapter.GetData();
             return clientesTabla;
+        }
+
+        static public taxiDataSet.conductoresDataTable tablaConductores()
+        {
+            conductoresTabla = conductoresAdapter.GetData();
+            return conductoresTabla;
+        }
+
+        static public taxiDataSet.tarifasDataTable tablaTarifas()
+        {
+            tarifasTabla = tarifasAdapter.GetData();
+            return tarifasTabla;
+        }
+
+        static public taxiDataSet.carrerasDataTable tablaCarreras()
+        {
+            carrerasTabla = carrerasAdapter.GetData();
+            return carrerasTabla;
         }
 
         static public Usuarios buscaUsuario(string user, string clave)

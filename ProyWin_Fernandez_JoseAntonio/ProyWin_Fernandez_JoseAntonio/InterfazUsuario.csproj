@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="IUDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="IUDatos.Designer.cs">
+      <DependentUpon>IUDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -65,8 +65,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="IUDatos.resx">
+      <DependentUpon>IUDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -79,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +99,36 @@
       <Project>{23f04a51-da3d-4bb4-aa70-9db1d6aa3cb8}</Project>
       <Name>LNegocioyADatos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi_icon-icons.com_69861.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_22597.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20140705060727.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi_18540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_user_customer_man_male_man_boy_people_1687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\construction_project_plan_building_architect_design_develop-73_icon-icons.com_60243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201407050607271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket_icon-icons.com_54128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi-sign-wallpaper-3202-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi-sign-wallpaper-3202-11.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

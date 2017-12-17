@@ -97,7 +97,8 @@ namespace InterfazUsuario
             else
             {
                 errorProvider1.Clear();
-                MessageBox.Show("Login Realizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IUDatos iuDatos = new IUDatos();
+                iuDatos.ShowDialog();
             }
         }
 
