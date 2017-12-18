@@ -35,6 +35,7 @@
             this.txbPass = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRegistro = new System.Windows.Forms.Button();
             this.gpbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +69,7 @@
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAcceder.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
             this.btnAcceder.Location = new System.Drawing.Point(77, 146);
             this.btnAcceder.Name = "btnAcceder";
@@ -105,12 +106,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnRegistro
+            // 
+            this.btnRegistro.BackColor = System.Drawing.Color.DarkRed;
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.Location = new System.Drawing.Point(27, 465);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(246, 33);
+            this.btnRegistro.TabIndex = 4;
+            this.btnRegistro.Text = "Registrarse";
+            this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(301, 522);
+            this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.gpbLogin);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
@@ -132,5 +147,6 @@
         private System.Windows.Forms.TextBox txbPass;
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnRegistro;
     }
 }

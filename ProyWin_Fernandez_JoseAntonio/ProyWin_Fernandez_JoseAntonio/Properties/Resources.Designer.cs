@@ -94,6 +94,16 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap database_add_insert_21836 {
+            get {
+                object obj = ResourceManager.GetObject("database_add_insert_21836", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap person_user_customer_man_male_man_boy_people_1687 {
             get {
                 object obj = ResourceManager.GetObject("person_user_customer_man_male_man_boy_people_1687", resourceCulture);

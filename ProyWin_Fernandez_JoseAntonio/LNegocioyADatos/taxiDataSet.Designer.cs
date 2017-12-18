@@ -4500,8 +4500,8 @@ namespace LNegocioyADatos.taxiDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, tarifas.numeroTarifa, conductores.nombreConductor, 
-                         clientes.nombreCliente
+            this._commandCollection[1].CommandText = @"SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, carreras.idTarifa, carreras.idConductor, carreras.idCliente, tarifas.numeroTarifa, 
+                         conductores.nombreConductor, clientes.nombreCliente
 FROM            carreras LEFT OUTER JOIN
                          clientes ON carreras.idCliente = clientes.idCliente LEFT OUTER JOIN
                          tarifas ON carreras.idTarifa = tarifas.idTarifa LEFT OUTER JOIN

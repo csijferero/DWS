@@ -13,6 +13,7 @@ namespace InterfazUsuario
 {
     public partial class IUDatos : Form
     {
+        string textoCabecera;
         public IUDatos()
         {
             InitializeComponent();
@@ -22,9 +23,7 @@ namespace InterfazUsuario
         {
 
             //List<Clientes> listaClientes = LNyAD.listaClientes(); //Rellenamos la lista desde la BD
-            
-            //Cambiamos las cabeceras del DataGridView
-            
+
 
         }
 
@@ -37,6 +36,8 @@ namespace InterfazUsuario
             dgv.Columns[3].HeaderText = "Domicilio";
             dgv.Columns[4].HeaderText = "Email";
             dgv.Columns[5].HeaderText = "DNI";
+            textoCabecera = "Usted está viendo: Clientes";
+            lblBase.Text = textoCabecera;
         }
 
         private void tsbConductor_Click(object sender, EventArgs e)
@@ -50,16 +51,22 @@ namespace InterfazUsuario
             dgv.Columns[5].HeaderText = "DNI";
             dgv.Columns[6].HeaderText = "Licencia";
             dgv.Columns[7].HeaderText = "Matrícula";
+            textoCabecera = "Usted está viendo: Conductores";
+            lblBase.Text = textoCabecera;
         }
 
         private void tsbTarifa_Click(object sender, EventArgs e)
         {
+
             dgv.DataSource = LNyAD.tablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
             dgv.Columns[1].HeaderText = "Tarifa";
             dgv.Columns[2].HeaderText = "Precio de Bandera";
             dgv.Columns[3].HeaderText = "Precio por Metros";
             dgv.Columns[4].HeaderText = "Precio por Minuto";
+            textoCabecera = "Usted está viendo: Tarifas";
+            lblBase.Text = textoCabecera;
+
         }
 
         private void tsbCarrera_Click(object sender, EventArgs e)
@@ -74,7 +81,12 @@ namespace InterfazUsuario
             dgv.Columns[3].HeaderText = "Fecha";
             dgv.Columns[4].HeaderText = "Metros";
             dgv.Columns[5].HeaderText = "Duración";
+            dgv.Columns[9].HeaderText = "Tarifa";
+            dgv.Columns[10].HeaderText = "Conductor";
+            dgv.Columns[11].HeaderText = "Cliente";
 
+            textoCabecera = "Usted está viendo: Carreras";
+            lblBase.Text = textoCabecera;
 
         }
     }

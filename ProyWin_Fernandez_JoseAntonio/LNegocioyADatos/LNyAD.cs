@@ -63,8 +63,13 @@ namespace LNegocioyADatos
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorNombreClave(user, clave);
-            foreach (taxiDataSet.usuariosRow regUsuarios in usuariosTabla) //?¿?¿?¿
+
+            if (usuariosTabla.Count != 0)
+            {
+                taxiDataSet.usuariosRow regUsuarios = usuariosTabla[0];
                 usuario = new Usuarios(regUsuarios);
+            }
+
             return usuario;
         }
     }

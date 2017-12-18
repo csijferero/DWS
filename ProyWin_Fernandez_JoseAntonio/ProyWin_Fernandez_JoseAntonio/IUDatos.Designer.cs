@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbConductor = new System.Windows.Forms.ToolStripButton();
             this.tsbCarrera = new System.Windows.Forms.ToolStripButton();
             this.tsbTarifa = new System.Windows.Forms.ToolStripButton();
+            this.btnAñadir = new System.Windows.Forms.Button();
             this.fotoCabecera = new System.Windows.Forms.PictureBox();
+            this.lblBase = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCabecera)).BeginInit();
@@ -49,40 +51,40 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Forte", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.LawnGreen;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LawnGreen;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Forte", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv.EnableHeadersVisualStyles = false;
-            this.dgv.Location = new System.Drawing.Point(12, 238);
+            this.dgv.Location = new System.Drawing.Point(12, 294);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Forte", 15.75F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Aquamarine;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(994, 244);
+            this.dgv.Size = new System.Drawing.Size(994, 188);
             this.dgv.TabIndex = 0;
             // 
             // toolStrip1
@@ -103,7 +105,7 @@
             // 
             // tsbCliente
             // 
-            this.tsbCliente.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbCliente.ForeColor = System.Drawing.Color.Blue;
             this.tsbCliente.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.person_user_customer_man_male_man_boy_people_1687;
             this.tsbCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -115,7 +117,7 @@
             // 
             // tsbConductor
             // 
-            this.tsbConductor.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbConductor.ForeColor = System.Drawing.Color.Blue;
             this.tsbConductor.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_18540;
             this.tsbConductor.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -128,7 +130,7 @@
             // tsbCarrera
             // 
             this.tsbCarrera.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbCarrera.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbCarrera.ForeColor = System.Drawing.Color.Blue;
             this.tsbCarrera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Ticket_icon_icons_com_54128;
             this.tsbCarrera.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -142,7 +144,7 @@
             // tsbTarifa
             // 
             this.tsbTarifa.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tsbTarifa.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbTarifa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbTarifa.ForeColor = System.Drawing.Color.Blue;
             this.tsbTarifa.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.construction_project_plan_building_architect_design_develop_73_icon_icons_com_60243;
             this.tsbTarifa.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -151,6 +153,23 @@
             this.tsbTarifa.Text = "Tarifas";
             this.tsbTarifa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbTarifa.Click += new System.EventHandler(this.tsbTarifa_Click);
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.AutoSize = true;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.database_add_insert_21836;
+            this.btnAñadir.Location = new System.Drawing.Point(0, 134);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(134, 154);
+            this.btnAñadir.TabIndex = 3;
+            this.btnAñadir.Text = "Añadir Registro";
+            this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAñadir.UseVisualStyleBackColor = false;
             // 
             // fotoCabecera
             // 
@@ -162,16 +181,28 @@
             this.fotoCabecera.TabIndex = 2;
             this.fotoCabecera.TabStop = false;
             // 
+            // lblBase
+            // 
+            this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblBase.Location = new System.Drawing.Point(243, 126);
+            this.lblBase.Name = "lblBase";
+            this.lblBase.Size = new System.Drawing.Size(530, 71);
+            this.lblBase.TabIndex = 4;
+            this.lblBase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // IUDatos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1018, 493);
+            this.Controls.Add(this.lblBase);
+            this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.fotoCabecera);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgv);
-            this.Font = new System.Drawing.Font("Forte", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Blue;
             this.Name = "IUDatos";
             this.Text = "Form1";
@@ -194,6 +225,8 @@
         private System.Windows.Forms.ToolStripButton tsbTarifa;
         private System.Windows.Forms.ToolStripButton tsbCarrera;
         private System.Windows.Forms.PictureBox fotoCabecera;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Label lblBase;
     }
 }
 
