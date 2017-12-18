@@ -63,26 +63,6 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _20140705060727 {
-            get {
-                object obj = ResourceManager.GetObject("20140705060727", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _201407050607271 {
-            get {
-                object obj = ResourceManager.GetObject("201407050607271", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap construction_project_plan_building_architect_design_develop_73_icon_icons_com_60243 {
             get {
                 object obj = ResourceManager.GetObject("construction_project_plan_building_architect_design_develop-73_icon-icons.com_602" +
@@ -94,9 +74,9 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap database_add_insert_21836 {
+        internal static System.Drawing.Bitmap new_file_40454 {
             get {
-                object obj = ResourceManager.GetObject("database_add_insert_21836", resourceCulture);
+                object obj = ResourceManager.GetObject("new-file_40454", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -107,6 +87,16 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         internal static System.Drawing.Bitmap person_user_customer_man_male_man_boy_people_1687 {
             get {
                 object obj = ResourceManager.GetObject("person_user_customer_man_male_man_boy_people_1687", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sevitaxi {
+            get {
+                object obj = ResourceManager.GetObject("Sevitaxi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -137,16 +127,6 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         internal static System.Drawing.Bitmap taxi_sign_wallpaper_3202_1 {
             get {
                 object obj = ResourceManager.GetObject("taxi-sign-wallpaper-3202-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap taxi_sign_wallpaper_3202_11 {
-            get {
-                object obj = ResourceManager.GetObject("taxi-sign-wallpaper-3202-11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

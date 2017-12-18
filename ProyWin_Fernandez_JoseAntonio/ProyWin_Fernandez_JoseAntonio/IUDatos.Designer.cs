@@ -161,7 +161,7 @@
             this.btnAñadir.FlatAppearance.BorderSize = 0;
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.database_add_insert_21836;
+            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.new_file_40454;
             this.btnAñadir.Location = new System.Drawing.Point(0, 134);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(134, 154);
@@ -173,7 +173,7 @@
             // 
             // fotoCabecera
             // 
-            this.fotoCabecera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_sign_wallpaper_3202_11;
+            this.fotoCabecera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_sign_wallpaper_3202_1;
             this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
             this.fotoCabecera.Name = "fotoCabecera";
             this.fotoCabecera.Size = new System.Drawing.Size(540, 114);

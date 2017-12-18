@@ -98,7 +98,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources._201407050607271;
+            this.pictureBox1.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Sevitaxi;
             this.pictureBox1.Location = new System.Drawing.Point(27, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 218);

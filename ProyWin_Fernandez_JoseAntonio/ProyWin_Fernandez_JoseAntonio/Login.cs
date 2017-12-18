@@ -113,7 +113,8 @@ namespace InterfazUsuario
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-
+            RegistroUsuario regUser = new RegistroUsuario();
+            regUser.ShowDialog();
         }
     }
 }
