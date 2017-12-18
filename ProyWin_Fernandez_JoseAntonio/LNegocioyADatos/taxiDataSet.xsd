@@ -133,7 +133,21 @@
               <Mapping SourceColumn="idConductor" DataSetColumn="idConductor" />
               <Mapping SourceColumn="idCliente" DataSetColumn="idCliente" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetCarrerasMOD" GetMethodModifier="Public" GetMethodName="GetCarrerasMOD" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetCarrerasMOD" UserSourceName="GetCarrerasMOD">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, tarifas.numeroTarifa, conductores.nombreConductor, 
+                         clientes.nombreCliente
+FROM            carreras LEFT OUTER JOIN
+                         clientes ON carreras.idCliente = clientes.idCliente LEFT OUTER JOIN
+                         tarifas ON carreras.idTarifa = tarifas.idTarifa LEFT OUTER JOIN
+                         conductores ON carreras.idConductor = conductores.idConductor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientesTableAdapter" GeneratorDataComponentClassName="clientesTableAdapter" Name="clientes" UserDataComponentName="clientesTableAdapter">
             <MainSource>

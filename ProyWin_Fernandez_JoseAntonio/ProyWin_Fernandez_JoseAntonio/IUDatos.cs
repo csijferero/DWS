@@ -65,6 +65,16 @@ namespace InterfazUsuario
         private void tsbCarrera_Click(object sender, EventArgs e)
         {
             dgv.DataSource = LNyAD.tablaCarreras(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.Columns["idCarrera"].Visible = false; //Ocultamos los IDs
+            dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
+            dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs
+            dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
+            dgv.Columns[1].HeaderText = "Origen";
+            dgv.Columns[2].HeaderText = "Destino";
+            dgv.Columns[3].HeaderText = "Fecha";
+            dgv.Columns[4].HeaderText = "Metros";
+            dgv.Columns[5].HeaderText = "Duración";
+
 
         }
     }

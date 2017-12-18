@@ -4492,12 +4492,21 @@ namespace LNegocioyADatos.taxiDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idCarrera`, `origen`, `destino`, `fecha`, `metros`, `duracion`, `idTarifa" +
                 "`, `idConductor`, `idCliente` FROM `carreras`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, tarifas.numeroTarifa, conductores.nombreConductor, 
+                         clientes.nombreCliente
+FROM            carreras LEFT OUTER JOIN
+                         clientes ON carreras.idCliente = clientes.idCliente LEFT OUTER JOIN
+                         tarifas ON carreras.idTarifa = tarifas.idTarifa LEFT OUTER JOIN
+                         conductores ON carreras.idConductor = conductores.idConductor";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4519,6 +4528,17 @@ namespace LNegocioyADatos.taxiDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual taxiDataSet.carrerasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            taxiDataSet.carrerasDataTable dataTable = new taxiDataSet.carrerasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.carrerasDataTable GetCarrerasMOD() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             taxiDataSet.carrerasDataTable dataTable = new taxiDataSet.carrerasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

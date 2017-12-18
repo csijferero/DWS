@@ -55,7 +55,7 @@ namespace LNegocioyADatos
 
         static public taxiDataSet.carrerasDataTable tablaCarreras()
         {
-            carrerasTabla = carrerasAdapter.GetData();
+            carrerasTabla = carrerasAdapter.GetCarrerasMOD();
             return carrerasTabla;
         }
 
@@ -63,7 +63,7 @@ namespace LNegocioyADatos
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorNombreClave(user, clave);
-            foreach (taxiDataSet.usuariosRow regUsuarios in usuariosTabla)
+            foreach (taxiDataSet.usuariosRow regUsuarios in usuariosTabla) //?¿?¿?¿
                 usuario = new Usuarios(regUsuarios);
             return usuario;
         }
