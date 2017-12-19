@@ -76,14 +76,14 @@ namespace InterfazUsuario
             errorProvider1.Clear();
             string texto = String.Empty;
 
-            if (txbUser.ForeColor == Color.Gray || txbUser.Text == String.Empty)
+            if (txbUser.ForeColor == Color.Gray || txbUser.Text == String.Empty) //Usuario Vacio
             {
                 texto = "El campo nombre no puede estar vacio\n";
                 errorProvider1.SetError(txbUser, "Campo Vacio");
                 txbPass.Text = String.Empty;
                 txbPass_Leave(null, null);
             }
-            if (txbPass.ForeColor == Color.Gray || txbPass.Text == String.Empty)
+            if (txbPass.ForeColor == Color.Gray || txbPass.Text == String.Empty) //Clave Vacia
             {
                 texto += "El campo clave no puede estar vacio";
                 errorProvider1.SetError(txbPass, "Campo Vacio");
@@ -106,9 +106,14 @@ namespace InterfazUsuario
             if (usu != null) //Si el Usuario y la Contraseña son correctos accedo
             {
                 errorProvider1.Clear();
-                IUDatos iuDatos = new IUDatos();
-                iuDatos.ShowDialog();
-                iuDatos.Dispose();
+                if (usu.AccesoUsuario == 2)
+                    MessageBox.Show("No puedes acceder a la aplicacion hasta que se de de alta tu cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    IUDatos iuDatos = new IUDatos();
+                    iuDatos.ShowDialog();
+                    iuDatos.Dispose();
+                }
             }
             else //Si la contraseña es erronea doy error
             {

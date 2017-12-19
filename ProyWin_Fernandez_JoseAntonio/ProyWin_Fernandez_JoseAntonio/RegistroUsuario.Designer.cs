@@ -66,7 +66,7 @@
             this.gpbLogin.Location = new System.Drawing.Point(27, 262);
             this.gpbLogin.Name = "gpbLogin";
             this.gpbLogin.Size = new System.Drawing.Size(246, 291);
-            this.gpbLogin.TabIndex = 6;
+            this.gpbLogin.TabIndex = 1;
             this.gpbLogin.TabStop = false;
             // 
             // chbTerminos
@@ -76,7 +76,7 @@
             this.chbTerminos.Location = new System.Drawing.Point(16, 194);
             this.chbTerminos.Name = "chbTerminos";
             this.chbTerminos.Size = new System.Drawing.Size(224, 17);
-            this.chbTerminos.TabIndex = 7;
+            this.chbTerminos.TabIndex = 4;
             this.chbTerminos.Text = "Acepto los Terminos y Condiciones";
             this.chbTerminos.UseVisualStyleBackColor = true;
             // 
@@ -88,7 +88,7 @@
             this.btnRegistro.Location = new System.Drawing.Point(72, 227);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(103, 33);
-            this.btnRegistro.TabIndex = 3;
+            this.btnRegistro.TabIndex = 5;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);

@@ -74,6 +74,16 @@ namespace ProyWin_Fernandez_JoseAntonio.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Data_settings_theapplication_3364 {
+            get {
+                object obj = ResourceManager.GetObject("Data_settings_theapplication_3364", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_file_40454 {
             get {
                 object obj = ResourceManager.GetObject("new-file_40454", resourceCulture);

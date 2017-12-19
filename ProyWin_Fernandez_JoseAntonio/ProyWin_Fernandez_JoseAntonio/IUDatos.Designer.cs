@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lblBase = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.fotoCabecera = new System.Windows.Forms.PictureBox();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbConductor = new System.Windows.Forms.ToolStripButton();
             this.tsbCarrera = new System.Windows.Forms.ToolStripButton();
             this.tsbTarifa = new System.Windows.Forms.ToolStripButton();
-            this.btnAñadir = new System.Windows.Forms.Button();
-            this.fotoCabecera = new System.Windows.Forms.PictureBox();
-            this.lblBase = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCabecera)).BeginInit();
@@ -51,23 +52,23 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LawnGreen;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LawnGreen;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv.EnableHeadersVisualStyles = false;
@@ -77,12 +78,12 @@
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Aquamarine;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(994, 188);
             this.dgv.TabIndex = 0;
@@ -102,6 +103,60 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1018, 131);
             this.toolStrip1.TabIndex = 1;
+            // 
+            // lblBase
+            // 
+            this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblBase.Location = new System.Drawing.Point(243, 126);
+            this.lblBase.Name = "lblBase";
+            this.lblBase.Size = new System.Drawing.Size(530, 71);
+            this.lblBase.TabIndex = 4;
+            this.lblBase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Data_settings_theapplication_3364;
+            this.button1.Location = new System.Drawing.Point(876, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 154);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Administrar Usuarios";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.AutoSize = true;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.new_file_40454;
+            this.btnAñadir.Location = new System.Drawing.Point(0, 134);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(134, 154);
+            this.btnAñadir.TabIndex = 3;
+            this.btnAñadir.Text = "Añadir Registro";
+            this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            // 
+            // fotoCabecera
+            // 
+            this.fotoCabecera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_sign_wallpaper_3202_1;
+            this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
+            this.fotoCabecera.Name = "fotoCabecera";
+            this.fotoCabecera.Size = new System.Drawing.Size(540, 114);
+            this.fotoCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.fotoCabecera.TabIndex = 2;
+            this.fotoCabecera.TabStop = false;
             // 
             // tsbCliente
             // 
@@ -154,49 +209,13 @@
             this.tsbTarifa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbTarifa.Click += new System.EventHandler(this.tsbTarifa_Click);
             // 
-            // btnAñadir
-            // 
-            this.btnAñadir.AutoSize = true;
-            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAñadir.FlatAppearance.BorderSize = 0;
-            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.new_file_40454;
-            this.btnAñadir.Location = new System.Drawing.Point(0, 134);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(134, 154);
-            this.btnAñadir.TabIndex = 3;
-            this.btnAñadir.Text = "Añadir Registro";
-            this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAñadir.UseVisualStyleBackColor = false;
-            // 
-            // fotoCabecera
-            // 
-            this.fotoCabecera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_sign_wallpaper_3202_1;
-            this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
-            this.fotoCabecera.Name = "fotoCabecera";
-            this.fotoCabecera.Size = new System.Drawing.Size(540, 114);
-            this.fotoCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.fotoCabecera.TabIndex = 2;
-            this.fotoCabecera.TabStop = false;
-            // 
-            // lblBase
-            // 
-            this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblBase.Location = new System.Drawing.Point(243, 126);
-            this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(530, 71);
-            this.lblBase.TabIndex = 4;
-            this.lblBase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // IUDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1018, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblBase);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.fotoCabecera);
@@ -227,6 +246,7 @@
         private System.Windows.Forms.PictureBox fotoCabecera;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Label lblBase;
+        private System.Windows.Forms.Button button1;
     }
 }
 
