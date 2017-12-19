@@ -72,5 +72,26 @@ namespace LNegocioyADatos
 
             return usuario;
         }
+
+        static public Usuarios buscaRegistro(string user)
+        {
+            Usuarios usuario = null;
+            usuariosTabla = usuariosAdapter.BuscarPorNombre(user);
+
+            if (usuariosTabla.Count != 0)
+            {
+                taxiDataSet.usuariosRow regUsuarios = usuariosTabla[0];
+                usuario = new Usuarios(regUsuarios);
+            }
+
+            return usuario;
+        }
+
+        static public void agregarUsuario(string user, string clave)
+        {
+
+            usuariosAdapter.AgregarUsuario(user, clave, 2);
+
+        }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.txbNewUser = new System.Windows.Forms.TextBox();
             this.gpbLogin = new System.Windows.Forms.GroupBox();
-            this.chdTerminos = new System.Windows.Forms.CheckBox();
+            this.chbTerminos = new System.Windows.Forms.CheckBox();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.txbConfirmNewPass = new System.Windows.Forms.TextBox();
             this.txbNewPass = new System.Windows.Forms.TextBox();
@@ -51,11 +51,14 @@
             this.txbNewUser.Size = new System.Drawing.Size(122, 20);
             this.txbNewUser.TabIndex = 1;
             this.txbNewUser.Text = "Usuario";
+            this.txbNewUser.Enter += new System.EventHandler(this.textNewUser_Enter);
+            this.txbNewUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
+            this.txbNewUser.Leave += new System.EventHandler(this.textNewUser_Leave);
             // 
             // gpbLogin
             // 
             this.gpbLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.gpbLogin.Controls.Add(this.chdTerminos);
+            this.gpbLogin.Controls.Add(this.chbTerminos);
             this.gpbLogin.Controls.Add(this.btnRegistro);
             this.gpbLogin.Controls.Add(this.txbConfirmNewPass);
             this.gpbLogin.Controls.Add(this.txbNewPass);
@@ -66,16 +69,16 @@
             this.gpbLogin.TabIndex = 6;
             this.gpbLogin.TabStop = false;
             // 
-            // chdTerminos
+            // chbTerminos
             // 
-            this.chdTerminos.AutoSize = true;
-            this.chdTerminos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chdTerminos.Location = new System.Drawing.Point(16, 194);
-            this.chdTerminos.Name = "chdTerminos";
-            this.chdTerminos.Size = new System.Drawing.Size(224, 17);
-            this.chdTerminos.TabIndex = 7;
-            this.chdTerminos.Text = "Acepto los Terminos y Condiciones";
-            this.chdTerminos.UseVisualStyleBackColor = true;
+            this.chbTerminos.AutoSize = true;
+            this.chbTerminos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbTerminos.Location = new System.Drawing.Point(16, 194);
+            this.chbTerminos.Name = "chbTerminos";
+            this.chbTerminos.Size = new System.Drawing.Size(224, 17);
+            this.chbTerminos.TabIndex = 7;
+            this.chbTerminos.Text = "Acepto los Terminos y Condiciones";
+            this.chbTerminos.UseVisualStyleBackColor = true;
             // 
             // btnRegistro
             // 
@@ -99,6 +102,9 @@
             this.txbConfirmNewPass.Size = new System.Drawing.Size(122, 20);
             this.txbConfirmNewPass.TabIndex = 3;
             this.txbConfirmNewPass.Text = "Confirmar Contraseña";
+            this.txbConfirmNewPass.Enter += new System.EventHandler(this.txbConfirmNewPass_Enter);
+            this.txbConfirmNewPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
+            this.txbConfirmNewPass.Leave += new System.EventHandler(this.txbConfirmNewPass_Leave);
             // 
             // txbNewPass
             // 
@@ -109,6 +115,9 @@
             this.txbNewPass.Size = new System.Drawing.Size(122, 20);
             this.txbNewPass.TabIndex = 2;
             this.txbNewPass.Text = "Contraseña";
+            this.txbNewPass.Enter += new System.EventHandler(this.txbNewPass_Enter);
+            this.txbNewPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
+            this.txbNewPass.Leave += new System.EventHandler(this.txbNewPass_Leave);
             // 
             // errorProvider1
             // 
@@ -134,6 +143,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "RegistroUsuario";
             this.Text = "RegistroUsuario";
+            this.Load += new System.EventHandler(this.RegistroUsuario_Load);
             this.gpbLogin.ResumeLayout(false);
             this.gpbLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -149,7 +159,7 @@
         private System.Windows.Forms.TextBox txbNewPass;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.CheckBox chdTerminos;
+        private System.Windows.Forms.CheckBox chbTerminos;
         private System.Windows.Forms.TextBox txbConfirmNewPass;
     }
 }

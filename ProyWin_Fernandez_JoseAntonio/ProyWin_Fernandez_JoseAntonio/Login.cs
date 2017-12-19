@@ -73,32 +73,48 @@ namespace InterfazUsuario
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             string texto = String.Empty;
 
             if (txbUser.ForeColor == Color.Gray || txbUser.Text == String.Empty)
             {
                 texto = "El campo nombre no puede estar vacio\n";
+                errorProvider1.SetError(txbUser, "Campo Vacio");
+                txbPass.Text = String.Empty;
+                txbPass_Leave(null, null);
             }
             if (txbPass.ForeColor == Color.Gray || txbPass.Text == String.Empty)
             {
                 texto += "El campo clave no puede estar vacio";
+                errorProvider1.SetError(txbPass, "Campo Vacio");
             }
             if (texto != String.Empty)
             {
                 MessageBox.Show(texto, "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            usu = LNyAD.buscaUsuario(txbUser.Text, txbPass.Text);
-            if (usu == null)
+            usu = LNyAD.buscaRegistro(txbUser.Text);
+            if (usu == null) //Si NO hay un usuario con dicho nombre doy error
             {
-                errorProvider1.SetError(btnAcceder, "Login Incorrecto");
-                MessageBox.Show("No se ha encontrado ningun registro con dicha identificacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(txbUser, "Usuario Incorrecto");
+                MessageBox.Show("No se ha encontrado ningun registro con dicho usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbPass.Text = String.Empty;
+                txbPass_Leave(null, null);
+                return;
             }
-            else
+            usu = LNyAD.buscaUsuario(txbUser.Text, txbPass.Text);
+            if (usu != null) //Si el Usuario y la Contraseña son correctos accedo
             {
                 errorProvider1.Clear();
                 IUDatos iuDatos = new IUDatos();
                 iuDatos.ShowDialog();
+                iuDatos.Dispose();
+            }
+            else //Si la contraseña es erronea doy error
+            {
+                errorProvider1.SetError(txbPass, "Clave incorrecta");
+                MessageBox.Show("La clave de usuario no es valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbPass.Text = String.Empty;
             }
         }
 
@@ -113,8 +129,14 @@ namespace InterfazUsuario
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            txbPass.Text = String.Empty;
+            txbUser.Text = string.Empty;
+            txbPass_Leave(null, null);
+            textUser_Leave(null, null);
             RegistroUsuario regUser = new RegistroUsuario();
             regUser.ShowDialog();
+            regUser.Dispose();
         }
     }
 }
