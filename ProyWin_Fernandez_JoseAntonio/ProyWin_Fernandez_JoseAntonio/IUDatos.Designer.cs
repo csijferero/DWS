@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lblBase = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnAñadir = new System.Windows.Forms.Button();
-            this.fotoCabecera = new System.Windows.Forms.PictureBox();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbConductor = new System.Windows.Forms.ToolStripButton();
             this.tsbCarrera = new System.Windows.Forms.ToolStripButton();
             this.tsbTarifa = new System.Windows.Forms.ToolStripButton();
+            this.lblBase = new System.Windows.Forms.Label();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.fotoCabecera = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCabecera)).BeginInit();
@@ -104,65 +104,11 @@
             this.toolStrip1.Size = new System.Drawing.Size(1018, 131);
             this.toolStrip1.TabIndex = 1;
             // 
-            // lblBase
-            // 
-            this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblBase.Location = new System.Drawing.Point(243, 126);
-            this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(530, 71);
-            this.lblBase.TabIndex = 4;
-            this.lblBase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Data_settings_theapplication_3364;
-            this.button1.Location = new System.Drawing.Point(876, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 154);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Administrar Usuarios";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnAñadir
-            // 
-            this.btnAñadir.AutoSize = true;
-            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAñadir.FlatAppearance.BorderSize = 0;
-            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.new_file_40454;
-            this.btnAñadir.Location = new System.Drawing.Point(0, 134);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(134, 154);
-            this.btnAñadir.TabIndex = 3;
-            this.btnAñadir.Text = "Añadir Registro";
-            this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAñadir.UseVisualStyleBackColor = false;
-            // 
-            // fotoCabecera
-            // 
-            this.fotoCabecera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_sign_wallpaper_3202_1;
-            this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
-            this.fotoCabecera.Name = "fotoCabecera";
-            this.fotoCabecera.Size = new System.Drawing.Size(540, 114);
-            this.fotoCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.fotoCabecera.TabIndex = 2;
-            this.fotoCabecera.TabStop = false;
-            // 
             // tsbCliente
             // 
             this.tsbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbCliente.ForeColor = System.Drawing.Color.Blue;
-            this.tsbCliente.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.person_user_customer_man_male_man_boy_people_1687;
+            this.tsbCliente.Image = global::InterfazUsuario.Properties.Resources.person_user_customer_man_male_man_boy_people_1687;
             this.tsbCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCliente.Name = "tsbCliente";
             this.tsbCliente.Size = new System.Drawing.Size(114, 128);
@@ -174,7 +120,7 @@
             // 
             this.tsbConductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbConductor.ForeColor = System.Drawing.Color.Blue;
-            this.tsbConductor.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.taxi_18540;
+            this.tsbConductor.Image = global::InterfazUsuario.Properties.Resources.taxi_18540;
             this.tsbConductor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConductor.Name = "tsbConductor";
             this.tsbConductor.Size = new System.Drawing.Size(114, 128);
@@ -187,7 +133,7 @@
             this.tsbCarrera.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbCarrera.ForeColor = System.Drawing.Color.Blue;
-            this.tsbCarrera.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Ticket_icon_icons_com_54128;
+            this.tsbCarrera.Image = global::InterfazUsuario.Properties.Resources.Ticket_icon_icons_com_54128;
             this.tsbCarrera.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCarrera.Name = "tsbCarrera";
             this.tsbCarrera.Size = new System.Drawing.Size(114, 128);
@@ -201,7 +147,7 @@
             this.tsbTarifa.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbTarifa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbTarifa.ForeColor = System.Drawing.Color.Blue;
-            this.tsbTarifa.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.construction_project_plan_building_architect_design_develop_73_icon_icons_com_60243;
+            this.tsbTarifa.Image = global::InterfazUsuario.Properties.Resources.construction_project_plan_building_architect_design_develop_73_icon_icons_com_60243;
             this.tsbTarifa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbTarifa.Name = "tsbTarifa";
             this.tsbTarifa.Size = new System.Drawing.Size(114, 128);
@@ -209,13 +155,68 @@
             this.tsbTarifa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbTarifa.Click += new System.EventHandler(this.tsbTarifa_Click);
             // 
+            // lblBase
+            // 
+            this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblBase.Location = new System.Drawing.Point(243, 126);
+            this.lblBase.Name = "lblBase";
+            this.lblBase.Size = new System.Drawing.Size(530, 71);
+            this.lblBase.TabIndex = 4;
+            this.lblBase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoSize = true;
+            this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Image = global::InterfazUsuario.Properties.Resources.Data_settings_theapplication_3364;
+            this.btnUser.Location = new System.Drawing.Point(876, 134);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(142, 154);
+            this.btnUser.TabIndex = 5;
+            this.btnUser.Text = "Administrar Usuarios";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.AutoSize = true;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Image = global::InterfazUsuario.Properties.Resources.new_file_40454;
+            this.btnAñadir.Location = new System.Drawing.Point(0, 134);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(134, 154);
+            this.btnAñadir.TabIndex = 3;
+            this.btnAñadir.Text = "Añadir Registro";
+            this.btnAñadir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAñadir.UseVisualStyleBackColor = false;
+            // 
+            // fotoCabecera
+            // 
+            this.fotoCabecera.Image = global::InterfazUsuario.Properties.Resources.taxi_sign_wallpaper_3202_1;
+            this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
+            this.fotoCabecera.Name = "fotoCabecera";
+            this.fotoCabecera.Size = new System.Drawing.Size(540, 114);
+            this.fotoCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.fotoCabecera.TabIndex = 2;
+            this.fotoCabecera.TabStop = false;
+            // 
             // IUDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1018, 493);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUser);
             this.Controls.Add(this.lblBase);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.fotoCabecera);
@@ -246,7 +247,7 @@
         private System.Windows.Forms.PictureBox fotoCabecera;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Label lblBase;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUser;
     }
 }
 

@@ -89,5 +89,10 @@ namespace InterfazUsuario
             lblBase.Text = textoCabecera;
 
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

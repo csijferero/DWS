@@ -81,6 +81,7 @@ namespace InterfazUsuario
                 texto = "El campo nombre no puede estar vacio\n";
                 errorProvider1.SetError(txbUser, "Campo Vacio");
                 txbPass.Text = String.Empty;
+                btnAcceder.Focus();
                 txbPass_Leave(null, null);
             }
             if (txbPass.ForeColor == Color.Gray || txbPass.Text == String.Empty) //Clave Vacia
@@ -99,6 +100,7 @@ namespace InterfazUsuario
                 errorProvider1.SetError(txbUser, "Usuario Incorrecto");
                 MessageBox.Show("No se ha encontrado ningun registro con dicho usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbPass.Text = String.Empty;
+                btnAcceder.Focus();
                 txbPass_Leave(null, null);
                 return;
             }
@@ -106,7 +108,7 @@ namespace InterfazUsuario
             if (usu != null) //Si el Usuario y la Contraseña son correctos accedo
             {
                 errorProvider1.Clear();
-                if (usu.AccesoUsuario == 2)
+                if (usu.AccesoUsuario == 0)
                     MessageBox.Show("No puedes acceder a la aplicacion hasta que se de de alta tu cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {

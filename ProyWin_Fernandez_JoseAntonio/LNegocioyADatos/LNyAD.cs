@@ -87,10 +87,10 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public void agregarUsuario(string user, string clave)
+        static public void agregarUsuario(string nombre, string alias, string login, string clave)
         {
 
-            usuariosAdapter.AgregarUsuario(user, clave, 2);
+            usuariosAdapter.AgregarUsuario(0, alias, clave, login, nombre);
 
         }
     }

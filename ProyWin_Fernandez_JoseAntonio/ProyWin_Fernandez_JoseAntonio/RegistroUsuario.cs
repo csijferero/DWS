@@ -21,6 +21,8 @@ namespace InterfazUsuario
 
         bool cambiadoUser = false;
         bool cambiadoPass = false;
+        bool cambiadoAlias = false;
+        bool cambiadoNombre = false;
         bool cambiadoConfirm = false;
 
         #region Placeholder
@@ -41,6 +43,46 @@ namespace InterfazUsuario
                 txbNewUser.Text = "Usuario";
                 txbNewUser.ForeColor = Color.Gray;
                 cambiadoUser = false;
+            }
+        }
+
+        private void txbAlias_Enter(object sender, EventArgs e)
+        {
+            if (txbAlias.Text == "Alias" && cambiadoAlias == false)
+            {
+                txbAlias.ForeColor = Color.Black;
+                txbAlias.Text = "";
+                cambiadoAlias = true;
+            }
+        }
+
+        private void txbAlias_Leave(object sender, EventArgs e)
+        {
+            if (txbAlias.Text == "")
+            {
+                txbAlias.Text = "Alias";
+                txbAlias.ForeColor = Color.Gray;
+                cambiadoAlias = false;
+            }
+        }
+
+        private void txbNombre_Enter(object sender, EventArgs e)
+        {
+            if (txbNombre.Text == "Nombre" && cambiadoNombre == false)
+            {
+                txbNombre.ForeColor = Color.Black;
+                txbNombre.Text = "";
+                cambiadoNombre = true;
+            }
+        }
+
+        private void txbNombre_Leave(object sender, EventArgs e)
+        {
+            if (txbNombre.Text == "")
+            {
+                txbNombre.Text = "Nombre";
+                txbNombre.ForeColor = Color.Gray;
+                cambiadoNombre = false;
             }
         }
 
@@ -96,10 +138,31 @@ namespace InterfazUsuario
 
             if (txbNewUser.ForeColor == Color.Gray || txbNewUser.Text == String.Empty)
             {
-                texto = "El campo nombre no puede estar vacio\n";
+                texto = "El campo usuario no puede estar vacio\n";
                 errorProvider1.SetError(txbNewUser, "Campo Vacio");
                 txbConfirmNewPass.Text = String.Empty;
                 txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
+                txbNewPass_Leave(null, null);
+                txbConfirmNewPass_Leave(null, null);
+            }
+            if (txbAlias.ForeColor == Color.Gray || txbAlias.Text == String.Empty)
+            {
+                texto += "El campo alias no puede estar vacio\n";
+                errorProvider1.SetError(txbAlias, "Campo Vacio");
+                txbConfirmNewPass.Text = String.Empty;
+                txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
+                txbNewPass_Leave(null, null);
+                txbConfirmNewPass_Leave(null, null);
+            }
+            if (txbNombre.ForeColor == Color.Gray || txbNombre.Text == String.Empty)
+            {
+                texto += "El campo nombre no puede estar vacio\n";
+                errorProvider1.SetError(txbNombre, "Campo Vacio");
+                txbConfirmNewPass.Text = String.Empty;
+                txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
@@ -109,6 +172,7 @@ namespace InterfazUsuario
                 errorProvider1.SetError(txbNewPass, "Campo Vacio");
                 txbConfirmNewPass.Text = String.Empty;
                 txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
@@ -118,6 +182,7 @@ namespace InterfazUsuario
                 errorProvider1.SetError(txbConfirmNewPass, "Campo Vacio");
                 txbConfirmNewPass.Text = String.Empty;
                 txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
@@ -132,6 +197,7 @@ namespace InterfazUsuario
                 errorProvider1.SetError(txbConfirmNewPass, "Campo Diferente");
                 txbConfirmNewPass.Text = String.Empty;
                 txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
                 return;
@@ -143,12 +209,13 @@ namespace InterfazUsuario
                 MessageBox.Show("Ya existe un usuario con el mismo nombre registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbConfirmNewPass.Text = String.Empty;
                 txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
             else if (chbTerminos.Checked)
             {
-                LNyAD.agregarUsuario(txbNewUser.Text, txbNewPass.Text);
+                LNyAD.agregarUsuario(txbNombre.Text, txbAlias.Text.ToUpper(), txbNewUser.Text, txbNewPass.Text);
                 errorProvider1.Clear();
                 MessageBox.Show("El Usuario ha sido registrado con éxito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

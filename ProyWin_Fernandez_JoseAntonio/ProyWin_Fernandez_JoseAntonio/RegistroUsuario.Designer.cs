@@ -37,6 +37,8 @@
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txbAlias = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
             this.gpbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,6 +60,8 @@
             // gpbLogin
             // 
             this.gpbLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gpbLogin.Controls.Add(this.txbNombre);
+            this.gpbLogin.Controls.Add(this.txbAlias);
             this.gpbLogin.Controls.Add(this.chbTerminos);
             this.gpbLogin.Controls.Add(this.btnRegistro);
             this.gpbLogin.Controls.Add(this.txbConfirmNewPass);
@@ -76,7 +80,7 @@
             this.chbTerminos.Location = new System.Drawing.Point(16, 194);
             this.chbTerminos.Name = "chbTerminos";
             this.chbTerminos.Size = new System.Drawing.Size(224, 17);
-            this.chbTerminos.TabIndex = 4;
+            this.chbTerminos.TabIndex = 6;
             this.chbTerminos.Text = "Acepto los Terminos y Condiciones";
             this.chbTerminos.UseVisualStyleBackColor = true;
             // 
@@ -88,7 +92,7 @@
             this.btnRegistro.Location = new System.Drawing.Point(72, 227);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(103, 33);
-            this.btnRegistro.TabIndex = 5;
+            this.btnRegistro.TabIndex = 7;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
@@ -96,11 +100,11 @@
             // txbConfirmNewPass
             // 
             this.txbConfirmNewPass.ForeColor = System.Drawing.Color.Gray;
-            this.txbConfirmNewPass.Location = new System.Drawing.Point(62, 154);
+            this.txbConfirmNewPass.Location = new System.Drawing.Point(62, 168);
             this.txbConfirmNewPass.MaxLength = 10;
             this.txbConfirmNewPass.Name = "txbConfirmNewPass";
             this.txbConfirmNewPass.Size = new System.Drawing.Size(122, 20);
-            this.txbConfirmNewPass.TabIndex = 3;
+            this.txbConfirmNewPass.TabIndex = 5;
             this.txbConfirmNewPass.Text = "Confirmar Contraseña";
             this.txbConfirmNewPass.Enter += new System.EventHandler(this.txbConfirmNewPass_Enter);
             this.txbConfirmNewPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
@@ -109,11 +113,11 @@
             // txbNewPass
             // 
             this.txbNewPass.ForeColor = System.Drawing.Color.Gray;
-            this.txbNewPass.Location = new System.Drawing.Point(62, 86);
+            this.txbNewPass.Location = new System.Drawing.Point(62, 142);
             this.txbNewPass.MaxLength = 10;
             this.txbNewPass.Name = "txbNewPass";
             this.txbNewPass.Size = new System.Drawing.Size(122, 20);
-            this.txbNewPass.TabIndex = 2;
+            this.txbNewPass.TabIndex = 4;
             this.txbNewPass.Text = "Contraseña";
             this.txbNewPass.Enter += new System.EventHandler(this.txbNewPass_Enter);
             this.txbNewPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
@@ -125,13 +129,37 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ProyWin_Fernandez_JoseAntonio.Properties.Resources.Sevitaxi;
+            this.pictureBox2.Image = global::InterfazUsuario.Properties.Resources.Sevitaxi;
             this.pictureBox2.Location = new System.Drawing.Point(27, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(246, 218);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            // 
+            // txbAlias
+            // 
+            this.txbAlias.ForeColor = System.Drawing.Color.Gray;
+            this.txbAlias.Location = new System.Drawing.Point(62, 52);
+            this.txbAlias.MaxLength = 4;
+            this.txbAlias.Name = "txbAlias";
+            this.txbAlias.Size = new System.Drawing.Size(122, 20);
+            this.txbAlias.TabIndex = 2;
+            this.txbAlias.Text = "Alias";
+            this.txbAlias.Enter += new System.EventHandler(this.txbAlias_Enter);
+            this.txbAlias.Leave += new System.EventHandler(this.txbAlias_Leave);
+            // 
+            // txbNombre
+            // 
+            this.txbNombre.ForeColor = System.Drawing.Color.Gray;
+            this.txbNombre.Location = new System.Drawing.Point(62, 87);
+            this.txbNombre.MaxLength = 50;
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(122, 20);
+            this.txbNombre.TabIndex = 3;
+            this.txbNombre.Text = "Nombre";
+            this.txbNombre.Enter += new System.EventHandler(this.txbNombre_Enter);
+            this.txbNombre.Leave += new System.EventHandler(this.txbNombre_Leave);
             // 
             // RegistroUsuario
             // 
@@ -161,5 +189,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox chbTerminos;
         private System.Windows.Forms.TextBox txbConfirmNewPass;
+        private System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.TextBox txbAlias;
     }
 }
