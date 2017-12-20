@@ -120,6 +120,17 @@ namespace LNegocioyADatos
             return usuario;
         }
 
+        static public List<Usuarios> buscaAdmin()
+        {
+            List<Usuarios> listaUsuarios = new List<Usuarios>();
+            usuariosTabla = usuariosAdapter.BuscaAdmin();
+
+            foreach (taxiDataSet.usuariosRow regUsuarios in usuariosTabla)
+                listaUsuarios.Add(new Usuarios(regUsuarios));
+
+            return listaUsuarios;
+        }
+
         static public void editarUsuario(Usuarios usu)
         {
             //obtrengo el registro del usuario a editar

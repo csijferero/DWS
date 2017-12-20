@@ -56,7 +56,12 @@ namespace InterfazUsuario
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            usu = LNyAD.obtenerUsuario(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString())); //Obtengo el usuario seleccionado
+            errorProvider1.Clear();
+            if (dgv.SelectedCells[0].ColumnIndex == 1 && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                return;
+            }
+            usu = LNyAD.obtenerUsuario(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[2].Value.ToString())); //Obtengo el usuario seleccionado
             //Relleno los campos de nuevo con los de la fila seleccionada
             txbID.Text = usu.IdUsuario.ToString();
             txbNombre.Text = usu.NombreUsuario;
@@ -89,25 +94,7 @@ namespace InterfazUsuario
                 text += "No se ha realizado ningun cambio";
                 error = true;
             }
-            //if (txbID.Text == String.Empty) //Campo ID Vacio ERROR
-            //{
-            //    text += "Campo ID vacio";
-            //    error = true;
-            //    errorProvider1.SetError(txbID, "Vacio");
-            //}
-            //else if (!Int32.TryParse(txbID.Text, out num)) //Campo ID con letras ERROR
-            //{
-            //    text += "Debe introducir un numero en el campo ID";
-            //    error = true;
-            //    errorProvider1.SetError(txbID, "Formato Incorrecto");
-            //}
-            //else if (LNyAD.obtenerUsuario(Convert.ToInt32(txbID.Text)) != null && Convert.ToInt32(txbID.Text) != usu.IdUsuario) //Existe un ID igual y es diferente al que tenia anteriormente el usuario ERROR
-            //{
-            //    text += "El ID ya existe";
-            //    error = true;
-            //    errorProvider1.SetError(txbID, "Repetido");
-            //}
-            if (txbNombre.Text == String.Empty)
+            if (txbNombre.Text == String.Empty) //Campo Nombre vacio ERROR
             {
                 text += "Campo Nombre vacio";
                 error = true;
@@ -119,7 +106,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbAlias, "Vacio");
             }
-            else if (txbAlias.Text.Length != 4)
+            else if (txbAlias.Text.Length != 4) //Campo Alias menos de 4 caracteres
             {
                 text += "El Alias debe tener 4 caracteres";
                 error = true;
@@ -148,6 +135,12 @@ namespace InterfazUsuario
                 text += "No se ha seleccionado ningun nivel de acceso";
                 error = true;
                 errorProvider1.SetError(cmbAcceso, "Vacio");
+            }
+            else if (LNyAD.buscaAdmin().Count==1 && UsuarioDentro.AccesoUsuario==1 && cmbAcceso.SelectedIndex != 1) //Intento quitar el unico administrador ERROR
+            {
+                text += "Debe haber un administrador como minimo";
+                error = true;
+                errorProvider1.SetError(cmbAcceso, "Agregue otro Admin");
             }
             if (error)
                 MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);

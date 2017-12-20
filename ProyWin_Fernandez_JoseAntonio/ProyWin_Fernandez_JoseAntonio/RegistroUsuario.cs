@@ -212,6 +212,16 @@ namespace InterfazUsuario
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
+            else if (LNyAD.buscaAlias(txbAlias.Text) != null)
+            {
+                errorProvider1.SetError(txbAlias, "Alias Repetido");
+                MessageBox.Show("Ya existe un usuario con el mismo alias registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbConfirmNewPass.Text = String.Empty;
+                txbNewPass.Text = String.Empty;
+                btnRegistro.Focus();
+                txbNewPass_Leave(null, null);
+                txbConfirmNewPass_Leave(null, null);
+            }
             else if (chbTerminos.Checked)
             {
                 LNyAD.agregarUsuario(txbNombre.Text, txbAlias.Text.ToUpper(), txbNewUser.Text, Encriptacion.Encriptar(txbNewPass.Text));
