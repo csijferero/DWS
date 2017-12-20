@@ -52,7 +52,7 @@ namespace InterfazUsuario
             dgv.Columns[5].HeaderText = "Email";
             dgv.Columns[6].HeaderText = "DNI";
             dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
-            dgv.
+            //ffefefef
             textoCabecera = "Usted está viendo: Clientes";
             lblBase.Text = textoCabecera;
         }

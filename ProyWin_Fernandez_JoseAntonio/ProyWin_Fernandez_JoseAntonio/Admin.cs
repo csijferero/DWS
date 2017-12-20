@@ -40,6 +40,7 @@ namespace InterfazUsuario
             {
                 cmbAcceso.Enabled = false;
                 btnReset.Visible = false;
+                dgv.Columns[0].Visible = false;
             }
 
             CargarDGV();
@@ -83,7 +84,7 @@ namespace InterfazUsuario
             errorProvider1.Clear();
             CargaCelda();
             //Si pulso borrar...
-            if (dgv.CurrentRow.Index>0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            if (e.RowIndex>=0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
             {
                 if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1) //Y quiero borrar al unico admin ERROR
                 {
@@ -183,7 +184,7 @@ namespace InterfazUsuario
             //Cargo el DGV y selecciono la fila editada
             int fila = dgv.CurrentRow.Index;
             CargarDGV();
-            dgv.Rows[fila].Selected = true;
+            dgv.CurrentCell = dgv.Rows[fila].Cells[2];
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -196,7 +197,7 @@ namespace InterfazUsuario
                 //Cargo el DGV y selecciono la fila editada
                 int fila = dgv.CurrentRow.Index;
                 CargarDGV();
-                dgv.Rows[fila].Selected = true;
+                dgv.CurrentCell = dgv.Rows[fila].Cells[2];
                 CargaCelda();
             }
         }
