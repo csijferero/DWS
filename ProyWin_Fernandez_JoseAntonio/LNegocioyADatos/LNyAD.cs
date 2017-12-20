@@ -73,10 +73,24 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public Usuarios buscaRegistro(string user)
+        static public Usuarios buscaLogin(string login)
         {
             Usuarios usuario = null;
-            usuariosTabla = usuariosAdapter.BuscarPorNombre(user);
+            usuariosTabla = usuariosAdapter.BuscarPorLogin(login);
+
+            if (usuariosTabla.Count != 0)
+            {
+                taxiDataSet.usuariosRow regUsuarios = usuariosTabla[0];
+                usuario = new Usuarios(regUsuarios);
+            }
+
+            return usuario;
+        }
+
+        static public Usuarios buscaAlias(string alias)
+        {
+            Usuarios usuario = null;
+            usuariosTabla = usuariosAdapter.BuscarPorAlias(alias);
 
             if (usuariosTabla.Count != 0)
             {
@@ -89,9 +103,51 @@ namespace LNegocioyADatos
 
         static public void agregarUsuario(string nombre, string alias, string login, string clave)
         {
-
             usuariosAdapter.AgregarUsuario(0, alias, clave, login, nombre);
+        }
+
+        static public Usuarios obtenerUsuario(int idUsuario)
+        {
+            Usuarios usuario = null;
+            usuariosTabla = usuariosAdapter.BuscarPorId(idUsuario);
+
+            if (usuariosTabla.Count != 0)
+            {
+                taxiDataSet.usuariosRow regUsuarios = usuariosTabla[0];
+                usuario = new Usuarios(regUsuarios);
+            }
+
+            return usuario;
+        }
+
+        static public void editarUsuario(Usuarios usu)
+        {
+            //obtrengo el registro del usuario a editar
+            usuariosTabla = usuariosAdapter.BuscarPorId(usu.IdUsuario);
+            taxiDataSet.usuariosRow regUsuario = usuariosTabla[0];
+
+            //Realizo los cambios
+            regUsuario.nombreUsuario = usu.NombreUsuario;
+            regUsuario.aliasUsuario = usu.AliasUsuario;
+            regUsuario.loginUsuario = usu.LoginUsuario;
+            regUsuario.accesoUsuario = usu.AccesoUsuario;
+            regUsuario.claveUsuario = usu.ClaveUsuario;
+
+            usuariosAdapter.Update(regUsuario);
 
         }
+
+        static public taxiDataSet.usuariosDataTable tablaUsuarios()
+        {
+            usuariosTabla = usuariosAdapter.GetData();
+            return usuariosTabla;
+        }
+
+        static public taxiDataSet.usuariosDataTable tablaUsuarios(int idUsuario)
+        {
+            usuariosTabla = usuariosAdapter.BuscarPorId(idUsuario);
+            return usuariosTabla;
+        }
+
     }
 }

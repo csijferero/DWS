@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\Encriptacion.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="LNyAD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

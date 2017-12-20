@@ -13,7 +13,22 @@ namespace InterfazUsuario
 {
     public partial class IUDatos : Form
     {
+        Usuarios usu;
         string textoCabecera;
+
+        public Usuarios Usu
+        {
+            get
+            {
+                return usu;
+            }
+
+            set
+            {
+                usu = value;
+            }
+        }
+
         public IUDatos()
         {
             InitializeComponent();
@@ -21,7 +36,7 @@ namespace InterfazUsuario
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btnAñadir.Enabled = false;
             //List<Clientes> listaClientes = LNyAD.listaClientes(); //Rellenamos la lista desde la BD
 
 
@@ -92,7 +107,10 @@ namespace InterfazUsuario
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-
+            Admin iuAdmin = new Admin();
+            iuAdmin.UsuarioDentro = usu; //Mando el usuario al siguiente formulario
+            iuAdmin.ShowDialog();
+            iuAdmin.Dispose();
         }
     }
 }

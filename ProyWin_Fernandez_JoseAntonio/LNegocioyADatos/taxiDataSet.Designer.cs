@@ -7147,7 +7147,7 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[4];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[6];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombre" +
@@ -7200,22 +7200,33 @@ FROM            carreras LEFT OUTER JOIN
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombre" +
-                "Usuario FROM usuarios WHERE (loginUsuario = @Param1)";
+                "Usuario FROM usuarios WHERE aliasUsuario=?";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Param1";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
-            param.Size = 10;
+            param.Size = 4;
             param.IsNullable = true;
-            param.SourceColumn = "loginUsuario";
+            param.SourceColumn = "aliasUsuario";
             this._commandCollection[2].Parameters.Add(param);
             this._commandCollection[3] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombre" +
-                "Usuario FROM usuarios WHERE (loginUsuario = @Param1) AND (claveUsuario = @Param2" +
-                ")";
+                "Usuario FROM usuarios WHERE idUsuario=?";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "idUsuario";
+            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombre" +
+                "Usuario FROM usuarios WHERE loginUsuario=?";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Param1";
             param.DbType = global::System.Data.DbType.String;
@@ -7223,7 +7234,21 @@ FROM            carreras LEFT OUTER JOIN
             param.Size = 10;
             param.IsNullable = true;
             param.SourceColumn = "loginUsuario";
-            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4].Parameters.Add(param);
+            this._commandCollection[5] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombre" +
+                "Usuario FROM usuarios WHERE (loginUsuario = @Param1) AND (claveUsuario = @Param2" +
+                ")";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 10;
+            param.IsNullable = true;
+            param.SourceColumn = "loginUsuario";
+            this._commandCollection[5].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Param2";
             param.DbType = global::System.Data.DbType.String;
@@ -7231,7 +7256,7 @@ FROM            carreras LEFT OUTER JOIN
             param.Size = 45;
             param.IsNullable = true;
             param.SourceColumn = "claveUsuario";
-            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[5].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7262,7 +7287,7 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual taxiDataSet.usuariosDataTable BuscarPorNombre(string Param1) {
+        public virtual taxiDataSet.usuariosDataTable BuscarPorAlias(string Param1) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Param1 == null)) {
                 throw new global::System.ArgumentNullException("Param1");
@@ -7279,8 +7304,37 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual taxiDataSet.usuariosDataTable BuscarPorNombreClave(string Param1, string Param2) {
+        public virtual taxiDataSet.usuariosDataTable BuscarPorId(int Param1) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
+            taxiDataSet.usuariosDataTable dataTable = new taxiDataSet.usuariosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.usuariosDataTable BuscarPorLogin(string Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            taxiDataSet.usuariosDataTable dataTable = new taxiDataSet.usuariosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.usuariosDataTable BuscarPorNombreClave(string Param1, string Param2) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             if ((Param1 == null)) {
                 throw new global::System.ArgumentNullException("Param1");
             }

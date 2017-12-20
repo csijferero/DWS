@@ -94,8 +94,7 @@ namespace InterfazUsuario
                 MessageBox.Show(texto, "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            usu = LNyAD.buscaRegistro(txbUser.Text);
-            if (usu == null) //Si NO hay un usuario con dicho nombre doy error
+            if (LNyAD.buscaLogin(txbUser.Text) == null) //Si NO hay un usuario con dicho nombre doy error
             {
                 errorProvider1.SetError(txbUser, "Usuario Incorrecto");
                 MessageBox.Show("No se ha encontrado ningun registro con dicho usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -104,7 +103,7 @@ namespace InterfazUsuario
                 txbPass_Leave(null, null);
                 return;
             }
-            usu = LNyAD.buscaUsuario(txbUser.Text, txbPass.Text);
+            usu = LNyAD.buscaUsuario(txbUser.Text, Encriptacion.Encriptar(txbPass.Text)); // Lo declaro aqui porque lo usare varias veces
             if (usu != null) //Si el Usuario y la Contraseña son correctos accedo
             {
                 errorProvider1.Clear();
@@ -112,7 +111,13 @@ namespace InterfazUsuario
                     MessageBox.Show("No puedes acceder a la aplicacion hasta que se de de alta tu cuenta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
+                    txbPass.Text = String.Empty;
+                    txbUser.Text = String.Empty;
+                    btnAcceder.Focus();
+                    txbPass_Leave(null, null);
+                    textUser_Leave(null, null);
                     IUDatos iuDatos = new IUDatos();
+                    iuDatos.Usu = usu; //Mando el usuario al siguiente formulario
                     iuDatos.ShowDialog();
                     iuDatos.Dispose();
                 }
@@ -138,7 +143,7 @@ namespace InterfazUsuario
         {
             errorProvider1.Clear();
             txbPass.Text = String.Empty;
-            txbUser.Text = string.Empty;
+            txbUser.Text = String.Empty;
             txbPass_Leave(null, null);
             textUser_Leave(null, null);
             RegistroUsuario regUser = new RegistroUsuario();

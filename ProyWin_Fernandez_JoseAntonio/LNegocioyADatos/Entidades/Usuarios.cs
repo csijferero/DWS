@@ -10,13 +10,17 @@ namespace LNegocioyADatos
     {
         int idUsuario;
         string nombreUsuario;
+        string aliasUsuario;
+        string loginUsuario;
         string claveUsuario;
         int accesoUsuario;
 
-        public Usuarios(int idUsuario, string nombreUsuario, string claveUsuario, int accesoUsuario)
+        public Usuarios(int idUsuario, string nombreUsuario, string aliasUsuario, string loginUsuario, string claveUsuario, int accesoUsuario)
         {
             this.idUsuario = idUsuario;
             this.nombreUsuario = nombreUsuario;
+            this.aliasUsuario = aliasUsuario;
+            this.loginUsuario = loginUsuario;
             this.claveUsuario = claveUsuario;
             this.accesoUsuario = accesoUsuario;
         }
@@ -25,10 +29,11 @@ namespace LNegocioyADatos
         {
             this.idUsuario = regUsuarios.idUsuario;
             this.nombreUsuario = regUsuarios.nombreUsuario;
+            this.aliasUsuario = regUsuarios.aliasUsuario;
+            this.loginUsuario = regUsuarios.loginUsuario;
             this.claveUsuario = regUsuarios.claveUsuario;
             this.accesoUsuario = regUsuarios.accesoUsuario;
         }
-
         public int IdUsuario
         {
             get
@@ -52,6 +57,32 @@ namespace LNegocioyADatos
             set
             {
                 nombreUsuario = value;
+            }
+        }
+
+        public string AliasUsuario
+        {
+            get
+            {
+                return aliasUsuario;
+            }
+
+            set
+            {
+                aliasUsuario = value;
+            }
+        }
+
+        public string LoginUsuario
+        {
+            get
+            {
+                return loginUsuario;
+            }
+
+            set
+            {
+                loginUsuario = value;
             }
         }
 
@@ -80,7 +111,5 @@ namespace LNegocioyADatos
                 accesoUsuario = value;
             }
         }
-
-        
     }
 }
