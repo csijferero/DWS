@@ -25,7 +25,7 @@ namespace LNegocioyADatos
         static carrerasTableAdapter carrerasAdapter = new carrerasTableAdapter();
         static taxiDataSet.carrerasDataTable carrerasTabla = new taxiDataSet.carrerasDataTable();
 
-        static public List<Clientes> listaClientes()
+        static public List<Clientes> ListaClientes()
         {
             List<Clientes> listaClientes = new List<Clientes>();
             clientesTabla = clientesAdapter.GetData(); //Cargamos la lista
@@ -35,31 +35,31 @@ namespace LNegocioyADatos
             return listaClientes;
         }
 
-        static public taxiDataSet.clientesDataTable tablaClientes()
+        static public taxiDataSet.clientesDataTable TablaClientes()
         {
             clientesTabla = clientesAdapter.GetData();
             return clientesTabla;
         }
 
-        static public taxiDataSet.conductoresDataTable tablaConductores()
+        static public taxiDataSet.conductoresDataTable TablaConductores()
         {
             conductoresTabla = conductoresAdapter.GetData();
             return conductoresTabla;
         }
 
-        static public taxiDataSet.tarifasDataTable tablaTarifas()
+        static public taxiDataSet.tarifasDataTable TablaTarifas()
         {
             tarifasTabla = tarifasAdapter.GetData();
             return tarifasTabla;
         }
 
-        static public taxiDataSet.carrerasDataTable tablaCarreras()
+        static public taxiDataSet.carrerasDataTable TablaCarreras()
         {
             carrerasTabla = carrerasAdapter.GetCarrerasMOD();
             return carrerasTabla;
         }
 
-        static public Usuarios buscaUsuario(string user, string clave)
+        static public Usuarios BuscaUsuario(string user, string clave)
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorNombreClave(user, clave);
@@ -73,7 +73,7 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public Usuarios buscaLogin(string login)
+        static public Usuarios BuscaLogin(string login)
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorLogin(login);
@@ -87,7 +87,7 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public Usuarios buscaAlias(string alias)
+        static public Usuarios BuscaAlias(string alias)
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorAlias(alias);
@@ -101,12 +101,12 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public void agregarUsuario(string nombre, string alias, string login, string clave)
+        static public void AgregarUsuario(string nombre, string alias, string login, string clave)
         {
             usuariosAdapter.AgregarUsuario(0, alias, clave, login, nombre);
         }
 
-        static public Usuarios obtenerUsuario(int idUsuario)
+        static public Usuarios ObtenerUsuario(int idUsuario)
         {
             Usuarios usuario = null;
             usuariosTabla = usuariosAdapter.BuscarPorId(idUsuario);
@@ -120,7 +120,7 @@ namespace LNegocioyADatos
             return usuario;
         }
 
-        static public List<Usuarios> buscaAdmin()
+        static public List<Usuarios> BuscaAdmin()
         {
             List<Usuarios> listaUsuarios = new List<Usuarios>();
             usuariosTabla = usuariosAdapter.BuscaAdmin();
@@ -131,7 +131,7 @@ namespace LNegocioyADatos
             return listaUsuarios;
         }
 
-        static public void editarUsuario(Usuarios usu)
+        static public void EditarUsuario(Usuarios usu)
         {
             //obtrengo el registro del usuario a editar
             usuariosTabla = usuariosAdapter.BuscarPorId(usu.IdUsuario);
@@ -148,13 +148,28 @@ namespace LNegocioyADatos
 
         }
 
-        static public taxiDataSet.usuariosDataTable tablaUsuarios()
+        public static void BorarUsuario(int idUsuario)
+        {
+            // Obtengo el registro del usuario a eliminar
+            usuariosTabla = usuariosAdapter.BuscarPorId(idUsuario);
+
+            taxiDataSet.usuariosRow regUsuario = usuariosTabla[0];
+
+            // elimino el registro
+            regUsuario.Delete();
+
+            // actualizo la BD
+            LNyAD.usuariosAdapter.Update(regUsuario);
+
+        }
+
+        static public taxiDataSet.usuariosDataTable TablaUsuarios()
         {
             usuariosTabla = usuariosAdapter.GetData();
             return usuariosTabla;
         }
 
-        static public taxiDataSet.usuariosDataTable tablaUsuarios(int idUsuario)
+        static public taxiDataSet.usuariosDataTable TablaUsuarios(int idUsuario)
         {
             usuariosTabla = usuariosAdapter.BuscarPorId(idUsuario);
             return usuariosTabla;

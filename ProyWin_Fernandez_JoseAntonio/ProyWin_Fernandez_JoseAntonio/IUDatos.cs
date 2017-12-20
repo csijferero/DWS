@@ -44,7 +44,7 @@ namespace InterfazUsuario
 
         private void tsbCliente_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = LNyAD.tablaClientes(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs
             dgv.Columns[1].HeaderText = "Nombre";
             dgv.Columns[2].HeaderText = "Apellidos";
@@ -57,7 +57,7 @@ namespace InterfazUsuario
 
         private void tsbConductor_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = LNyAD.tablaConductores(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
             dgv.Columns[1].HeaderText = "Nombre";
             dgv.Columns[2].HeaderText = "Apellidos";
@@ -73,7 +73,7 @@ namespace InterfazUsuario
         private void tsbTarifa_Click(object sender, EventArgs e)
         {
 
-            dgv.DataSource = LNyAD.tablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
             dgv.Columns[1].HeaderText = "Tarifa";
             dgv.Columns[2].HeaderText = "Precio de Bandera";
@@ -86,7 +86,7 @@ namespace InterfazUsuario
 
         private void tsbCarrera_Click(object sender, EventArgs e)
         {
-            dgv.DataSource = LNyAD.tablaCarreras(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idCarrera"].Visible = false; //Ocultamos los IDs
             dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
             dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs

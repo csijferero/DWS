@@ -202,7 +202,7 @@ namespace InterfazUsuario
                 txbConfirmNewPass_Leave(null, null);
                 return;
             }
-            if (LNyAD.buscaLogin(txbNewUser.Text) != null)
+            if (LNyAD.BuscaLogin(txbNewUser.Text) != null)
             {
                 errorProvider1.SetError(txbNewUser, "Usuario Repetido");
                 MessageBox.Show("Ya existe un usuario con el mismo nombre registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -212,7 +212,7 @@ namespace InterfazUsuario
                 txbNewPass_Leave(null, null);
                 txbConfirmNewPass_Leave(null, null);
             }
-            else if (LNyAD.buscaAlias(txbAlias.Text) != null)
+            else if (LNyAD.BuscaAlias(txbAlias.Text) != null)
             {
                 errorProvider1.SetError(txbAlias, "Alias Repetido");
                 MessageBox.Show("Ya existe un usuario con el mismo alias registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -224,7 +224,7 @@ namespace InterfazUsuario
             }
             else if (chbTerminos.Checked)
             {
-                LNyAD.agregarUsuario(txbNombre.Text, txbAlias.Text.ToUpper(), txbNewUser.Text, Encriptacion.Encriptar(txbNewPass.Text));
+                LNyAD.AgregarUsuario(txbNombre.Text, txbAlias.Text.ToUpper(), txbNewUser.Text, Encriptacion.Encriptar(txbNewPass.Text));
                 errorProvider1.Clear();
                 MessageBox.Show("El Usuario ha sido registrado con éxito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

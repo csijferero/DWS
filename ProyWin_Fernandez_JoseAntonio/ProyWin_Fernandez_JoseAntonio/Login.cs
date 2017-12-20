@@ -94,7 +94,7 @@ namespace InterfazUsuario
                 MessageBox.Show(texto, "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (LNyAD.buscaLogin(txbUser.Text) == null) //Si NO hay un usuario con dicho nombre doy error
+            if (LNyAD.BuscaLogin(txbUser.Text) == null) //Si NO hay un usuario con dicho nombre doy error
             {
                 errorProvider1.SetError(txbUser, "Usuario Incorrecto");
                 MessageBox.Show("No se ha encontrado ningun registro con dicho usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -103,7 +103,7 @@ namespace InterfazUsuario
                 txbPass_Leave(null, null);
                 return;
             }
-            usu = LNyAD.buscaUsuario(txbUser.Text, Encriptacion.Encriptar(txbPass.Text)); // Lo declaro aqui porque lo usare varias veces
+            usu = LNyAD.BuscaUsuario(txbUser.Text, Encriptacion.Encriptar(txbPass.Text)); // Lo declaro aqui porque lo usare varias veces
             if (usu != null) //Si el Usuario y la Contraseña son correctos accedo
             {
                 errorProvider1.Clear();

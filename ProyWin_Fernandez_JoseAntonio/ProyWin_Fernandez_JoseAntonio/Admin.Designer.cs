@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txbID = new System.Windows.Forms.TextBox();
             this.labelID = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
@@ -49,8 +50,6 @@
             this.labelContraseña = new System.Windows.Forms.Label();
             this.txbClave = new System.Windows.Forms.TextBox();
             this.gpbLogin = new System.Windows.Forms.GroupBox();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gpbLogin.SuspendLayout();
@@ -81,7 +80,6 @@
             this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Edit,
             this.Del});
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv.EnableHeadersVisualStyles = false;
@@ -102,6 +100,19 @@
             this.dgv.TabIndex = 1;
             this.dgv.TabStop = false;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
+            // 
+            // Del
+            // 
+            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Del.HeaderText = "Del";
+            this.Del.Name = "Del";
+            this.Del.ReadOnly = true;
+            this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Del.Text = "X";
+            this.Del.ToolTipText = "Eliminar";
+            this.Del.UseColumnTextForButtonValue = true;
+            this.Del.Width = 40;
             // 
             // txbID
             // 
@@ -258,31 +269,6 @@
             this.gpbLogin.TabStop = false;
             this.gpbLogin.Text = "Funciones";
             // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Edit.Text = "►";
-            this.Edit.ToolTipText = "Editar Registro";
-            this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 45;
-            // 
-            // Del
-            // 
-            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Del.HeaderText = "Del";
-            this.Del.Name = "Del";
-            this.Del.ReadOnly = true;
-            this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Del.Text = "X";
-            this.Del.ToolTipText = "Eliminar";
-            this.Del.UseColumnTextForButtonValue = true;
-            this.Del.Width = 40;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +318,6 @@
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.TextBox txbClave;
         private System.Windows.Forms.GroupBox gpbLogin;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Del;
     }
 }

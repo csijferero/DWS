@@ -44,24 +44,22 @@ namespace InterfazUsuario
                 labelContraseña.Visible = false;
             }
 
-            cargarDGV();
+            CargarDGV();
 
             //Cargo el comboBox
             cmbAcceso.Items.Insert(0, "[0] Deshabilitado");
             cmbAcceso.Items.Insert(1, "[1] Administrador");
             cmbAcceso.Items.Insert(2, "[2] User");
 
-            dgv_CellClick(null, null); //Aplico el metodo para rellenar los campos
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
+
+            CargaCelda();
+
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void CargaCelda()
         {
-            errorProvider1.Clear();
-            if (dgv.SelectedCells[0].ColumnIndex == 1 && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
-            {
-                return;
-            }
-            usu = LNyAD.obtenerUsuario(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[2].Value.ToString())); //Obtengo el usuario seleccionado
+            usu = LNyAD.ObtenerUsuario(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())); //Obtengo el usuario seleccionado
             //Relleno los campos de nuevo con los de la fila seleccionada
             txbID.Text = usu.IdUsuario.ToString();
             txbNombre.Text = usu.NombreUsuario;
@@ -79,6 +77,25 @@ namespace InterfazUsuario
             {
                 labelContraseña.Visible = false;
                 txbClave.Visible = false;
+            }
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            errorProvider1.Clear();
+            CargaCelda();
+            //Si pulso borrar...
+            if (dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1)
+                {
+                    MessageBox.Show("No se puede borrar al unico administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LNyAD.BorarUsuario(usu.IdUsuario);
+                    CargarDGV();
+                }
             }
         }
         private bool HayErrorEnFormulario()
@@ -112,7 +129,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbAlias, "Formato");
             }
-            else if (LNyAD.buscaAlias(txbAlias.Text) != null && txbAlias.Text != usu.AliasUsuario) //Existe un alias igual y es diferente al que tenia anteriormente el usuario ERROR
+            else if (LNyAD.BuscaAlias(txbAlias.Text) != null && txbAlias.Text != usu.AliasUsuario) //Existe un alias igual y es diferente al que tenia anteriormente el usuario ERROR
             {
                 text += "El alias ya existe";
                 error = true;
@@ -124,7 +141,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbLogin, "Vacio");
             }
-            else if (LNyAD.buscaLogin(txbLogin.Text) != null && txbLogin.Text != usu.LoginUsuario) //Existe un login igual y es diferente al que tenia anteriormente el usuario ERROR
+            else if (LNyAD.BuscaLogin(txbLogin.Text) != null && txbLogin.Text != usu.LoginUsuario) //Existe un login igual y es diferente al que tenia anteriormente el usuario ERROR
             {
                 text += "El login ya existe";
                 error = true;
@@ -136,7 +153,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(cmbAcceso, "Vacio");
             }
-            else if (LNyAD.buscaAdmin().Count==1 && UsuarioDentro.AccesoUsuario==1 && cmbAcceso.SelectedIndex != 1) //Intento quitar el unico administrador ERROR
+            else if (LNyAD.BuscaAdmin().Count == 1 && UsuarioDentro.AccesoUsuario == 1 && cmbAcceso.SelectedIndex != 1) //Intento quitar el unico administrador ERROR
             {
                 text += "Debe haber un administrador como minimo";
                 error = true;
@@ -160,11 +177,11 @@ namespace InterfazUsuario
             usu.LoginUsuario = txbLogin.Text;
             usu.AccesoUsuario = Convert.ToInt32(cmbAcceso.SelectedIndex);
             usu.ClaveUsuario = Encriptacion.Encriptar(txbClave.Text);
-            LNyAD.editarUsuario(usu);
+            LNyAD.EditarUsuario(usu);
 
             MessageBox.Show("Operación realizada", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            cargarDGV();
+            CargarDGV();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -172,18 +189,18 @@ namespace InterfazUsuario
             if (MessageBox.Show("¿Desea resetear la contraseña de este usuario a [1234]?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 usu.ClaveUsuario = Encriptacion.Encriptar("1234");
-                LNyAD.editarUsuario(usu);
+                LNyAD.EditarUsuario(usu);
                 MessageBox.Show("Operación realizada", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cargarDGV();
+                CargarDGV();
             }
         }
 
-        private void cargarDGV()
+        private void CargarDGV()
         {
             if (usuarioDentro.AccesoUsuario == 1) //Si el usuario es administrador...
-                dgv.DataSource = LNyAD.tablaUsuarios(); //Cargo el DGV con todos los usuarios
+                dgv.DataSource = LNyAD.TablaUsuarios(); //Cargo el DGV con todos los usuarios
             else //Si es un usuario normal...
-                dgv.DataSource = LNyAD.tablaUsuarios(usuarioDentro.IdUsuario); //Cargo el DGV solo con su usuario
+                dgv.DataSource = LNyAD.TablaUsuarios(usuarioDentro.IdUsuario); //Cargo el DGV solo con su usuario
         }
     }
 }
