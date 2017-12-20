@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.txbNewUser = new System.Windows.Forms.TextBox();
             this.gpbLogin = new System.Windows.Forms.GroupBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
+            this.txbAlias = new System.Windows.Forms.TextBox();
             this.chbTerminos = new System.Windows.Forms.CheckBox();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.txbConfirmNewPass = new System.Windows.Forms.TextBox();
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txbAlias = new System.Windows.Forms.TextBox();
-            this.txbNombre = new System.Windows.Forms.TextBox();
             this.gpbLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,6 +72,32 @@
             this.gpbLogin.Size = new System.Drawing.Size(246, 291);
             this.gpbLogin.TabIndex = 1;
             this.gpbLogin.TabStop = false;
+            // 
+            // txbNombre
+            // 
+            this.txbNombre.ForeColor = System.Drawing.Color.Gray;
+            this.txbNombre.Location = new System.Drawing.Point(62, 87);
+            this.txbNombre.MaxLength = 50;
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(122, 20);
+            this.txbNombre.TabIndex = 3;
+            this.txbNombre.Text = "Nombre";
+            this.txbNombre.Enter += new System.EventHandler(this.txbNombre_Enter);
+            this.txbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
+            this.txbNombre.Leave += new System.EventHandler(this.txbNombre_Leave);
+            // 
+            // txbAlias
+            // 
+            this.txbAlias.ForeColor = System.Drawing.Color.Gray;
+            this.txbAlias.Location = new System.Drawing.Point(62, 52);
+            this.txbAlias.MaxLength = 4;
+            this.txbAlias.Name = "txbAlias";
+            this.txbAlias.Size = new System.Drawing.Size(122, 20);
+            this.txbAlias.TabIndex = 2;
+            this.txbAlias.Text = "Alias";
+            this.txbAlias.Enter += new System.EventHandler(this.txbAlias_Enter);
+            this.txbAlias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
+            this.txbAlias.Leave += new System.EventHandler(this.txbAlias_Leave);
             // 
             // chbTerminos
             // 
@@ -136,30 +162,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            // 
-            // txbAlias
-            // 
-            this.txbAlias.ForeColor = System.Drawing.Color.Gray;
-            this.txbAlias.Location = new System.Drawing.Point(62, 52);
-            this.txbAlias.MaxLength = 4;
-            this.txbAlias.Name = "txbAlias";
-            this.txbAlias.Size = new System.Drawing.Size(122, 20);
-            this.txbAlias.TabIndex = 2;
-            this.txbAlias.Text = "Alias";
-            this.txbAlias.Enter += new System.EventHandler(this.txbAlias_Enter);
-            this.txbAlias.Leave += new System.EventHandler(this.txbAlias_Leave);
-            // 
-            // txbNombre
-            // 
-            this.txbNombre.ForeColor = System.Drawing.Color.Gray;
-            this.txbNombre.Location = new System.Drawing.Point(62, 87);
-            this.txbNombre.MaxLength = 50;
-            this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(122, 20);
-            this.txbNombre.TabIndex = 3;
-            this.txbNombre.Text = "Nombre";
-            this.txbNombre.Enter += new System.EventHandler(this.txbNombre_Enter);
-            this.txbNombre.Leave += new System.EventHandler(this.txbNombre_Leave);
             // 
             // RegistroUsuario
             // 

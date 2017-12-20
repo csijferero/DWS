@@ -40,8 +40,6 @@ namespace InterfazUsuario
             {
                 cmbAcceso.Enabled = false;
                 btnReset.Visible = false;
-                txbClave.Visible = false;
-                labelContraseña.Visible = false;
             }
 
             CargarDGV();
@@ -85,9 +83,9 @@ namespace InterfazUsuario
             errorProvider1.Clear();
             CargaCelda();
             //Si pulso borrar...
-            if (dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            if (dgv.CurrentRow.Index>0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
             {
-                if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1)
+                if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1) //Y quiero borrar al unico admin ERROR
                 {
                     MessageBox.Show("No se puede borrar al unico administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -95,6 +93,7 @@ namespace InterfazUsuario
                 {
                     LNyAD.BorarUsuario(usu.IdUsuario);
                     CargarDGV();
+                    CargaCelda();
                 }
             }
         }
@@ -153,7 +152,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(cmbAcceso, "Vacio");
             }
-            else if (LNyAD.BuscaAdmin().Count == 1 && UsuarioDentro.AccesoUsuario == 1 && cmbAcceso.SelectedIndex != 1) //Intento quitar el unico administrador ERROR
+            else if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1 && cmbAcceso.SelectedIndex != 1) //Intento quitar el unico administrador ERROR
             {
                 text += "Debe haber un administrador como minimo";
                 error = true;
@@ -181,7 +180,10 @@ namespace InterfazUsuario
 
             MessageBox.Show("Operación realizada", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            //Cargo el DGV y selecciono la fila editada
+            int fila = dgv.CurrentRow.Index;
             CargarDGV();
+            dgv.Rows[fila].Selected = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -191,7 +193,11 @@ namespace InterfazUsuario
                 usu.ClaveUsuario = Encriptacion.Encriptar("1234");
                 LNyAD.EditarUsuario(usu);
                 MessageBox.Show("Operación realizada", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Cargo el DGV y selecciono la fila editada
+                int fila = dgv.CurrentRow.Index;
                 CargarDGV();
+                dgv.Rows[fila].Selected = true;
+                CargaCelda();
             }
         }
 
@@ -201,6 +207,15 @@ namespace InterfazUsuario
                 dgv.DataSource = LNyAD.TablaUsuarios(); //Cargo el DGV con todos los usuarios
             else //Si es un usuario normal...
                 dgv.DataSource = LNyAD.TablaUsuarios(usuarioDentro.IdUsuario); //Cargo el DGV solo con su usuario
+        }
+
+        private void txbKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnGuardar_Click(null, null);
+            }
+
         }
     }
 }

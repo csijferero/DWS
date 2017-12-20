@@ -122,6 +122,7 @@
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(35, 20);
             this.txbID.TabIndex = 1;
+            this.txbID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
             // 
             // labelID
             // 
@@ -150,6 +151,7 @@
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(155, 20);
             this.txbNombre.TabIndex = 2;
+            this.txbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
             // 
             // labelAlias
             // 
@@ -168,6 +170,7 @@
             this.txbAlias.Name = "txbAlias";
             this.txbAlias.Size = new System.Drawing.Size(155, 20);
             this.txbAlias.TabIndex = 3;
+            this.txbAlias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
             // 
             // labelLogin
             // 
@@ -186,6 +189,7 @@
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.Size = new System.Drawing.Size(155, 20);
             this.txbLogin.TabIndex = 4;
+            this.txbLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
             // 
             // btnReset
             // 
@@ -246,6 +250,7 @@
             this.labelContraseña.Size = new System.Drawing.Size(71, 13);
             this.labelContraseña.TabIndex = 14;
             this.labelContraseña.Text = "Contraseña";
+            this.labelContraseña.Visible = false;
             // 
             // txbClave
             // 
@@ -255,6 +260,8 @@
             this.txbClave.Size = new System.Drawing.Size(155, 20);
             this.txbClave.TabIndex = 6;
             this.txbClave.UseSystemPasswordChar = true;
+            this.txbClave.Visible = false;
+            this.txbClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKeyPress);
             // 
             // gpbLogin
             // 

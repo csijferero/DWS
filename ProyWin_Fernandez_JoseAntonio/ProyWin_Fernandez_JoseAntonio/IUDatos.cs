@@ -46,11 +46,13 @@ namespace InterfazUsuario
         {
             dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs
-            dgv.Columns[1].HeaderText = "Nombre";
-            dgv.Columns[2].HeaderText = "Apellidos";
-            dgv.Columns[3].HeaderText = "Domicilio";
-            dgv.Columns[4].HeaderText = "Email";
-            dgv.Columns[5].HeaderText = "DNI";
+            dgv.Columns[2].HeaderText = "Nombre";
+            dgv.Columns[3].HeaderText = "Apellidos";
+            dgv.Columns[4].HeaderText = "Domicilio";
+            dgv.Columns[5].HeaderText = "Email";
+            dgv.Columns[6].HeaderText = "DNI";
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
+            dgv.
             textoCabecera = "Usted está viendo: Clientes";
             lblBase.Text = textoCabecera;
         }
@@ -59,13 +61,14 @@ namespace InterfazUsuario
         {
             dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
-            dgv.Columns[1].HeaderText = "Nombre";
-            dgv.Columns[2].HeaderText = "Apellidos";
-            dgv.Columns[3].HeaderText = "Domicilio";
-            dgv.Columns[4].HeaderText = "Email";
-            dgv.Columns[5].HeaderText = "DNI";
-            dgv.Columns[6].HeaderText = "Licencia";
-            dgv.Columns[7].HeaderText = "Matrícula";
+            dgv.Columns[2].HeaderText = "Nombre";
+            dgv.Columns[3].HeaderText = "Apellidos";
+            dgv.Columns[4].HeaderText = "Domicilio";
+            dgv.Columns[5].HeaderText = "Email";
+            dgv.Columns[6].HeaderText = "DNI";
+            dgv.Columns[7].HeaderText = "Licencia";
+            dgv.Columns[8].HeaderText = "Matrícula";
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
             textoCabecera = "Usted está viendo: Conductores";
             lblBase.Text = textoCabecera;
         }
@@ -75,10 +78,11 @@ namespace InterfazUsuario
 
             dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
-            dgv.Columns[1].HeaderText = "Tarifa";
-            dgv.Columns[2].HeaderText = "Precio de Bandera";
-            dgv.Columns[3].HeaderText = "Precio por Metros";
-            dgv.Columns[4].HeaderText = "Precio por Minuto";
+            dgv.Columns[2].HeaderText = "Tarifa";
+            dgv.Columns[3].HeaderText = "Precio de Bandera";
+            dgv.Columns[4].HeaderText = "Precio por Metros";
+            dgv.Columns[5].HeaderText = "Precio por Minuto";
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
             textoCabecera = "Usted está viendo: Tarifas";
             lblBase.Text = textoCabecera;
 
@@ -91,14 +95,15 @@ namespace InterfazUsuario
             dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
             dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs
             dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
-            dgv.Columns[1].HeaderText = "Origen";
-            dgv.Columns[2].HeaderText = "Destino";
-            dgv.Columns[3].HeaderText = "Fecha";
-            dgv.Columns[4].HeaderText = "Metros";
-            dgv.Columns[5].HeaderText = "Duración";
-            dgv.Columns[9].HeaderText = "Tarifa";
-            dgv.Columns[10].HeaderText = "Conductor";
-            dgv.Columns[11].HeaderText = "Cliente";
+            dgv.Columns[2].HeaderText = "Origen";
+            dgv.Columns[3].HeaderText = "Destino";
+            dgv.Columns[4].HeaderText = "Fecha";
+            dgv.Columns[5].HeaderText = "Metros";
+            dgv.Columns[6].HeaderText = "Duración";
+            dgv.Columns[10].HeaderText = "Tarifa";
+            dgv.Columns[11].HeaderText = "Conductor";
+            dgv.Columns[12].HeaderText = "Cliente";
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
 
             textoCabecera = "Usted está viendo: Carreras";
             lblBase.Text = textoCabecera;

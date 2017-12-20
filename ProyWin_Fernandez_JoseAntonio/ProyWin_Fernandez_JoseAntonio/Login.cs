@@ -127,6 +127,8 @@ namespace InterfazUsuario
                 errorProvider1.SetError(txbPass, "Clave incorrecta");
                 MessageBox.Show("La clave de usuario no es valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbPass.Text = String.Empty;
+                btnAcceder.Focus();
+                txbPass_Leave(null, null);
             }
         }
 
