@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbConductor = new System.Windows.Forms.ToolStripButton();
@@ -41,8 +42,9 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.fotoCabecera = new System.Windows.Forms.PictureBox();
-            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbBusqueda = new System.Windows.Forms.TextBox();
+            this.labelBusqueda = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCabecera)).BeginInit();
@@ -54,44 +56,57 @@
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LawnGreen;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.LawnGreen;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Del});
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv.EnableHeadersVisualStyles = false;
-            this.dgv.Location = new System.Drawing.Point(12, 294);
+            this.dgv.Location = new System.Drawing.Point(12, 399);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgv.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Aquamarine;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(994, 188);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
+            // 
+            // Del
+            // 
+            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Del.HeaderText = "Del";
+            this.Del.Name = "Del";
+            this.Del.ReadOnly = true;
+            this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Del.Text = "X";
+            this.Del.ToolTipText = "Eliminar";
+            this.Del.UseColumnTextForButtonValue = true;
+            this.Del.Visible = false;
+            this.Del.Width = 45;
             // 
             // toolStrip1
             // 
@@ -108,6 +123,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1018, 131);
             this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsbCliente
             // 
@@ -215,34 +231,45 @@
             this.fotoCabecera.TabIndex = 2;
             this.fotoCabecera.TabStop = false;
             // 
-            // Del
+            // txbBusqueda
             // 
-            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Del.HeaderText = "Del";
-            this.Del.Name = "Del";
-            this.Del.ReadOnly = true;
-            this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Del.Text = "X";
-            this.Del.ToolTipText = "Eliminar";
-            this.Del.UseColumnTextForButtonValue = true;
-            this.Del.Visible = false;
-            this.Del.Width = 45;
+            this.txbBusqueda.Location = new System.Drawing.Point(328, 225);
+            this.txbBusqueda.Name = "txbBusqueda";
+            this.txbBusqueda.Size = new System.Drawing.Size(100, 20);
+            this.txbBusqueda.TabIndex = 6;
+            this.txbBusqueda.Visible = false;
+            this.txbBusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
-            // textBox1
+            // labelBusqueda
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            this.labelBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBusqueda.Location = new System.Drawing.Point(328, 194);
+            this.labelBusqueda.Name = "labelBusqueda";
+            this.labelBusqueda.Size = new System.Drawing.Size(100, 16);
+            this.labelBusqueda.TabIndex = 8;
+            this.labelBusqueda.Text = "Alias";
+            this.labelBusqueda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBusqueda.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(279, 213);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // IUDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1018, 493);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1018, 599);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.labelBusqueda);
+            this.Controls.Add(this.txbBusqueda);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.lblBase);
             this.Controls.Add(this.btnAñadir);
@@ -276,7 +303,9 @@
         private System.Windows.Forms.Label lblBase;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.DataGridViewButtonColumn Del;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbBusqueda;
+        private System.Windows.Forms.Label labelBusqueda;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

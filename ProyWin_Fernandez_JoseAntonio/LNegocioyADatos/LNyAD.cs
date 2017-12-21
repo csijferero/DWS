@@ -41,9 +41,21 @@ namespace LNegocioyADatos
             return clientesTabla;
         }
 
+        static public taxiDataSet.clientesDataTable TablaClientesDNI(string DNI)
+        {
+            clientesTabla = clientesAdapter.BuscarPorDNI('%' + DNI + '%');
+            return clientesTabla;
+        }
+
         static public taxiDataSet.conductoresDataTable TablaConductores()
         {
             conductoresTabla = conductoresAdapter.GetData();
+            return conductoresTabla;
+        }
+
+        static public taxiDataSet.conductoresDataTable TablaConductoresMatricula(string matricula)
+        {
+            conductoresTabla = conductoresAdapter.BuscarPorMatricula('%' + matricula + '%');
             return conductoresTabla;
         }
 
@@ -53,9 +65,21 @@ namespace LNegocioyADatos
             return tarifasTabla;
         }
 
+        static public taxiDataSet.tarifasDataTable TablaTarifasNumero(decimal numero)
+        {
+            tarifasTabla = tarifasAdapter.BuscarPorNumero(numero);
+            return tarifasTabla;
+        }
+
         static public taxiDataSet.carrerasDataTable TablaCarreras()
         {
             carrerasTabla = carrerasAdapter.GetCarrerasMOD();
+            return carrerasTabla;
+        }
+
+        static public taxiDataSet.carrerasDataTable TablaCarrerasFecha(DateTime fecha)
+        {
+            carrerasTabla = carrerasAdapter.BuscarPorFecha(fecha);
             return carrerasTabla;
         }
 

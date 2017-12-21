@@ -14,7 +14,7 @@ namespace InterfazUsuario
     public partial class IUDatos : Form
     {
         Usuarios usu;
-        string textoCabecera;
+        decimal val;
 
         public Usuarios Usu
         {
@@ -51,40 +51,35 @@ namespace InterfazUsuario
             if (e.RowIndex >= 0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del"
                 && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
             {
-                int colum;
 
-                if (usu.AccesoUsuario == 1)
-                    colum = 1;
-                else
-                    colum = 0;
-
-                if (dgv.Columns[colum].HeaderText == "idCliente") //Y quiero borrar un cliente
+                if (dgv.Columns[1].HeaderText == "idCliente") //Y quiero borrar un cliente
                 {
-                    LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[colum].Value.ToString()));
+                    LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
                     tsbCliente_Click(null, null);
                 }
-                else if (dgv.Columns[colum].HeaderText == "idConductor") //Y quiero borrar un conductor
+                else if (dgv.Columns[1].HeaderText == "idConductor") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[colum].Value.ToString()));
+                    LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
                     tsbConductor_Click(null, null);
                 }
-                else if (dgv.Columns[colum].HeaderText == "idTarifa") //Y quiero borrar un conductor
+                else if (dgv.Columns[1].HeaderText == "idTarifa") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[colum].Value.ToString()));
+                    LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
                     tsbTarifa_Click(null, null);
                 }
-                else if (dgv.Columns[colum].HeaderText == "idCarrera") //Y quiero borrar un conductor
+                else if (dgv.Columns[1].HeaderText == "idCarrera") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarCarrera(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[colum].Value.ToString()));
+                    LNyAD.BorarCarrera(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
                     tsbCarrera_Click(null, null);
                 }
+                //Reseteo los parametros de busqueda
+                txbBusqueda.Text = String.Empty;
+                dateTimePicker1.Value = DateTime.Today;
             }
         }
 
         private void tsbCliente_Click(object sender, EventArgs e)
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
-                dgv.Columns[0].Visible = true;
 
             dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idCliente"].Visible = false; //Ocultamos los IDs
@@ -95,14 +90,12 @@ namespace InterfazUsuario
             dgv.Columns[6].HeaderText = "DNI";
             dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
 
-            textoCabecera = "Usted está viendo: Clientes";
-            lblBase.Text = textoCabecera;
+            lblBase.Text = "Usted está viendo: Clientes";
+            labelBusqueda.Text = "DNI";
         }
 
         private void tsbConductor_Click(object sender, EventArgs e)
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
-                dgv.Columns[0].Visible = true;
 
             dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idConductor"].Visible = false; //Ocultamos los IDs
@@ -115,14 +108,12 @@ namespace InterfazUsuario
             dgv.Columns[8].HeaderText = "Matrícula";
             dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
 
-            textoCabecera = "Usted está viendo: Conductores";
-            lblBase.Text = textoCabecera;
+            lblBase.Text = "Usted está viendo: Conductores";
+            labelBusqueda.Text = "Matricula";
         }
 
         private void tsbTarifa_Click(object sender, EventArgs e)
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
-                dgv.Columns[0].Visible = true;
 
             dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idTarifa"].Visible = false; //Ocultamos los IDs
@@ -132,14 +123,12 @@ namespace InterfazUsuario
             dgv.Columns[5].HeaderText = "Precio por Minuto";
             dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
 
-            textoCabecera = "Usted está viendo: Tarifas";
-            lblBase.Text = textoCabecera;
+            lblBase.Text = "Usted está viendo: Tarifas";
+            labelBusqueda.Text = "Numero Tarifa";
         }
 
         private void tsbCarrera_Click(object sender, EventArgs e)
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
-                dgv.Columns[0].Visible = true;
 
             dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable
             dgv.Columns["idCarrera"].Visible = false; //Ocultamos los IDs
@@ -156,9 +145,8 @@ namespace InterfazUsuario
             dgv.Columns[12].HeaderText = "Cliente";
             dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
 
-            textoCabecera = "Usted está viendo: Carreras";
-            lblBase.Text = textoCabecera;
-
+            lblBase.Text = "Usted está viendo: Carreras";
+            labelBusqueda.Text = "Fecha";
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -171,7 +159,50 @@ namespace InterfazUsuario
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
         {
+            if (labelBusqueda.Text == "DNI") //Si el DGV es de clientes...
+                dgv.DataSource = LNyAD.TablaClientesDNI(txbBusqueda.Text);
+            else if (labelBusqueda.Text == "Matricula") //Si el DGV es de conductores...
+                dgv.DataSource = LNyAD.TablaConductoresMatricula(txbBusqueda.Text);
+            else if (labelBusqueda.Text == "Numero Tarifa") //Si el DGV es de tarifas...
+            {
+                if (decimal.TryParse(txbBusqueda.Text, out val)) //Y la busqueda es decimal...
+                    dgv.DataSource = LNyAD.TablaTarifasNumero(val);
+                else //Si no los muestro todos
+                {
+                    if(txbBusqueda.Text.Length>=1)
+                    txbBusqueda.Text = txbBusqueda.Text.Substring(0, txbBusqueda.Text.Length - 1);
+                    dgv.DataSource = LNyAD.TablaTarifas();
+                }
+            }
+        }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
+                dgv.Columns[0].Visible = true;
+
+            labelBusqueda.Visible = true;
+            //Activo los parametros de busqueda
+            if (e.ClickedItem.Text != "Carreras")
+            {
+                txbBusqueda.Text = String.Empty;
+                txbBusqueda.Visible = true;
+                dateTimePicker1.Visible = false;
+            }
+            else
+            {
+                dateTimePicker1.Value = DateTime.Today;
+                dateTimePicker1.Visible = true;
+                txbBusqueda.Visible = false;
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (labelBusqueda.Text == "Fecha") //Si el DGV es de carreras...
+            {
+                dgv.DataSource = LNyAD.TablaCarrerasFecha(dateTimePicker1.Value);
+            }
         }
     }
 }
