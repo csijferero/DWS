@@ -182,6 +182,7 @@
             // 
             // cmbTarifa
             // 
+            this.cmbTarifa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarifa.FormattingEnabled = true;
             this.cmbTarifa.Location = new System.Drawing.Point(214, 179);
             this.cmbTarifa.Name = "cmbTarifa";
@@ -190,6 +191,7 @@
             // 
             // cmbCond
             // 
+            this.cmbCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCond.FormattingEnabled = true;
             this.cmbCond.Location = new System.Drawing.Point(633, 182);
             this.cmbCond.Name = "cmbCond";
@@ -198,6 +200,7 @@
             // 
             // cmbClient
             // 
+            this.cmbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbClient.FormattingEnabled = true;
             this.cmbClient.Location = new System.Drawing.Point(633, 23);
             this.cmbClient.Name = "cmbClient";

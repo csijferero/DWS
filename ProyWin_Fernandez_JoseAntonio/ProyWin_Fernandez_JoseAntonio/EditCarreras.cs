@@ -35,7 +35,9 @@ namespace InterfazUsuario
         private void EditCarreras_Load(object sender, EventArgs e)
         {
             //Cargo los combos
-            cmbClient.DataSource = LNyAD.ListaClientes();
+            List<Clientes> listaClientes = LNyAD.ListaClientes();
+            listaClientes.Insert(0, new Clientes(0, "Seleccione un Cliente", "", "", "", ""));
+            cmbClient.DataSource = listaClientes;
             cmbCond.DataSource = LNyAD.ListaConductores();
             cmbTarifa.DataSource = LNyAD.ListaTarifas();
 
