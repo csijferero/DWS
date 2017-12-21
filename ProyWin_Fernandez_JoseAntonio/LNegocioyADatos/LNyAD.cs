@@ -34,6 +34,24 @@ namespace LNegocioyADatos
                 listaClientes.Add(new Clientes(regClientes)); //Añadimos en la lista los componentes de la BD
             return listaClientes;
         }
+        static public List<Conductores> ListaConductores()
+        {
+            List<Conductores> listaConductores = new List<Conductores>();
+            conductoresTabla = conductoresAdapter.GetData(); //Cargamos la lista
+
+            foreach (taxiDataSet.conductoresRow regConductores in conductoresTabla)
+                listaConductores.Add(new Conductores(regConductores)); //Añadimos en la lista los componentes de la BD
+            return listaConductores;
+        }
+        static public List<Tarifas> ListaTarifas()
+        {
+            List<Tarifas> listaTarifas = new List<Tarifas>();
+            tarifasTabla = tarifasAdapter.GetData(); //Cargamos la lista
+
+            foreach (taxiDataSet.tarifasRow regTarifas in tarifasTabla)
+                listaTarifas.Add(new Tarifas(regTarifas)); //Añadimos en la lista los componentes de la BD
+            return listaTarifas;
+        }
 
         static public taxiDataSet.clientesDataTable TablaClientes()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LNegocioyADatos
 {
-    class Tarifas
+    public class Tarifas
     {
         int idTarifa;
         double numeroTarifa;
@@ -21,6 +21,15 @@ namespace LNegocioyADatos
             this.precioBandera = precioBandera;
             this.precioDuracion = precioDuracion;
             this.precioMetros = precioMetros;
+        }
+
+        public Tarifas()
+        {
+            this.idTarifa = -1;
+            this.numeroTarifa = -1;
+            this.precioBandera = -1;
+            this.precioDuracion = -1;
+            this.precioMetros = -1;
         }
 
         public Tarifas(taxiDataSet.tarifasRow regTarifas)

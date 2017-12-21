@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LNegocioyADatos.Entidades
+namespace LNegocioyADatos
 {
-    class Carreras
+    public class Carreras
     {
         int idCarrera;
         string origen;
@@ -29,6 +29,19 @@ namespace LNegocioyADatos.Entidades
             this.idTarifa = idTarifa;
             this.idConductor = idConductor;
             this.idCliente = idCliente;
+        }
+
+        public Carreras()
+        {
+            this.idCarrera = -1;
+            this.origen = String.Empty;
+            this.destino = String.Empty;
+            this.fecha = DateTime.Today;
+            this.metros = -1;
+            this.duracion = -1;
+            this.idTarifa = -1;
+            this.idConductor = -1;
+            this.idCliente = -1;
         }
 
         public Carreras(taxiDataSet.carrerasRow regCarreras)

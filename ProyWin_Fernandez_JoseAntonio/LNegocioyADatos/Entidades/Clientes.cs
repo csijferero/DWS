@@ -25,6 +25,16 @@ namespace LNegocioyADatos
             this.dniCliente = dniCliente;
         }
 
+        public Clientes()
+        {
+            this.idCliente = -1;
+            this.nombreCliente = String.Empty;
+            this.apellidosCliente = String.Empty;
+            this.direccionCliente = String.Empty;
+            this.emailCliente = String.Empty;
+            this.dniCliente = String.Empty;
+        }
+
         public Clientes(taxiDataSet.clientesRow regClientes)
         {
             this.idCliente = regClientes.idCliente;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LNegocioyADatos
 {
-    class Conductores
+    public class Conductores
     {
         int idConductor;
         string nombreConductor;
@@ -27,6 +27,18 @@ namespace LNegocioyADatos
             this.dniConductor = dniConductor;
             this.licenciaConductor = licenciaConductor;
             this.matriculaConductor = matriculaConductor;
+        }
+
+        public Conductores()
+        {
+            this.idConductor = -1;
+            this.nombreConductor = String.Empty;
+            this.apellidosConductor = String.Empty;
+            this.direccionConductor = String.Empty;
+            this.emailConductor = String.Empty;
+            this.dniConductor = String.Empty;
+            this.licenciaConductor = -1;
+            this.matriculaConductor = String.Empty;
         }
         public Conductores(taxiDataSet.conductoresRow regConductores)
         {

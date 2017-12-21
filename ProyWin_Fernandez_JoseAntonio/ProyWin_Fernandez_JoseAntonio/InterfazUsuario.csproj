@@ -57,6 +57,30 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCarreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCarreras.Designer.cs">
+      <DependentUpon>EditCarreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCliente.Designer.cs">
+      <DependentUpon>EditCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditConductor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditConductor.Designer.cs">
+      <DependentUpon>EditConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTarifa.Designer.cs">
+      <DependentUpon>EditTarifa.cs</DependentUpon>
+    </Compile>
     <Compile Include="IUDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +108,18 @@
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCarreras.resx">
+      <DependentUpon>EditCarreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCliente.resx">
+      <DependentUpon>EditCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditConductor.resx">
+      <DependentUpon>EditConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTarifa.resx">
+      <DependentUpon>EditTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IUDatos.resx">
       <DependentUpon>IUDatos.cs</DependentUpon>

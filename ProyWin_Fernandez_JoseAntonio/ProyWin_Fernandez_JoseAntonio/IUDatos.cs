@@ -169,17 +169,27 @@ namespace InterfazUsuario
                     dgv.DataSource = LNyAD.TablaTarifasNumero(val);
                 else //Si no los muestro todos
                 {
-                    if(txbBusqueda.Text.Length>=1)
-                    txbBusqueda.Text = txbBusqueda.Text.Substring(0, txbBusqueda.Text.Length - 1);
-                    dgv.DataSource = LNyAD.TablaTarifas();
+                    if (txbBusqueda.Text.Length >= 1)
+                    {
+                        txbBusqueda.Text = txbBusqueda.Text.Substring(0, txbBusqueda.Text.Length - 1);
+                        txbBusqueda.Select(txbBusqueda.Text.Length, 0);
+                        dgv.DataSource = LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbBusqueda.Text));
+                    }
+                    else
+                    {
+                        dgv.DataSource = LNyAD.TablaTarifas();
+                    }
                 }
             }
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
+            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1)
+            { //Si soy ADMIN y el Del esta invisible lo activo
                 dgv.Columns[0].Visible = true;
+                btnAñadir.Enabled = true;
+            }
 
             labelBusqueda.Visible = true;
             //Activo los parametros de busqueda
@@ -202,6 +212,38 @@ namespace InterfazUsuario
             if (labelBusqueda.Text == "Fecha") //Si el DGV es de carreras...
             {
                 dgv.DataSource = LNyAD.TablaCarrerasFecha(dateTimePicker1.Value);
+            }
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            if (labelBusqueda.Text == "DNI")
+            {
+                EditCliente iuCli = new EditCliente();
+                iuCli.Cli = new Clientes(); //Mando la fila al siguiente formulario
+                iuCli.ShowDialog();
+                iuCli.Dispose();
+            }
+            else if (labelBusqueda.Text == "Matricula")
+            {
+                EditConductor iuCond = new EditConductor();
+                iuCond.Cond = new Conductores(); //Mando la fila al siguiente formulario
+                iuCond.ShowDialog();
+                iuCond.Dispose();
+            }
+            else if (labelBusqueda.Text == "Numero Tarifa")
+            {
+                EditTarifa iuTar = new EditTarifa();
+                iuTar.Tar = new Tarifas(); //Mando la fila al siguiente formulario
+                iuTar.ShowDialog();
+                iuTar.Dispose();
+            }
+            else if (labelBusqueda.Text == "Fecha")
+            {
+                EditCarreras iuCarr = new EditCarreras();
+                iuCarr.Car = new Carreras(); //Mando la fila al siguiente formulario
+                iuCarr.ShowDialog();
+                iuCarr.Dispose();
             }
         }
     }
