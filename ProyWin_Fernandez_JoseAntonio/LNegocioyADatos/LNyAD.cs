@@ -160,7 +160,60 @@ namespace LNegocioyADatos
 
             // actualizo la BD
             LNyAD.usuariosAdapter.Update(regUsuario);
+        }
 
+        public static void BorarCliente(int idCliente)
+        {
+            // Obtengo el registro del cliente a eliminar
+            clientesTabla = clientesAdapter.BuscarPorId(idCliente);
+
+            taxiDataSet.clientesRow regCliente = clientesTabla[0];
+
+            // elimino el registro
+            regCliente.Delete();
+
+            // actualizo la BD
+            LNyAD.clientesAdapter.Update(regCliente);
+        }
+
+        public static void BorarTarifa(int idTarifa)
+        {
+            // Obtengo el registro de la tarifa a eliminar
+            tarifasTabla = tarifasAdapter.BuscarPorId(idTarifa);
+
+            taxiDataSet.tarifasRow regTarifa = tarifasTabla[0];
+
+            // elimino el registro
+            regTarifa.Delete();
+
+            // actualizo la BD
+            LNyAD.tarifasAdapter.Update(regTarifa);
+        }
+        public static void BorarConductor(int idConductor)
+        {
+            // Obtengo el registro del conductor a eliminar
+            conductoresTabla = conductoresAdapter.BuscarPorId(idConductor);
+
+            taxiDataSet.conductoresRow regConductor = conductoresTabla[0];
+
+            // elimino el registro
+            regConductor.Delete();
+
+            // actualizo la BD
+            LNyAD.conductoresAdapter.Update(regConductor);
+        }
+        public static void BorarCarrera(int idCarrera)
+        {
+            // Obtengo el registro de la carrera a eliminar
+            carrerasTabla = carrerasAdapter.BuscarPorId(idCarrera);
+
+            taxiDataSet.carrerasRow regCarrera = carrerasTabla[0];
+
+            // elimino el registro
+            regCarrera.Delete();
+
+            // actualizo la BD
+            LNyAD.carrerasAdapter.Update(regCarrera);
         }
 
         static public taxiDataSet.usuariosDataTable TablaUsuarios()

@@ -36,23 +36,23 @@ namespace InterfazUsuario
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            if (usuarioDentro.AccesoUsuario != 1) //Si NO es administrador
+            if (usuarioDentro.AccesoUsuario != 1) //Si NO es administrador NO permito cambiar acceso, resetear clave ni borrar user
             {
                 cmbAcceso.Enabled = false;
                 btnReset.Visible = false;
                 dgv.Columns[0].Visible = false;
             }
 
-            CargarDGV();
+            CargarDGV(); //Cargo el DGV
 
             //Cargo el comboBox
             cmbAcceso.Items.Insert(0, "[0] Deshabilitado");
             cmbAcceso.Items.Insert(1, "[1] Administrador");
             cmbAcceso.Items.Insert(2, "[2] User");
 
-            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
+            dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1; //Coloco el boton de borrar al final
 
-            CargaCelda();
+            CargaCelda(); //Cargo los datos de la fila
 
         }
 
@@ -82,9 +82,11 @@ namespace InterfazUsuario
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             errorProvider1.Clear();
-            CargaCelda();
+            CargaCelda(); //Cargo los datos de la fila
+
             //Si pulso borrar...
-            if (e.RowIndex>=0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del" && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            if (e.RowIndex >= 0 && dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText == "Del"
+                && (MessageBox.Show("¿Está seguro de que desea borrar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
             {
                 if (LNyAD.BuscaAdmin().Count == 1 && usu.AccesoUsuario == 1) //Y quiero borrar al unico admin ERROR
                 {
@@ -102,7 +104,6 @@ namespace InterfazUsuario
         {
             errorProvider1.Clear();
 
-            //int num;
             string text = "";
             bool error = false;
             if (Convert.ToInt32(txbID.Text) == usu.IdUsuario && txbNombre.Text == usu.NombreUsuario && txbAlias.Text == usu.AliasUsuario
@@ -194,6 +195,7 @@ namespace InterfazUsuario
                 usu.ClaveUsuario = Encriptacion.Encriptar("1234");
                 LNyAD.EditarUsuario(usu);
                 MessageBox.Show("Operación realizada", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 //Cargo el DGV y selecciono la fila editada
                 int fila = dgv.CurrentRow.Index;
                 CargarDGV();
@@ -216,7 +218,6 @@ namespace InterfazUsuario
             {
                 btnGuardar_Click(null, null);
             }
-
         }
     }
 }

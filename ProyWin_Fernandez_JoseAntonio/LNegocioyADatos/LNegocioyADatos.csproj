@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Carreras.cs" />
     <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\Conductores.cs" />
     <Compile Include="Entidades\Encriptacion.cs" />
+    <Compile Include="Entidades\Tarifas.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="LNyAD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

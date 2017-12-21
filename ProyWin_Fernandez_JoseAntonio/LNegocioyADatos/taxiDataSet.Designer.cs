@@ -4546,7 +4546,7 @@ namespace LNegocioyADatos.taxiDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[3];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idCarrera`, `origen`, `destino`, `fecha`, `metros`, `duracion`, `idTarifa" +
@@ -4554,13 +4554,25 @@ namespace LNegocioyADatos.taxiDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, carreras.idTarifa, carreras.idConductor, carreras.idCliente, tarifas.numeroTarifa, 
+            this._commandCollection[1].CommandText = "SELECT `idCarrera`, `origen`, `destino`, `fecha`, `metros`, `duracion`, `idTarifa" +
+                "`, `idConductor`, `idCliente` FROM `carreras` WHERE idCarrera=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "idCarrera";
+            this._commandCollection[1].Parameters.Add(param);
+            this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, carreras.idTarifa, carreras.idConductor, carreras.idCliente, tarifas.numeroTarifa, 
                          conductores.nombreConductor, clientes.nombreCliente
 FROM            carreras LEFT OUTER JOIN
                          clientes ON carreras.idCliente = clientes.idCliente LEFT OUTER JOIN
                          tarifas ON carreras.idTarifa = tarifas.idTarifa LEFT OUTER JOIN
                          conductores ON carreras.idConductor = conductores.idConductor";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4591,8 +4603,20 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual taxiDataSet.carrerasDataTable GetCarrerasMOD() {
+        public virtual taxiDataSet.carrerasDataTable BuscarPorId(int Param1) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
+            taxiDataSet.carrerasDataTable dataTable = new taxiDataSet.carrerasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.carrerasDataTable GetCarrerasMOD() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             taxiDataSet.carrerasDataTable dataTable = new taxiDataSet.carrerasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5103,12 +5127,24 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idCliente`, `nombreCliente`, `apellidosCliente`, `direccionCliente`, `ema" +
                 "ilCliente`, `dniCliente` FROM `clientes`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT `idCliente`, `nombreCliente`, `apellidosCliente`, `direccionCliente`, `ema" +
+                "ilCliente`, `dniCliente` FROM `clientes` WHERE idCliente=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "idCliente";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5130,6 +5166,18 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual taxiDataSet.clientesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            taxiDataSet.clientesDataTable dataTable = new taxiDataSet.clientesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.clientesDataTable BuscarPorId(int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
             taxiDataSet.clientesDataTable dataTable = new taxiDataSet.clientesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5732,13 +5780,26 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idConductor`, `nombreConductor`, `apellidosConductor`, `direccionConducto" +
                 "r`, `emailConductor`, `dniConductor`, `licenciaConductor`, `matriculaConductor` " +
                 "FROM `conductores`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT `idConductor`, `nombreConductor`, `apellidosConductor`, `direccionConducto" +
+                "r`, `emailConductor`, `dniConductor`, `licenciaConductor`, `matriculaConductor` " +
+                "FROM `conductores` WHERE idConductor=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "idConductor";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5760,6 +5821,18 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual taxiDataSet.conductoresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            taxiDataSet.conductoresDataTable dataTable = new taxiDataSet.conductoresDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.conductoresDataTable BuscarPorId(int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
             taxiDataSet.conductoresDataTable dataTable = new taxiDataSet.conductoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6683,12 +6756,24 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idTarifa`, `numeroTarifa`, `precioBandera`, `precioDuracion`, `precioMetr" +
                 "os` FROM `tarifas`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT `idTarifa`, `numeroTarifa`, `precioBandera`, `precioDuracion`, `precioMetr" +
+                "os` FROM `tarifas` WHERE idTarifa=?";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "idTarifa";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6710,6 +6795,18 @@ FROM            carreras LEFT OUTER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual taxiDataSet.tarifasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            taxiDataSet.tarifasDataTable dataTable = new taxiDataSet.tarifasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual taxiDataSet.tarifasDataTable BuscarPorId(int Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Param1));
             taxiDataSet.tarifasDataTable dataTable = new taxiDataSet.tarifasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
