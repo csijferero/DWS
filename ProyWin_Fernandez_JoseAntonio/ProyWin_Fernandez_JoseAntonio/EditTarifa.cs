@@ -14,6 +14,7 @@ namespace InterfazUsuario
     public partial class EditTarifa : Form
     {
         Tarifas tar;
+        bool nuevo;
         public Tarifas Tar
         {
             get
@@ -24,6 +25,19 @@ namespace InterfazUsuario
             set
             {
                 tar = value;
+            }
+        }
+
+        public bool Nuevo
+        {
+            get
+            {
+                return nuevo;
+            }
+
+            set
+            {
+                nuevo = value;
             }
         }
 

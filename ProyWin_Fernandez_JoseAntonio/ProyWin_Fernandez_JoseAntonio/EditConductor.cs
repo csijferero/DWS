@@ -14,6 +14,7 @@ namespace InterfazUsuario
     public partial class EditConductor : Form
     {
         Conductores cond;
+        bool nuevo;
         public Conductores Cond
         {
             get
@@ -26,6 +27,20 @@ namespace InterfazUsuario
                 cond = value;
             }
         }
+
+        public bool Nuevo
+        {
+            get
+            {
+                return nuevo;
+            }
+
+            set
+            {
+                nuevo = value;
+            }
+        }
+
         public EditConductor()
         {
             InitializeComponent();

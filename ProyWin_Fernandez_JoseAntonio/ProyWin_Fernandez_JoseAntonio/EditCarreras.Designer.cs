@@ -98,7 +98,7 @@
             // txbDuracion
             // 
             this.txbDuracion.Location = new System.Drawing.Point(633, 124);
-            this.txbDuracion.MaxLength = 10;
+            this.txbDuracion.MaxLength = 4;
             this.txbDuracion.Name = "txbDuracion";
             this.txbDuracion.Size = new System.Drawing.Size(155, 20);
             this.txbDuracion.TabIndex = 61;
@@ -106,7 +106,7 @@
             // txbDestino
             // 
             this.txbDestino.Location = new System.Drawing.Point(633, 73);
-            this.txbDestino.MaxLength = 4;
+            this.txbDestino.MaxLength = 15;
             this.txbDestino.Name = "txbDestino";
             this.txbDestino.Size = new System.Drawing.Size(155, 20);
             this.txbDestino.TabIndex = 60;
@@ -124,7 +124,7 @@
             // txbOrigen
             // 
             this.txbOrigen.Location = new System.Drawing.Point(214, 73);
-            this.txbOrigen.MaxLength = 50;
+            this.txbOrigen.MaxLength = 15;
             this.txbOrigen.Name = "txbOrigen";
             this.txbOrigen.Size = new System.Drawing.Size(155, 20);
             this.txbOrigen.TabIndex = 53;
@@ -138,6 +138,7 @@
             this.labelID.Size = new System.Drawing.Size(20, 13);
             this.labelID.TabIndex = 54;
             this.labelID.Text = "ID";
+            this.labelID.Visible = false;
             // 
             // txbID
             // 
@@ -147,6 +148,7 @@
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(35, 20);
             this.txbID.TabIndex = 52;
+            this.txbID.Visible = false;
             // 
             // txbMetros
             // 

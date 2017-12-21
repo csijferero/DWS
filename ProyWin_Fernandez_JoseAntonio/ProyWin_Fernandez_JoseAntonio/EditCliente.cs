@@ -14,6 +14,7 @@ namespace InterfazUsuario
     public partial class EditCliente : Form
     {
         Clientes cli;
+        bool nuevo;
         public Clientes Cli
         {
             get
@@ -26,6 +27,20 @@ namespace InterfazUsuario
                 cli = value;
             }
         }
+
+        public bool Nuevo
+        {
+            get
+            {
+                return nuevo;
+            }
+
+            set
+            {
+                nuevo = value;
+            }
+        }
+
         public EditCliente()
         {
             InitializeComponent();
