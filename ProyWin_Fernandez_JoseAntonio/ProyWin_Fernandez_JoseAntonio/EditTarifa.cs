@@ -94,7 +94,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbNumero, "Error de formato");
             }
-            else if (LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbNumero.Text)).Count != 0)
+            else if (LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbNumero.Text)).Count != 0 && txbNumero.Text!=tar.NumeroTarifa.ToString()) //Comprobar asociado a carrera ERROR
             {
                 text += "Ya existe una Tarifa con este Numero\n";
                 error = true;

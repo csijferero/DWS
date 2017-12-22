@@ -109,13 +109,13 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbDireccion, "Vacio");
             }
-            if (!Regex.IsMatch(txbEmail.Text, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
+            if (!Regex.IsMatch(txbEmail.Text, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*")) //Formato Email ERROR
             {
                 text += "Formato de correo electronico incorrecto\n";
                 error = true;
                 errorProvider1.SetError(txbEmail, "Error de formato");
             }
-            if (txbDNI.Text.Length == 10)
+            if (txbDNI.Text.Length == 10) //Formato DNI ERROR
             {
                 if (txbDNI.Text[8] != '-' || (txbDNI.Text[9] > 'Z' || txbDNI.Text[9] < 'A') || !double.TryParse(txbDNI.Text.Substring(0, 8), out val))
                 {
@@ -123,7 +123,7 @@ namespace InterfazUsuario
                     error = true;
                     errorProvider1.SetError(txbDNI, "Error de formato");
                 }
-                else if (LNyAD.TablaClientesDNI(txbDNI.Text).Count != 0)
+                else if (LNyAD.TablaClientesDNI(txbDNI.Text).Count != 0 && txbDNI.Text != cli.DniCliente) //Comprobar asociacion Carrera ERROR
                 {
                     text += "Ya existe un Cliente con este DNI\n";
                     error = true;
