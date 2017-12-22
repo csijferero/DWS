@@ -74,6 +74,12 @@ namespace LNegocioyADatos
             return conductoresTabla;
         }
 
+        static public taxiDataSet.conductoresDataTable TablaConductoresDNI(string DNI)
+        {
+            conductoresTabla = conductoresAdapter.BuscarPorDNI(DNI);
+            return conductoresTabla;
+        }
+
         static public taxiDataSet.conductoresDataTable TablaConductoresMatricula(string matricula)
         {
             conductoresTabla = conductoresAdapter.BuscarPorMatricula('%' + matricula + '%');

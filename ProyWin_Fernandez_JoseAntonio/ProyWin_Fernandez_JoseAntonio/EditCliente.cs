@@ -123,6 +123,12 @@ namespace InterfazUsuario
                     error = true;
                     errorProvider1.SetError(txbDNI, "Error de formato");
                 }
+                else if (LNyAD.TablaClientesDNI(txbDNI.Text).Count != 0)
+                {
+                    text += "Ya existe un Cliente con este DNI\n";
+                    error = true;
+                    errorProvider1.SetError(txbDNI, "Repetido");
+                }
             }
             else
             {

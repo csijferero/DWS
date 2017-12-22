@@ -200,6 +200,7 @@ namespace InterfazUsuario
             if (labelBusqueda.Text == "Fecha") //Si el DGV es de carreras...
             {
                 dgv.DataSource = LNyAD.TablaCarrerasFecha(dateTimePicker1.Value);
+                dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
             }
         }
 
@@ -240,6 +241,7 @@ namespace InterfazUsuario
                 iuCarr.ShowDialog();
                 iuCarr.Dispose();
                 dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
             }
         }
 
@@ -282,6 +284,7 @@ namespace InterfazUsuario
                     iuCarr.ShowDialog();
                     iuCarr.Dispose();
                     dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                    dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
                 }
             }
         }

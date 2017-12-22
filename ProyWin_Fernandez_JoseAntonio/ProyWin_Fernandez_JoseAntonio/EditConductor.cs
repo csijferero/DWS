@@ -129,6 +129,12 @@ namespace InterfazUsuario
                     error = true;
                     errorProvider1.SetError(txbDNI, "Error de formato");
                 }
+                else if (LNyAD.TablaConductoresDNI(txbDNI.Text).Count != 0)
+                {
+                    text += "Ya existe un Conductor con este DNI\n";
+                    error = true;
+                    errorProvider1.SetError(txbDNI, "Repetido");
+                }
             }
             else
             {
@@ -136,7 +142,7 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbDNI, "Error de formato");
             }
-            if (txbMatricula.Text.Length == 7) //Campo Matricula vacio ERROR
+            if (txbMatricula.Text.Length == 7) //Campo Matricula formato ERROR
             {
                 if (!Int32.TryParse(txbMatricula.Text.Substring(0, 4), out val2) || (txbMatricula.Text[4] > 'Z'
                 || txbMatricula.Text[4] < 'A') || (txbMatricula.Text[5] > 'Z' || txbMatricula.Text[5] < 'A') || (txbMatricula.Text[6] > 'Z' || txbMatricula.Text[6] < 'A'))

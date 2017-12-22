@@ -94,6 +94,12 @@ namespace InterfazUsuario
                 error = true;
                 errorProvider1.SetError(txbNumero, "Error de formato");
             }
+            else if (LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbNumero.Text)).Count != 0)
+            {
+                text += "Ya existe una Tarifa con este Numero\n";
+                error = true;
+                errorProvider1.SetError(txbNumero, "Repetido");
+            }
             if (!double.TryParse(txbMetros.Text, out val) || val <= 0) //Campo Metros vacio formato ERROR
             {
                 text += "Campo Precio Metros erroneo\n";

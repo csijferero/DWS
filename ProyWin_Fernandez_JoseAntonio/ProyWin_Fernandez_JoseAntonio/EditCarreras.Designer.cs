@@ -91,14 +91,14 @@
             this.labelDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDuracion.Location = new System.Drawing.Point(440, 124);
             this.labelDuracion.Name = "labelDuracion";
-            this.labelDuracion.Size = new System.Drawing.Size(58, 13);
+            this.labelDuracion.Size = new System.Drawing.Size(51, 13);
             this.labelDuracion.TabIndex = 63;
-            this.labelDuracion.Text = "Duracion";
+            this.labelDuracion.Text = "Minutos";
             // 
             // txbDuracion
             // 
             this.txbDuracion.Location = new System.Drawing.Point(633, 124);
-            this.txbDuracion.MaxLength = 4;
+            this.txbDuracion.MaxLength = 5;
             this.txbDuracion.Name = "txbDuracion";
             this.txbDuracion.Size = new System.Drawing.Size(155, 20);
             this.txbDuracion.TabIndex = 4;
@@ -153,7 +153,7 @@
             // txbMetros
             // 
             this.txbMetros.Location = new System.Drawing.Point(214, 124);
-            this.txbMetros.MaxLength = 4;
+            this.txbMetros.MaxLength = 7;
             this.txbMetros.Name = "txbMetros";
             this.txbMetros.Size = new System.Drawing.Size(155, 20);
             this.txbMetros.TabIndex = 3;
