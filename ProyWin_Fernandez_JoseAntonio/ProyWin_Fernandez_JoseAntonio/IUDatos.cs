@@ -51,18 +51,39 @@ namespace InterfazUsuario
 
                 if (dgv.Columns[1].HeaderText == "idCliente") //Y quiero borrar un cliente
                 {
-                    LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbCliente_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("El Cliente está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbCliente_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idConductor") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbConductor_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("El Conductor está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbConductor_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idTarifa") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbTarifa_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("La Tarifa está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbTarifa_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idCarrera") //Y quiero borrar un conductor
                 {

@@ -91,7 +91,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(994, 188);
+            this.dgv.Size = new System.Drawing.Size(1112, 188);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellDoubleClick);
@@ -122,7 +122,7 @@
             this.tsbTarifa});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1018, 131);
+            this.toolStrip1.Size = new System.Drawing.Size(1136, 131);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
@@ -181,7 +181,7 @@
             // 
             this.lblBase.Font = new System.Drawing.Font("Gabriola", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblBase.Location = new System.Drawing.Point(243, 126);
+            this.lblBase.Location = new System.Drawing.Point(309, 126);
             this.lblBase.Name = "lblBase";
             this.lblBase.Size = new System.Drawing.Size(530, 71);
             this.lblBase.TabIndex = 4;
@@ -195,7 +195,7 @@
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.Image = global::InterfazUsuario.Properties.Resources.Data_settings_theapplication_3364;
-            this.btnUser.Location = new System.Drawing.Point(876, 134);
+            this.btnUser.Location = new System.Drawing.Point(982, 134);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(142, 154);
             this.btnUser.TabIndex = 5;
@@ -227,7 +227,7 @@
             // fotoCabecera
             // 
             this.fotoCabecera.Image = global::InterfazUsuario.Properties.Resources.taxi_sign_wallpaper_3202_1;
-            this.fotoCabecera.Location = new System.Drawing.Point(238, 9);
+            this.fotoCabecera.Location = new System.Drawing.Point(303, 9);
             this.fotoCabecera.Name = "fotoCabecera";
             this.fotoCabecera.Size = new System.Drawing.Size(540, 114);
             this.fotoCabecera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -236,7 +236,7 @@
             // 
             // txbBusqueda
             // 
-            this.txbBusqueda.Location = new System.Drawing.Point(463, 209);
+            this.txbBusqueda.Location = new System.Drawing.Point(529, 209);
             this.txbBusqueda.Name = "txbBusqueda";
             this.txbBusqueda.Size = new System.Drawing.Size(100, 20);
             this.txbBusqueda.TabIndex = 6;
@@ -246,7 +246,7 @@
             // labelBusqueda
             // 
             this.labelBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBusqueda.Location = new System.Drawing.Point(463, 181);
+            this.labelBusqueda.Location = new System.Drawing.Point(529, 181);
             this.labelBusqueda.Name = "labelBusqueda";
             this.labelBusqueda.Size = new System.Drawing.Size(100, 16);
             this.labelBusqueda.TabIndex = 8;
@@ -256,7 +256,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(414, 200);
+            this.dateTimePicker1.Location = new System.Drawing.Point(480, 200);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 9;
@@ -269,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1018, 599);
+            this.ClientSize = new System.Drawing.Size(1136, 599);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.labelBusqueda);
             this.Controls.Add(this.txbBusqueda);

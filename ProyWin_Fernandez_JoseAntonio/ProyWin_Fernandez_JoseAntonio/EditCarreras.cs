@@ -90,9 +90,9 @@ namespace InterfazUsuario
             cmbTarifa.DataSource = LNyAD.ListaTarifas();
 
             //Indicamos las propiedades de cada Combo
-            cmbClient.DisplayMember = "NombreCliente";
+            cmbClient.DisplayMember = "DniCliente";
             cmbClient.ValueMember = "IdCliente";
-            cmbCond.DisplayMember = "NombreConductor";
+            cmbCond.DisplayMember = "DniConductor";
             cmbCond.ValueMember = "IdConductor";
             cmbTarifa.DisplayMember = "NumeroTarifa";
             cmbTarifa.ValueMember = "IdTarifa";
