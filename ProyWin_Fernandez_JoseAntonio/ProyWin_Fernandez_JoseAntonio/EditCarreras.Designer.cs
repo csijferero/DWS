@@ -80,7 +80,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(443, 249);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(345, 65);
-            this.btnGuardar.TabIndex = 51;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -101,15 +101,15 @@
             this.txbDuracion.MaxLength = 4;
             this.txbDuracion.Name = "txbDuracion";
             this.txbDuracion.Size = new System.Drawing.Size(155, 20);
-            this.txbDuracion.TabIndex = 61;
+            this.txbDuracion.TabIndex = 4;
             // 
             // txbDestino
             // 
             this.txbDestino.Location = new System.Drawing.Point(633, 73);
-            this.txbDestino.MaxLength = 15;
+            this.txbDestino.MaxLength = 50;
             this.txbDestino.Name = "txbDestino";
             this.txbDestino.Size = new System.Drawing.Size(155, 20);
-            this.txbDestino.TabIndex = 60;
+            this.txbDestino.TabIndex = 2;
             // 
             // labelOrigen
             // 
@@ -124,10 +124,10 @@
             // txbOrigen
             // 
             this.txbOrigen.Location = new System.Drawing.Point(214, 73);
-            this.txbOrigen.MaxLength = 15;
+            this.txbOrigen.MaxLength = 50;
             this.txbOrigen.Name = "txbOrigen";
             this.txbOrigen.Size = new System.Drawing.Size(155, 20);
-            this.txbOrigen.TabIndex = 53;
+            this.txbOrigen.TabIndex = 1;
             // 
             // labelID
             // 
@@ -156,7 +156,7 @@
             this.txbMetros.MaxLength = 4;
             this.txbMetros.Name = "txbMetros";
             this.txbMetros.Size = new System.Drawing.Size(155, 20);
-            this.txbMetros.TabIndex = 55;
+            this.txbMetros.TabIndex = 3;
             // 
             // errorProvider1
             // 
@@ -189,16 +189,17 @@
             this.cmbTarifa.Location = new System.Drawing.Point(214, 179);
             this.cmbTarifa.Name = "cmbTarifa";
             this.cmbTarifa.Size = new System.Drawing.Size(155, 21);
-            this.cmbTarifa.TabIndex = 68;
+            this.cmbTarifa.TabIndex = 5;
             // 
             // cmbCond
             // 
             this.cmbCond.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCond.FormattingEnabled = true;
+            this.cmbCond.ItemHeight = 13;
             this.cmbCond.Location = new System.Drawing.Point(633, 182);
             this.cmbCond.Name = "cmbCond";
             this.cmbCond.Size = new System.Drawing.Size(155, 21);
-            this.cmbCond.TabIndex = 69;
+            this.cmbCond.TabIndex = 6;
             // 
             // cmbClient
             // 
@@ -207,7 +208,7 @@
             this.cmbClient.Location = new System.Drawing.Point(633, 23);
             this.cmbClient.Name = "cmbClient";
             this.cmbClient.Size = new System.Drawing.Size(155, 21);
-            this.cmbClient.TabIndex = 71;
+            this.cmbClient.TabIndex = 7;
             // 
             // labelClient
             // 
@@ -224,7 +225,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(171, 243);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
-            this.dateTimePicker1.TabIndex = 73;
+            this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.Value = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
             // 
             // labelFecha

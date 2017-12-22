@@ -166,16 +166,7 @@ namespace InterfazUsuario
                     dgv.DataSource = LNyAD.TablaTarifasNumero(val);
                 else //Si no los muestro todos
                 {
-                    if (txbBusqueda.Text.Length >= 1)
-                    {
-                        txbBusqueda.Text = txbBusqueda.Text.Substring(0, txbBusqueda.Text.Length - 1);
-                        txbBusqueda.Select(txbBusqueda.Text.Length, 0);
-                        dgv.DataSource = LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbBusqueda.Text));
-                    }
-                    else
-                    {
-                        dgv.DataSource = LNyAD.TablaTarifas();
-                    }
+                    dgv.DataSource = LNyAD.TablaTarifas();
                 }
             }
         }
@@ -254,7 +245,7 @@ namespace InterfazUsuario
 
         private void dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e) //Doble Click para Actualizar
         {
-            if (usu.AccesoUsuario == 1 && e.RowIndex>=0)
+            if (usu.AccesoUsuario == 1 && e.RowIndex >= 0)
             {
                 if (labelBusqueda.Text == "DNI")
                 {

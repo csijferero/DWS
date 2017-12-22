@@ -348,7 +348,7 @@ namespace LNegocioyADatos
             conductoresAdapter.Update(regConductor); //Actualizo
         }
 
-        static public void EditarCleiente(Clientes client)
+        static public void EditarCliente(Clientes client)
         {
             taxiDataSet.clientesRow regClientes;
 

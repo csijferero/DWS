@@ -52,9 +52,10 @@
             this.btnGuardar.Location = new System.Drawing.Point(466, 122);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(306, 65);
-            this.btnGuardar.TabIndex = 34;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // errorProvider1
             // 
@@ -76,7 +77,7 @@
             this.txbDuracion.MaxLength = 4;
             this.txbDuracion.Name = "txbDuracion";
             this.txbDuracion.Size = new System.Drawing.Size(155, 20);
-            this.txbDuracion.TabIndex = 43;
+            this.txbDuracion.TabIndex = 3;
             // 
             // labelNumero
             // 
@@ -91,10 +92,10 @@
             // txbNumero
             // 
             this.txbNumero.Location = new System.Drawing.Point(639, 25);
-            this.txbNumero.MaxLength = 10;
+            this.txbNumero.MaxLength = 4;
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(41, 20);
-            this.txbNumero.TabIndex = 39;
+            this.txbNumero.TabIndex = 1;
             // 
             // labelBandera
             // 
@@ -119,10 +120,10 @@
             // txbMetros
             // 
             this.txbMetros.Location = new System.Drawing.Point(220, 71);
-            this.txbMetros.MaxLength = 50;
+            this.txbMetros.MaxLength = 4;
             this.txbMetros.Name = "txbMetros";
             this.txbMetros.Size = new System.Drawing.Size(155, 20);
-            this.txbMetros.TabIndex = 36;
+            this.txbMetros.TabIndex = 2;
             // 
             // labelID
             // 
@@ -149,7 +150,7 @@
             this.txbBandera.MaxLength = 4;
             this.txbBandera.Name = "txbBandera";
             this.txbBandera.Size = new System.Drawing.Size(155, 20);
-            this.txbBandera.TabIndex = 38;
+            this.txbBandera.TabIndex = 4;
             // 
             // EditTarifa
             // 
@@ -169,6 +170,7 @@
             this.Controls.Add(this.txbBandera);
             this.Name = "EditTarifa";
             this.Text = "EditTarifa";
+            this.Load += new System.EventHandler(this.EditTarifa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
