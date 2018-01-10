@@ -154,34 +154,34 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\taxi-sign-wallpaper-3202-1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ticket_icon-icons.com_54128.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\construction_project_plan_building_architect_design_develop-73_icon-icons.com_60243.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\taxi_18540.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\person_user_customer_man_male_man_boy_people_1687.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\taxi_icon-icons.com_69861.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\User_22597.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sevitaxi.jpg" />
+    <None Include="Resources\Data_settings_theapplication_3364.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new-file_40454.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Data_settings_theapplication_3364.png" />
+    <None Include="Resources\person_user_customer_man_male_man_boy_people_1687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sevitaxi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi-sign-wallpaper-3202-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi_18540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxi_icon-icons.com_69861.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket_icon-icons.com_54128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_22597.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
