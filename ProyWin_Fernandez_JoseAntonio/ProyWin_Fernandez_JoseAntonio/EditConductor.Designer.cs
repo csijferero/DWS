@@ -58,9 +58,10 @@
             this.btnGuardar.Location = new System.Drawing.Point(152, 223);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(556, 65);
-            this.btnGuardar.TabIndex = 34;
+            this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // errorProvider1
             // 
@@ -82,13 +83,13 @@
             this.txbDNI.MaxLength = 10;
             this.txbDNI.Name = "txbDNI";
             this.txbDNI.Size = new System.Drawing.Size(155, 20);
-            this.txbDNI.TabIndex = 44;
+            this.txbDNI.TabIndex = 5;
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(440, 67);
+            this.labelEmail.Location = new System.Drawing.Point(21, 118);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(37, 13);
             this.labelEmail.TabIndex = 45;
@@ -96,11 +97,11 @@
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(633, 67);
-            this.txbEmail.MaxLength = 4;
+            this.txbEmail.Location = new System.Drawing.Point(214, 118);
+            this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(155, 20);
-            this.txbEmail.TabIndex = 43;
+            this.txbEmail.TabIndex = 4;
             // 
             // labelDireccion
             // 
@@ -115,16 +116,16 @@
             // txbDireccion
             // 
             this.txbDireccion.Location = new System.Drawing.Point(633, 21);
-            this.txbDireccion.MaxLength = 10;
+            this.txbDireccion.MaxLength = 50;
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(155, 20);
-            this.txbDireccion.TabIndex = 39;
+            this.txbDireccion.TabIndex = 1;
             // 
             // labelApellidos
             // 
             this.labelApellidos.AutoSize = true;
             this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidos.Location = new System.Drawing.Point(21, 118);
+            this.labelApellidos.Location = new System.Drawing.Point(440, 67);
             this.labelApellidos.Name = "labelApellidos";
             this.labelApellidos.Size = new System.Drawing.Size(58, 13);
             this.labelApellidos.TabIndex = 41;
@@ -146,7 +147,7 @@
             this.txbNombre.MaxLength = 50;
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(155, 20);
-            this.txbNombre.TabIndex = 36;
+            this.txbNombre.TabIndex = 2;
             // 
             // labelID
             // 
@@ -169,11 +170,11 @@
             // 
             // txbApellidos
             // 
-            this.txbApellidos.Location = new System.Drawing.Point(214, 118);
-            this.txbApellidos.MaxLength = 4;
+            this.txbApellidos.Location = new System.Drawing.Point(633, 67);
+            this.txbApellidos.MaxLength = 50;
             this.txbApellidos.Name = "txbApellidos";
             this.txbApellidos.Size = new System.Drawing.Size(155, 20);
-            this.txbApellidos.TabIndex = 38;
+            this.txbApellidos.TabIndex = 3;
             // 
             // labelMatricula
             // 
@@ -188,10 +189,10 @@
             // txbMatricula
             // 
             this.txbMatricula.Location = new System.Drawing.Point(633, 176);
-            this.txbMatricula.MaxLength = 10;
+            this.txbMatricula.MaxLength = 7;
             this.txbMatricula.Name = "txbMatricula";
             this.txbMatricula.Size = new System.Drawing.Size(155, 20);
-            this.txbMatricula.TabIndex = 49;
+            this.txbMatricula.TabIndex = 7;
             // 
             // labelLicencia
             // 
@@ -209,7 +210,7 @@
             this.txbLicencia.MaxLength = 4;
             this.txbLicencia.Name = "txbLicencia";
             this.txbLicencia.Size = new System.Drawing.Size(155, 20);
-            this.txbLicencia.TabIndex = 47;
+            this.txbLicencia.TabIndex = 6;
             // 
             // EditConductor
             // 
@@ -235,6 +236,7 @@
             this.Controls.Add(this.txbApellidos);
             this.Name = "EditConductor";
             this.Text = "EditConductor";
+            this.Load += new System.EventHandler(this.EditConductor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

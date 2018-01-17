@@ -40,9 +40,6 @@ namespace InterfazUsuario
             {
                 btnAñadir.Enabled = false;
             }
-            //List<Clientes> listaClientes = LNyAD.listaClientes(); //Rellenamos la lista desde la BD
-
-
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -54,18 +51,39 @@ namespace InterfazUsuario
 
                 if (dgv.Columns[1].HeaderText == "idCliente") //Y quiero borrar un cliente
                 {
-                    LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbCliente_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("El Cliente está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbCliente_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idConductor") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbConductor_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("El Conductor está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbConductor_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idTarifa") //Y quiero borrar un conductor
                 {
-                    LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
-                    tsbTarifa_Click(null, null);
+                    if (LNyAD.ComprobarAsociacionTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())).Count != 0)
+                    {
+                        MessageBox.Show("La Tarifa está asociado a una Carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        LNyAD.BorarTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString()));
+                        tsbTarifa_Click(null, null);
+                    }
                 }
                 else if (dgv.Columns[1].HeaderText == "idCarrera") //Y quiero borrar un conductor
                 {
@@ -157,7 +175,7 @@ namespace InterfazUsuario
             iuAdmin.Dispose();
         }
 
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void textBox1_KeyUp(object sender, KeyEventArgs e) //FILTROS DE BUSQUEDA
         {
             if (labelBusqueda.Text == "DNI") //Si el DGV es de clientes...
                 dgv.DataSource = LNyAD.TablaClientesDNI(txbBusqueda.Text);
@@ -169,30 +187,21 @@ namespace InterfazUsuario
                     dgv.DataSource = LNyAD.TablaTarifasNumero(val);
                 else //Si no los muestro todos
                 {
-                    if (txbBusqueda.Text.Length >= 1)
-                    {
-                        txbBusqueda.Text = txbBusqueda.Text.Substring(0, txbBusqueda.Text.Length - 1);
-                        txbBusqueda.Select(txbBusqueda.Text.Length, 0);
-                        dgv.DataSource = LNyAD.TablaTarifasNumero(Convert.ToDecimal(txbBusqueda.Text));
-                    }
-                    else
-                    {
-                        dgv.DataSource = LNyAD.TablaTarifas();
-                    }
+                    dgv.DataSource = LNyAD.TablaTarifas();
                 }
             }
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) //Activacion de los Filtros de busqueda
         {
-            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1)
-            { //Si soy ADMIN y el Del esta invisible lo activo
+            if (dgv.Columns[0].Visible == false && usu.AccesoUsuario == 1) //Si soy ADMIN y el Del esta invisible lo activo
+            {
                 dgv.Columns[0].Visible = true;
                 btnAñadir.Enabled = true;
             }
 
-            labelBusqueda.Visible = true;
             //Activo los parametros de busqueda
+            labelBusqueda.Visible = true;
             if (e.ClickedItem.Text != "Carreras")
             {
                 txbBusqueda.Text = String.Empty;
@@ -212,6 +221,7 @@ namespace InterfazUsuario
             if (labelBusqueda.Text == "Fecha") //Si el DGV es de carreras...
             {
                 dgv.DataSource = LNyAD.TablaCarrerasFecha(dateTimePicker1.Value);
+                dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
             }
         }
 
@@ -221,29 +231,82 @@ namespace InterfazUsuario
             {
                 EditCliente iuCli = new EditCliente();
                 iuCli.Cli = new Clientes(); //Mando la fila al siguiente formulario
+                iuCli.Nuevo = true;
                 iuCli.ShowDialog();
                 iuCli.Dispose();
+                dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
             }
             else if (labelBusqueda.Text == "Matricula")
             {
                 EditConductor iuCond = new EditConductor();
                 iuCond.Cond = new Conductores(); //Mando la fila al siguiente formulario
+                iuCond.Nuevo = true;
                 iuCond.ShowDialog();
                 iuCond.Dispose();
+                dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
             }
             else if (labelBusqueda.Text == "Numero Tarifa")
             {
                 EditTarifa iuTar = new EditTarifa();
                 iuTar.Tar = new Tarifas(); //Mando la fila al siguiente formulario
+                iuTar.Nuevo = true;
                 iuTar.ShowDialog();
                 iuTar.Dispose();
+                dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
             }
             else if (labelBusqueda.Text == "Fecha")
             {
                 EditCarreras iuCarr = new EditCarreras();
                 iuCarr.Car = new Carreras(); //Mando la fila al siguiente formulario
+                iuCarr.Nuevo = true;
                 iuCarr.ShowDialog();
                 iuCarr.Dispose();
+                dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
+            }
+        }
+
+        private void dgv_CellDoubleClick(object sender, DataGridViewCellEventArgs e) //Doble Click para Actualizar
+        {
+            if (usu.AccesoUsuario == 1 && e.RowIndex >= 0)
+            {
+                if (labelBusqueda.Text == "DNI")
+                {
+                    EditCliente iuCli = new EditCliente();
+                    iuCli.Cli = LNyAD.ObtenerCliente(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())); //Mando la fila al siguiente formulario
+                    iuCli.Nuevo = false;
+                    iuCli.ShowDialog();
+                    iuCli.Dispose();
+                    dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                }
+                else if (labelBusqueda.Text == "Matricula")
+                {
+                    EditConductor iuCond = new EditConductor();
+                    iuCond.Cond = LNyAD.ObtenerConductor(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())); //Mando la fila al siguiente formulario
+                    iuCond.Nuevo = false;
+                    iuCond.ShowDialog();
+                    iuCond.Dispose();
+                    dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                }
+                else if (labelBusqueda.Text == "Numero Tarifa")
+                {
+                    EditTarifa iuTar = new EditTarifa();
+                    iuTar.Tar = LNyAD.ObtenerTarifa(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())); //Mando la fila al siguiente formulario
+                    iuTar.Nuevo = false;
+                    iuTar.ShowDialog();
+                    iuTar.Dispose();
+                    dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                }
+                else if (labelBusqueda.Text == "Fecha")
+                {
+                    EditCarreras iuCarr = new EditCarreras();
+                    iuCarr.Car = LNyAD.obtenerCarrera(Convert.ToInt32(dgv.Rows[dgv.CurrentRow.Index].Cells[1].Value.ToString())); //Mando la fila al siguiente formulario
+                    iuCarr.Nuevo = false;
+                    iuCarr.ShowDialog();
+                    iuCarr.Dispose();
+                    dgv.DataSource = LNyAD.TablaCarreras(); //Llenamos el DataGridView a partir de un DataTable (ACTUALIZAR)
+                    dgv.Columns[0].DisplayIndex = dgv.Columns.Count - 1;
+                }
             }
         }
     }

@@ -174,7 +174,7 @@ namespace InterfazUsuario
             //Actualizo el usuario
             usu.IdUsuario = Convert.ToInt32(txbID.Text);
             usu.NombreUsuario = txbNombre.Text;
-            usu.AliasUsuario = txbAlias.Text;
+            usu.AliasUsuario = txbAlias.Text.ToUpper();
             usu.LoginUsuario = txbLogin.Text;
             usu.AccesoUsuario = Convert.ToInt32(cmbAcceso.SelectedIndex);
             usu.ClaveUsuario = Encriptacion.Encriptar(txbClave.Text);

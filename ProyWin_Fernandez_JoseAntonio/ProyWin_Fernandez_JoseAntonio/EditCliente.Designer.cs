@@ -54,9 +54,10 @@
             this.btnGuardar.Location = new System.Drawing.Point(140, 171);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(556, 65);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // errorProvider1
             // 
@@ -75,16 +76,16 @@
             // txbDireccion
             // 
             this.txbDireccion.Location = new System.Drawing.Point(645, 23);
-            this.txbDireccion.MaxLength = 10;
+            this.txbDireccion.MaxLength = 50;
             this.txbDireccion.Name = "txbDireccion";
             this.txbDireccion.Size = new System.Drawing.Size(155, 20);
-            this.txbDireccion.TabIndex = 21;
+            this.txbDireccion.TabIndex = 1;
             // 
             // labelApellidos
             // 
             this.labelApellidos.AutoSize = true;
             this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidos.Location = new System.Drawing.Point(33, 120);
+            this.labelApellidos.Location = new System.Drawing.Point(452, 69);
             this.labelApellidos.Name = "labelApellidos";
             this.labelApellidos.Size = new System.Drawing.Size(58, 13);
             this.labelApellidos.TabIndex = 25;
@@ -106,7 +107,7 @@
             this.txbNombre.MaxLength = 50;
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(155, 20);
-            this.txbNombre.TabIndex = 18;
+            this.txbNombre.TabIndex = 2;
             // 
             // labelID
             // 
@@ -129,11 +130,11 @@
             // 
             // txbApellidos
             // 
-            this.txbApellidos.Location = new System.Drawing.Point(226, 120);
-            this.txbApellidos.MaxLength = 4;
+            this.txbApellidos.Location = new System.Drawing.Point(645, 69);
+            this.txbApellidos.MaxLength = 50;
             this.txbApellidos.Name = "txbApellidos";
             this.txbApellidos.Size = new System.Drawing.Size(155, 20);
-            this.txbApellidos.TabIndex = 20;
+            this.txbApellidos.TabIndex = 3;
             // 
             // labelDNI
             // 
@@ -151,13 +152,13 @@
             this.txbDNI.MaxLength = 10;
             this.txbDNI.Name = "txbDNI";
             this.txbDNI.Size = new System.Drawing.Size(155, 20);
-            this.txbDNI.TabIndex = 31;
+            this.txbDNI.TabIndex = 5;
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(452, 69);
+            this.labelEmail.Location = new System.Drawing.Point(33, 120);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(37, 13);
             this.labelEmail.TabIndex = 32;
@@ -165,11 +166,11 @@
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(645, 69);
-            this.txbEmail.MaxLength = 4;
+            this.txbEmail.Location = new System.Drawing.Point(226, 120);
+            this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(155, 20);
-            this.txbEmail.TabIndex = 30;
+            this.txbEmail.TabIndex = 4;
             // 
             // EditCliente
             // 
@@ -191,6 +192,7 @@
             this.Controls.Add(this.txbApellidos);
             this.Name = "EditCliente";
             this.Text = "EditCliente";
+            this.Load += new System.EventHandler(this.EditCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
