@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Prueba_ASP {
+namespace ASP1 {
     
     
-    public partial class Index {
+    public partial class WebForm1 {
         
         /// <summary>
         /// Control form1.
@@ -94,13 +94,13 @@ namespace Prueba_ASP {
         protected global::System.Web.UI.WebControls.RadioButton rbMin;
         
         /// <summary>
-        /// Control Label1.
+        /// Control label.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label label;
         
         /// <summary>
         /// Control btn.

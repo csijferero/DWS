@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Prueba_ASP.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ASP1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -20,22 +20,22 @@
 &nbsp;
         <asp:TextBox ID="txbNombre" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnSaludar" runat="server" Text="Button" />
+        <asp:Button ID="btnSaludar" runat="server" Text="Button" OnClick="btnSaludar_Click" />
 &nbsp;&nbsp;&nbsp;
         <asp:CheckBox ID="chbVuelta" runat="server" Text="Borrar a la vuelta" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:RadioButton ID="rbMay" runat="server" Text="Mayuscula" />
-        <asp:RadioButton ID="rbMin" runat="server" Text="Minuscula" />
+        <asp:RadioButton ID="rbMay" runat="server" Text="Mayuscula" GroupName="rb" />
+        <asp:RadioButton ID="rbMin" runat="server" Text="Minuscula" GroupName="rb" />
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="label" runat="server" Text=" "></asp:Label>
         <br />
         <asp:Button ID="btn" runat="server" Text="Button" Width="148px" />
         <br />
         <br />
         <asp:CheckBox ID="chbPagina" runat="server" Text="Ir a la pagina de Altair" />
         <br />
-        <asp:ImageButton ID="ImageButton1" runat="server" Height="49px" ImageUrl="~/imagenes/logo-inicio.png" Width="74px" />
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="49px" ImageUrl="~/imagenes/logo-inicio.png" Width="74px" OnClick="ImageButton1_Click" />
     
     </div>
     </form>
