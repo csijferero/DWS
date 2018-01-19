@@ -32,9 +32,19 @@ namespace ASP1
             }
             else
                 label.Text = "Hola " + txbNombre.Text;
+        }
 
+        protected void chbVuelta_CheckedChanged(object sender, EventArgs e)
+        {
             if (chbVuelta.Checked)
-                txbNombre.Text = "";
+                txbNombre.Visible = false;
+            else
+                txbNombre.Visible = true;
+        }
+
+        protected void btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,7 +22,7 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnSaludar" runat="server" Text="Button" OnClick="btnSaludar_Click" />
 &nbsp;&nbsp;&nbsp;
-        <asp:CheckBox ID="chbVuelta" runat="server" Text="Borrar a la vuelta" />
+        <asp:CheckBox ID="chbVuelta" runat="server" Text="Borrar a la vuelta" OnCheckedChanged="chbVuelta_CheckedChanged" AutoPostBack="true" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RadioButton ID="rbMay" runat="server" Text="Mayuscula" GroupName="rb" />
         <asp:RadioButton ID="rbMin" runat="server" Text="Minuscula" GroupName="rb" />
@@ -30,7 +30,7 @@
         <br />
         <asp:Label ID="label" runat="server" Text=" "></asp:Label>
         <br />
-        <asp:Button ID="btn" runat="server" Text="Button" Width="148px" />
+        <asp:Button ID="btn" runat="server" Text="Button" Width="148px" PostBackUrl="http://altair.edu.es" />
         <br />
         <br />
         <asp:CheckBox ID="chbPagina" runat="server" Text="Ir a la pagina de Altair" />
