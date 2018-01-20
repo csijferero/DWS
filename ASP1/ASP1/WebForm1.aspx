@@ -33,7 +33,7 @@
         <asp:Button ID="btn" runat="server" Text="Button" Width="148px" PostBackUrl="http://altair.edu.es" />
         <br />
         <br />
-        <asp:CheckBox ID="chbPagina" runat="server" Text="Ir a la pagina de Altair" />
+        <asp:CheckBox ID="chbPagina" runat="server" Text="Ir a la pagina de Altair" OnCheckedChanged="chbPagina_CheckedChanged" />
         <br />
         <asp:ImageButton ID="ImageButton1" runat="server" Height="49px" ImageUrl="~/imagenes/logo-inicio.png" Width="74px" OnClick="ImageButton1_Click" />
     

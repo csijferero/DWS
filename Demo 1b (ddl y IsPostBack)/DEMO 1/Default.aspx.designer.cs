@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ASP_Combo {
+namespace DEMO_1 {
     
     
-    public partial class WebForm1 {
+    public partial class _Default {
         
         /// <summary>
         /// Control form1.
@@ -22,66 +22,66 @@ namespace ASP_Combo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control lblQuien.
+        /// Control Image1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuien;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// Control ddlAmigo.
+        /// Control lblBienvenido.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmigo;
+        protected global::System.Web.UI.WebControls.Label lblBienvenido;
         
         /// <summary>
-        /// Control btnSaludo.
+        /// Control ddlNombres.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaludo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNombres;
         
         /// <summary>
-        /// Control txtSaludo.
+        /// Control btnSaludar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtSaludo;
+        protected global::System.Web.UI.WebControls.Button btnSaludar;
         
         /// <summary>
-        /// Control txtAmigo.
+        /// Control lbSaludo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtAmigo;
+        protected global::System.Web.UI.WebControls.Label lbSaludo;
         
         /// <summary>
-        /// Control txbAmigo.
+        /// Control txbNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbAmigo;
+        protected global::System.Web.UI.WebControls.TextBox txbNombre;
         
         /// <summary>
-        /// Control btnAmigo.
+        /// Control btnAnyadir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAmigo;
+        protected global::System.Web.UI.WebControls.Button btnAnyadir;
     }
 }
