@@ -30,7 +30,7 @@
         <br />
         <asp:Label ID="label" runat="server" Text=" "></asp:Label>
         <br />
-        <asp:Button ID="btn" runat="server" Text="Button" Width="148px" PostBackUrl="http://altair.edu.es" />
+        <asp:Button ID="btn" runat="server" Text="Button" Width="148px" PostBackUrl="http://altair.edu.es" OnClick="btn_Click1" />
         <br />
         <br />
         <asp:CheckBox ID="chbPagina" runat="server" Text="Ir a la pagina de Altair" OnCheckedChanged="chbPagina_CheckedChanged" />

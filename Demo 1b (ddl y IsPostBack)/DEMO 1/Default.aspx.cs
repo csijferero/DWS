@@ -26,9 +26,10 @@ namespace DEMO_1
                 ddlNombres.Items.Add("Alejandro");
 
                 nombre = "Pablo L.";
+                txbNombre.Text = nombre;
             }
             // si no entra en el if, (es decir, si es un PostBack) en este momento nombre vale null
-            txbNombre.Text = nombre;
+            //txbNombre.Text = nombre;
         }
 
         protected void btnSaludar_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace DEMO_1
             lbSaludo.Visible = true;
 
             
-            nombre = ddlNombres.SelectedItem.ToString();
+            //nombre = ddlNombres.SelectedItem.ToString();
 
             // Si hago la asignación aquí, sí se verá el nombre seleccionado
             //txbNombre.Text = nombre;
