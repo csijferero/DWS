@@ -47,8 +47,10 @@ namespace DEMO_1
 
         protected void btnAnyadir_Click(object sender, EventArgs e)
         {
-            if (txbNombre.Text.Trim().Length>0)
+            if (txbNombre.Text.Trim().Length>0 && ddlNombres.Items.FindByText(txbNombre.Text.Trim()) == null)
                 ddlNombres.Items.Add(txbNombre.Text);
+            else
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Error", "alert('El amigo ya está añadido')", true);
             //nombre=
             txbNombre.Text = String.Empty;
         }
