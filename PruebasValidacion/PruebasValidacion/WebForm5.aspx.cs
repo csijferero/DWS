@@ -16,5 +16,20 @@ namespace PruebasValidacion
                 lblHola.Text = ((Label)Page.PreviousPage.FindControl("lblHola")).Text;
             }
         }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            try
+            {
+                if (Convert.ToInt32(txbCP.Text) < 41000 || Convert.ToInt32(txbCP.Text) > 41999)
+                    args.IsValid = false;
+                else
+                    args.IsValid = true;
+            }
+            catch
+            {
+                args.IsValid = false;
+            }
+        }
     }
 }
