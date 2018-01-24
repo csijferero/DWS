@@ -13,5 +13,11 @@ namespace ASP.NET_Paso_de_Datos
         {
             lblBienvenida.Text = "Bienvenido " + Request.Params.Get("txbNombre");
         }
+
+        protected void btnTFN_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WebForm3.aspx?txbNombre=" + Request.Params.Get("txbNombre"));
+
+        }
     }
 }
