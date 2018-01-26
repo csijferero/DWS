@@ -10,7 +10,7 @@
 namespace PruebasValidacion {
     
     
-    public partial class WebForm5 {
+    public partial class WebForm1 {
         
         /// <summary>
         /// Control form1.
@@ -31,66 +31,66 @@ namespace PruebasValidacion {
         protected global::System.Web.UI.WebControls.Label lbBienvenido;
         
         /// <summary>
-        /// Control lblHola.
+        /// Control Label1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHola;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control lblPob.
+        /// Control txbNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPob;
+        protected global::System.Web.UI.WebControls.TextBox txbNombre;
         
         /// <summary>
-        /// Control txbPob.
+        /// Control rfv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbPob;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv;
         
         /// <summary>
-        /// Control lblCP.
+        /// Control Label2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCP;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control txbCP.
+        /// Control txbApellidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbCP;
+        protected global::System.Web.UI.WebControls.TextBox txbApellidos;
         
         /// <summary>
-        /// Control custoVal.
+        /// Control rfv0.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator custoVal;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv0;
         
         /// <summary>
-        /// Control ImageButton1.
+        /// Control ibtnEnviar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.ImageButton ibtnEnviar;
     }
 }

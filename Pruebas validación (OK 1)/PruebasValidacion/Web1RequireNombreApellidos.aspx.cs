@@ -13,5 +13,11 @@ namespace PruebasValidacion
         {
 
         }
+
+        protected void btnEnviar_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect(String.Format("{0}?nombre={1}&apellidos={2}", "Web2ComparePassword.aspx", txbNombre.Text, txbApellidos.Text));
+                
+        }
     }
 }
