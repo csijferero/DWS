@@ -6,6 +6,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Prueba de Validation Group</title>
+    <script type="text/javascript">
+        function Validate() {
+            var isValid = Page_ClientValidate();
+            return isValid;
+        }
+    </script>
     <style type="text/css">
         .auto-style1 {
             width: 150px;
@@ -81,7 +87,7 @@
                                 </td>
                             </tr>
                              <tr><td colspan="2">
-                                 <asp:RegularExpressionValidator ID="valEmail" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Correo Admin Erroneo" ValidationGroup="ValidarAdmin" Font-Bold="True" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+                                 <asp:RegularExpressionValidator ID="valEmail" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Correo Admin Erroneo" ValidationGroup="ValidarAdmin" Font-Bold="True" ForeColor="Red" Display="Dynamic" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                  <asp:RequiredFieldValidator ID="valCorreoReq" runat="server" ControlToValidate="txtCorreo" Display="Dynamic" ErrorMessage="Correo Admin Requerido" Font-Bold="True" ForeColor="Red" ValidationGroup="ValidarAdmin"></asp:RequiredFieldValidator>
                                  </td></tr>
                         </table>
@@ -123,7 +129,7 @@
                         </td>
                     </tr>
                     <tr><td colspan="2" align="center">
-                        <asp:Button ID="btnValidarTodo" runat="server" Text="Validar Todo" Width="289px" OnClick="btnValidarTodo_Click" PostBackUrl="~/PaginaGeneral.aspx" ValidationGroup="ValidarCliente" />
+                        <asp:Button ID="btnValidarTodo" runat="server" Text="Validar Todo" Width="289px" OnClick="btnValidarTodo_Click" OnClientClick="Validate();" PostBackUrl="~/PaginaGeneral.aspx" />
                     </td>
                   </tr>
                     <tr><td align="center" bgcolor="#CCFFCC" class="auto-style13">
