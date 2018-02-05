@@ -11,9 +11,15 @@ namespace web3_ESTADO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblDensidadVal.Text = Request.Params.Get("txbDensidad");
-            lblPesoVal.Text = Request.Params.Get("txbPeso");
-            lblVolVal.Text = Request.Params.Get("txbVol");
+            if (!Page.IsPostBack)
+            {
+                lblDensidadVal.Text = Request.Params.Get("txbDensidad");
+                lblPesoVal.Text = Request.Params.Get("txbPeso");
+                lblVolVal.Text = Request.Params.Get("txbVol");
+                lblComienzo.Text = Application["horaInicio"].ToString();
+                lblHoraSesion.Text = Session["usuario"].ToString();
+                lblTiempo.Text = ((DateTime)(Session["usuario"]) - (DateTime)(Application["horaInicio"])).ToString();
+            }
         }
     }
 }

@@ -23,6 +23,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblDensidadVal" runat="server" Text="Densidad"></asp:Label>
     
+        <br />
+    
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Tiempo Aplicacion"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblComienzo" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        <asp:Label ID="Label2" runat="server" Text="Tiempo Sesion"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblHoraSesion" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Tiempo Tardado"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="lblTiempo" runat="server"></asp:Label>
+    
     </div>
     </form>
 </body>

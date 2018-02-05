@@ -32,8 +32,14 @@
         <br />
         <asp:Button ID="Button1" runat="server" PostBackUrl="~/WebForm1.aspx" Text="ViewState" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="View State Actual"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblHora" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="ViewState Anterior"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblHoraAnterior" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblDir" runat="server" Text="WebForm1.aspx" Visible="False"></asp:Label>
