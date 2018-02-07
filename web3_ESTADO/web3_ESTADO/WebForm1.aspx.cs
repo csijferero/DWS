@@ -27,15 +27,15 @@ namespace web3_ESTADO
                 lblHoraAnterior.Text = lblHora.Text;
             }
             lblHora.Text = ViewState["hora"].ToString();
-
-
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Cookies["miCo"]["densidad"] = txbDensidad.Text; //Cookies
-            Response.Redirect(String.Format("WebForm2.aspx?txbPeso={0}&txbVol={1}&urlAnterior={2}", txbPeso.Text, txbVolumen.Text, lblDir.Text));
-
+            Response.Cookies["miCo"]["peso"] = txbPeso.Text; //Cookies
+            Response.Cookies["miCo"]["volumen"] = txbVolumen.Text; //Cookies
+            Response.Cookies["miCo"]["url"] = lblDir.Text; //Cookies
+            Response.Redirect("WebForm2.aspx");
         }
     }
 }

@@ -13,17 +13,19 @@ namespace web3_ESTADO
         {
             if (!Page.IsPostBack)
             {
-                lblURL.Text = Request.Params.Get("urlAnterior");
+                lblURL.Text = Server.HtmlEncode(Request.Cookies["miCo"]["url"]);
                 txbDensidad.Text = Server.HtmlEncode(Request.Cookies["miCo"]["densidad"]);
-                txbPeso.Text = Request.Params.Get("txbPeso");
-                txbVolumen.Text = Request.Params.Get("txbVol");
+                txbPeso.Text = Server.HtmlEncode(Request.Cookies["miCo"]["peso"]);
+                txbVolumen.Text = Server.HtmlEncode(Request.Cookies["miCo"]["volumen"]);
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect(String.Format("WebForm3.aspx?txbPeso={0}&txbVol={1}&txbDensidad={2}", txbPeso.Text, txbVolumen.Text, txbDensidad.Text));
-
+            Response.Redirect("WebForm3.aspx");
+            Response.Cookies["miCo"]["densidad"] = txbDensidad.Text; //Cookies
+            Response.Cookies["miCo"]["peso"] = txbPeso.Text; //Cookies
+            Response.Cookies["miCo"]["volumen"] = txbVolumen.Text; //Cookies
         }
     }
 }
