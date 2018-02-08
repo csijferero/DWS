@@ -18,7 +18,7 @@ namespace web3_ESTADO
                 lblVolVal.Text = Server.HtmlEncode(Request.Cookies["miCo"]["volumen"]);
                 lblComienzo.Text = Application["horaInicio"].ToString();
                 lblHoraSesion.Text = Session["usuario"].ToString();
-                lblTiempo.Text = ((DateTime)(Session["usuario"]) - (DateTime)(Application["horaInicio"])).ToString();
+                lblTiempo.Text = ((DateTime)(DateTime.Now) - (DateTime)(Session["usuario"])).ToString();
             }
         }
     }

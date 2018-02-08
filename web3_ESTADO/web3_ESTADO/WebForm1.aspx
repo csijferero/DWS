@@ -44,7 +44,7 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" PostBackUrl="~/WebForm1.aspx" Text="ViewState" />
+        <asp:Button ID="Button1" runat="server" PostBackUrl="~/WebForm1.aspx" Text="ViewState" CausesValidation="False" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <asp:Label ID="Label1" runat="server" Text="View State Actual"></asp:Label>

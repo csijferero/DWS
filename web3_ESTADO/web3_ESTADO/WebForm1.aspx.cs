@@ -11,22 +11,15 @@ namespace web3_ESTADO
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (ViewState["hora"] == null)
+
+            if (!Page.IsPostBack)
             {
-                ViewState.Add("hora", DateTime.Now.ToString()); //Estado Vista
                 Application["horaInicio"] = DateTime.Now; //Estado aplicacion
-            }
-            else
-            {
-                ViewState["hora"] = DateTime.Now.ToString(); //Estado Vista
-                Session["usuario"] = DateTime.Now; //Estado Session
+                Button1_Click(null, null);
             }
 
-            if (lblHora.Text != null)
-            {
-                lblHoraAnterior.Text = lblHora.Text;
-            }
-            lblHora.Text = ViewState["hora"].ToString();
+
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -36,6 +29,27 @@ namespace web3_ESTADO
             Response.Cookies["miCo"]["volumen"] = txbVolumen.Text; //Cookies
             Response.Cookies["miCo"]["url"] = lblDir.Text; //Cookies
             Response.Redirect("WebForm2.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (ViewState["hora"] == null)
+            {
+                ViewState.Add("hora", DateTime.Now.ToString()); //Estado Vista
+            }
+            else
+            {
+                ViewState["hora"] = DateTime.Now.ToString(); //Estado Vista
+            }
+            Session["usuario"] = DateTime.Now; //Estado Session
+
+
+
+            if (lblHora.Text != null)
+            {
+                lblHoraAnterior.Text = lblHora.Text;
+            }
+            lblHora.Text = ViewState["hora"].ToString();
         }
     }
 }
