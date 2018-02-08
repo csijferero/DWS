@@ -13,7 +13,7 @@
     
     <h1>Jose Antonio</h1>
         <p>En esta pagina recopilamos los cookies para mostrarlos. Tambien recopilamos el APPLICATION.</p>
-        <p>Recopilamos los cookies guardados y los mostramos en los labels. Recogemos el tiempo de la aplicacion que se guardo en la primera pagina. Tambien mostramos el tiempo transcurrido</p>
+        <p>Recopilamos los cookies guardados y los mostramos en los labels. Recogemos el tiempo de la aplicacion que se guardo en la primera pagina. Tambien mostramos el tiempo transcurrido entre la sesion guardada en la primera pagina y la hora actual.</p>
         <br />
         <br />
         <br />

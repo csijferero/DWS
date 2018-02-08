@@ -12,7 +12,7 @@
     <div>
     <h1>Jose Antonio</h1>
         <p>En esta pagina estamos mandando mediante cookies el peso, el volumen, la densidad y el valor de un label oculto.
-        <p>Se controlan los rangos y se comprueba que no esten nulos los campos. Guarda en una variable ViewState la hora actual cada vez que se pulsa el boton VIEWSTATE. En session se guarda tambien la hora cada vez que se pulsa el boton. La primera vez que se entra en la aplicacion se guarda en APPLICATION la hora.</p>
+        <p>Se controlan los rangos y se comprueba que no esten nulos los campos. Guarda en una variable ViewState la hora actual cada vez que se pulsa el boton VIEWSTATE. En session se guarda tambien la hora cada vez que recarga. La primera vez que se entra en la aplicacion se guarda en APPLICATION la hora.</p>
         <br />
         <br />
     
@@ -44,7 +44,7 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" PostBackUrl="~/WebForm1.aspx" Text="ViewState" CausesValidation="False" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" PostBackUrl="~/WebForm1.aspx" Text="ViewState" CausesValidation="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <asp:Label ID="Label1" runat="server" Text="View State Actual"></asp:Label>
