@@ -32,5 +32,15 @@ namespace LNegocioyADatos.Properties {
                 return ((string)(this["taxiConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=taxi;persistsecurityinfo=True")]
+        public string taxiConnectionString1 {
+            get {
+                return ((string)(this["taxiConnectionString1"]));
+            }
+        }
     }
 }

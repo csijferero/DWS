@@ -59,7 +59,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="taxiDataSet1.Designer.cs">
+    <Compile Include="taxiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>taxiDataSet.xsd</DependentUpon>
@@ -76,7 +76,7 @@
     </None>
     <None Include="taxiDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>taxiDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>taxiDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="taxiDataSet.xss">

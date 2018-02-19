@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="taxiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="taxiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LNegocioyADatos.Properties.Settings.GlobalReference.Default.taxiConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection ConnectionStringObject="server=localhost;user id=root;password=altair;persistsecurityinfo=True;database=taxi" IsAppSettingsProperty="false" Modifier="Assembly" Name="localhost(taxi)" ParameterPrefix="@" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="carrera_suplementoTableAdapter" GeneratorDataComponentClassName="carrera_suplementoTableAdapter" Name="carrera_suplemento" UserDataComponentName="carrera_suplementoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.carrera_suplemento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.carrera_suplemento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `carrera_suplemento` WHERE ((`idCarreraSuplemento` = @p1) AND (`idCarrera` = @p2) AND (`idSuplemento` = @p3))</CommandText>
@@ -58,7 +58,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="carrerasTableAdapter" GeneratorDataComponentClassName="carrerasTableAdapter" Name="carreras" UserDataComponentName="carrerasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.carreras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.carreras" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `carreras` WHERE ((`idCarrera` = @p1) AND (`origen` = @p2) AND (`destino` = @p3) AND (`fecha` = @p4) AND (`metros` = @p5) AND (`duracion` = @p6) AND (`idTarifa` = @p7) AND (`idConductor` = @p8) AND (`idCliente` = @p9))</CommandText>
@@ -133,45 +133,11 @@
               <Mapping SourceColumn="idConductor" DataSetColumn="idConductor" />
               <Mapping SourceColumn="idCliente" DataSetColumn="idCliente" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.carreras" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorFecha" GetMethodModifier="Public" GetMethodName="BuscarPorFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorFecha" UserSourceName="BuscarPorFecha">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idCarrera`, `origen`, `destino`, `fecha`, `metros`, `duracion`, `idTarifa`, `idConductor`, `idCliente` FROM `carreras` WHERE `fecha` LIKE ?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="fecha" DataSourceName="taxi.carreras" DataTypeServer="date" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.carreras" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorId" GetMethodModifier="Public" GetMethodName="BuscarPorId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorId" UserSourceName="BuscarPorId">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idCarrera`, `origen`, `destino`, `fecha`, `metros`, `duracion`, `idTarifa`, `idConductor`, `idCliente` FROM `carreras` WHERE idCarrera=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idCarrera" DataSourceName="taxi.carreras" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idCarrera" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetCarrerasMOD" GeneratorSourceName="GetCarrerasMOD2" GetMethodModifier="Public" GetMethodName="GetCarrerasMOD" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetCarrerasMOD" UserSourceName="GetCarrerasMOD">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        carreras.idCarrera, carreras.origen, carreras.destino, carreras.fecha, carreras.metros, carreras.duracion, carreras.idTarifa, carreras.idConductor, carreras.idCliente, tarifas.numeroTarifa, 
-                         conductores.dniConductor, clientes.dniCliente
-FROM            carreras LEFT OUTER JOIN
-                         clientes ON carreras.idCliente = clientes.idCliente LEFT OUTER JOIN
-                         tarifas ON carreras.idTarifa = tarifas.idTarifa LEFT OUTER JOIN
-                         conductores ON carreras.idConductor = conductores.idConductor</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientesTableAdapter" GeneratorDataComponentClassName="clientesTableAdapter" Name="clientes" UserDataComponentName="clientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `clientes` WHERE ((`idCliente` = @p1) AND (`nombreCliente` = @p2) AND (`apellidosCliente` = @p3) AND (`direccionCliente` = @p4) AND (`emailCliente` = @p5) AND (`dniCliente` = @p6))</CommandText>
@@ -231,42 +197,11 @@ FROM            carreras LEFT OUTER JOIN
               <Mapping SourceColumn="emailCliente" DataSetColumn="emailCliente" />
               <Mapping SourceColumn="dniCliente" DataSetColumn="dniCliente" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.clientes" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorDNI" GetMethodModifier="Public" GetMethodName="BuscarPorDNI" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorDNI" UserSourceName="BuscarPorDNI">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idCliente`, `nombreCliente`, `apellidosCliente`, `direccionCliente`, `emailCliente`, `dniCliente` FROM `clientes` WHERE dniCliente LIKE ?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="dniCliente" DataSourceName="taxi.clientes" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="dniCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.clientes" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorId" GetMethodModifier="Public" GetMethodName="BuscarPorId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorId" UserSourceName="BuscarPorId">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idCliente`, `nombreCliente`, `apellidosCliente`, `direccionCliente`, `emailCliente`, `dniCliente` FROM `clientes` WHERE idCliente=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idCliente" DataSourceName="taxi.clientes" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.clientes" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="ClienteAsociado" GetMethodModifier="Public" GetMethodName="ClienteAsociado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="ClienteAsociado" UserSourceName="ClienteAsociado">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT clientes.idCliente, clientes.nombreCliente, clientes.apellidosCliente, clientes.direccionCliente, clientes.emailCliente, clientes.dniCliente FROM clientes LEFT JOIN carreras ON (clientes.idCliente = carreras.idCliente) WHERE carreras.idCliente=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idCliente" DataSourceName="taxi.carreras" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idCliente" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="conductoresTableAdapter" GeneratorDataComponentClassName="conductoresTableAdapter" Name="conductores" UserDataComponentName="conductoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.conductores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.conductores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `conductores` WHERE ((`idConductor` = @p1) AND (`nombreConductor` = @p2) AND (`apellidosConductor` = @p3) AND (`direccionConductor` = @p4) AND (`emailConductor` = @p5) AND (`dniConductor` = @p6) AND (`licenciaConductor` = @p7) AND (`matriculaConductor` = @p8))</CommandText>
@@ -336,52 +271,11 @@ FROM            carreras LEFT OUTER JOIN
               <Mapping SourceColumn="licenciaConductor" DataSetColumn="licenciaConductor" />
               <Mapping SourceColumn="matriculaConductor" DataSetColumn="matriculaConductor" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.conductores" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorDNI" GetMethodModifier="Public" GetMethodName="BuscarPorDNI" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorDNI" UserSourceName="BuscarPorDNI">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idConductor`, `nombreConductor`, `apellidosConductor`, `direccionConductor`, `emailConductor`, `dniConductor`, `licenciaConductor`, `matriculaConductor` FROM `conductores` WHERE dniConductor=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="dniConductor" DataSourceName="taxi.conductores" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="dniConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.conductores" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorId" GetMethodModifier="Public" GetMethodName="BuscarPorId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorId" UserSourceName="BuscarPorId">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idConductor`, `nombreConductor`, `apellidosConductor`, `direccionConductor`, `emailConductor`, `dniConductor`, `licenciaConductor`, `matriculaConductor` FROM `conductores` WHERE idConductor=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idConductor" DataSourceName="taxi.conductores" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.conductores" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorMatricula" GetMethodModifier="Public" GetMethodName="BuscarPorMatricula" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorMatricula" UserSourceName="BuscarPorMatricula">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idConductor`, `nombreConductor`, `apellidosConductor`, `direccionConductor`, `emailConductor`, `dniConductor`, `licenciaConductor`, `matriculaConductor` FROM `conductores` WHERE `matriculaConductor` LIKE ?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="matriculaConductor" DataSourceName="taxi.conductores" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="matriculaConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.conductores" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="CondctorAsociado" GetMethodModifier="Public" GetMethodName="CondctorAsociado" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="CondctorAsociado" UserSourceName="CondctorAsociado">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT conductores.idConductor, conductores.nombreConductor, conductores.apellidosConductor, conductores.direccionConductor, conductores.emailConductor, conductores.dniConductor, conductores.licenciaConductor, conductores.matriculaConductor FROM conductores LEFT JOIN carreras ON(conductores.idConductor = carreras.idConductor) WHERE carreras.idConductor=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idConductor" DataSourceName="taxi.carreras" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="suplementosTableAdapter" GeneratorDataComponentClassName="suplementosTableAdapter" Name="suplementos" UserDataComponentName="suplementosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.suplementos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.suplementos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `suplementos` WHERE ((`idSuplemento` = @p1) AND (`nombreSuplemento` = @p2) AND (`precioSuplemento` = @p3))</CommandText>
@@ -430,7 +324,7 @@ FROM            carreras LEFT OUTER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tarifasTableAdapter" GeneratorDataComponentClassName="tarifasTableAdapter" Name="tarifas" UserDataComponentName="tarifasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.tarifas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.tarifas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `tarifas` WHERE ((`idTarifa` = @p1) AND (`numeroTarifa` = @p2) AND (`precioBandera` = @p3) AND (`precioDuracion` = @p4) AND (`precioMetros` = @p5))</CommandText>
@@ -485,88 +379,57 @@ FROM            carreras LEFT OUTER JOIN
               <Mapping SourceColumn="precioDuracion" DataSetColumn="precioDuracion" />
               <Mapping SourceColumn="precioMetros" DataSetColumn="precioMetros" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.tarifas" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorId" GetMethodModifier="Public" GetMethodName="BuscarPorId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorId" UserSourceName="BuscarPorId">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idTarifa`, `numeroTarifa`, `precioBandera`, `precioDuracion`, `precioMetros` FROM `tarifas` WHERE idTarifa=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idTarifa" DataSourceName="taxi.tarifas" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idTarifa" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.tarifas" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorNumero" GetMethodModifier="Public" GetMethodName="BuscarPorNumero" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorNumero" UserSourceName="BuscarPorNumero">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT `idTarifa`, `numeroTarifa`, `precioBandera`, `precioDuracion`, `precioMetros` FROM `tarifas` WHERE `numeroTarifa` LIKE ?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="numeroTarifa" DataSourceName="taxi.tarifas" DataTypeServer="double" DbType="Decimal" Direction="Input" ParameterName="@Param1" Precision="22" ProviderType="Double" Scale="0" Size="0" SourceColumn="numeroTarifa" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.tarifas" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="TarifaAsociada" GetMethodModifier="Public" GetMethodName="TarifaAsociada" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="TarifaAsociada" UserSourceName="TarifaAsociada">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT tarifas.idTarifa, tarifas.numeroTarifa, tarifas.precioBandera, tarifas.precioDuracion, tarifas.precioMetros FROM tarifas LEFT JOIN carreras ON (tarifas.idTarifa = carreras.idTarifa) WHERE carreras.idTarifa=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idTarifa" DataSourceName="taxi.carreras" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idTarifa" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuariosTableAdapter" GeneratorDataComponentClassName="usuariosTableAdapter" Name="usuarios" UserDataComponentName="usuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="localhost(taxi)" DbObjectName="taxi.usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `usuarios` WHERE ((`idUsuario` = @p1) AND (`accesoUsuario` = @p2) AND (`aliasUsuario` = @p3) AND (`claveUsuario` = @p4) AND (`loginUsuario` = @p5) AND (`nombreUsuario` = @p6))</CommandText>
+                    <CommandText>DELETE FROM `usuarios` WHERE ((`idUsuario` = @p1) AND (`nombreUsuario` = @p2) AND (`aliasUsuario` = @p3) AND (`loginUsuario` = @p4) AND (`claveUsuario` = @p5) AND (`accesoUsuario` = @p6))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `usuarios` (`accesoUsuario`, `aliasUsuario`, `claveUsuario`, `loginUsuario`, `nombreUsuario`) VALUES (@p1, @p2, @p3, @p4, @p5)</CommandText>
+                    <CommandText>INSERT INTO `usuarios` (`nombreUsuario`, `aliasUsuario`, `loginUsuario`, `claveUsuario`, `accesoUsuario`) VALUES (@p1, @p2, @p3, @p4, @p5)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios</CommandText>
+                    <CommandText>SELECT `idUsuario`, `nombreUsuario`, `aliasUsuario`, `loginUsuario`, `claveUsuario`, `accesoUsuario` FROM `usuarios`</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `usuarios` SET `accesoUsuario` = @p1, `aliasUsuario` = @p2, `claveUsuario` = @p3, `loginUsuario` = @p4, `nombreUsuario` = @p5 WHERE ((`idUsuario` = @p6) AND (`accesoUsuario` = @p7) AND (`aliasUsuario` = @p8) AND (`claveUsuario` = @p9) AND (`loginUsuario` = @p10) AND (`nombreUsuario` = @p11))</CommandText>
+                    <CommandText>UPDATE `usuarios` SET `nombreUsuario` = @p1, `aliasUsuario` = @p2, `loginUsuario` = @p3, `claveUsuario` = @p4, `accesoUsuario` = @p5 WHERE ((`idUsuario` = @p6) AND (`nombreUsuario` = @p7) AND (`aliasUsuario` = @p8) AND (`loginUsuario` = @p9) AND (`claveUsuario` = @p10) AND (`accesoUsuario` = @p11))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -580,71 +443,7 @@ FROM            carreras LEFT OUTER JOIN
               <Mapping SourceColumn="claveUsuario" DataSetColumn="claveUsuario" />
               <Mapping SourceColumn="accesoUsuario" DataSetColumn="accesoUsuario" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarUsuario" Modifier="Public" Name="AgregarUsuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarUsuario">
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO `usuarios` (`accesoUsuario`, `aliasUsuario`, `claveUsuario`, `loginUsuario`, `nombreUsuario`) VALUES (@p1, @p2, @p3, @p4, @p5)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="p1" ColumnName="accesoUsuario" DataSourceName="taxi.usuarios" DataTypeServer="int(1)" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="accesoUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="p2" ColumnName="aliasUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(4)(4)" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="4" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="p3" ColumnName="claveUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="p4" ColumnName="loginUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(10)(10)" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="p5" ColumnName="nombreUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(50)(50)" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="nombreUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscaAdmin" GetMethodModifier="Public" GetMethodName="BuscaAdmin" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscaAdmin" UserSourceName="BuscaAdmin">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios WHERE accesoUsuario=1</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorAlias" GetMethodModifier="Public" GetMethodName="BuscarPorAlias" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorAlias" UserSourceName="BuscarPorAlias">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios WHERE aliasUsuario=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="aliasUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(4)(4)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="4" SourceColumn="aliasUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorId" GetMethodModifier="Public" GetMethodName="BuscarPorId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorId" UserSourceName="BuscarPorId">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios WHERE idUsuario=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="idUsuario" DataSourceName="taxi.usuarios" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorLogin" GetMethodModifier="Public" GetMethodName="BuscarPorLogin" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorLogin" UserSourceName="BuscarPorLogin">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios WHERE loginUsuario=?</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="loginUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(10)(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="taxiConnectionString (Settings)" DbObjectName="taxi.usuarios" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPorNombreClave" GetMethodModifier="Public" GetMethodName="BuscarPorNombreClave" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPorNombreClave" UserSourceName="BuscarPorNombreClave">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idUsuario, accesoUsuario, aliasUsuario, claveUsuario, loginUsuario, nombreUsuario FROM usuarios WHERE (loginUsuario = @Param1) AND (claveUsuario = @Param2)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="loginUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(10)(10)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="loginUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="claveUsuario" DataSourceName="taxi.usuarios" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="claveUsuario" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -654,7 +453,7 @@ FROM            carreras LEFT OUTER JOIN
   <xs:element name="taxiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="taxiDataSet" msprop:Generator_UserDSName="taxiDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="carrera_suplemento" msprop:Generator_TableClassName="carrera_suplementoDataTable" msprop:Generator_TableVarName="tablecarrera_suplemento" msprop:Generator_RowChangedName="carrera_suplementoRowChanged" msprop:Generator_TablePropName="carrera_suplemento" msprop:Generator_RowDeletingName="carrera_suplementoRowDeleting" msprop:Generator_RowChangingName="carrera_suplementoRowChanging" msprop:Generator_RowEvHandlerName="carrera_suplementoRowChangeEventHandler" msprop:Generator_RowDeletedName="carrera_suplementoRowDeleted" msprop:Generator_RowClassName="carrera_suplementoRow" msprop:Generator_UserTableName="carrera_suplemento" msprop:Generator_RowEvArgName="carrera_suplementoRowChangeEvent">
+        <xs:element name="carrera_suplemento" msprop:Generator_TableClassName="carrera_suplementoDataTable" msprop:Generator_TableVarName="tablecarrera_suplemento" msprop:Generator_TablePropName="carrera_suplemento" msprop:Generator_RowDeletingName="carrera_suplementoRowDeleting" msprop:Generator_RowChangingName="carrera_suplementoRowChanging" msprop:Generator_RowEvHandlerName="carrera_suplementoRowChangeEventHandler" msprop:Generator_RowDeletedName="carrera_suplementoRowDeleted" msprop:Generator_UserTableName="carrera_suplemento" msprop:Generator_RowChangedName="carrera_suplementoRowChanged" msprop:Generator_RowEvArgName="carrera_suplementoRowChangeEvent" msprop:Generator_RowClassName="carrera_suplementoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCarreraSuplemento" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCarreraSuplemento" msprop:Generator_ColumnPropNameInRow="idCarreraSuplemento" msprop:Generator_ColumnPropNameInTable="idCarreraSuplementoColumn" msprop:Generator_UserColumnName="idCarreraSuplemento" type="xs:int" />
@@ -663,7 +462,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="carreras" msprop:Generator_TableClassName="carrerasDataTable" msprop:Generator_TableVarName="tablecarreras" msprop:Generator_RowChangedName="carrerasRowChanged" msprop:Generator_TablePropName="carreras" msprop:Generator_RowDeletingName="carrerasRowDeleting" msprop:Generator_RowChangingName="carrerasRowChanging" msprop:Generator_RowEvHandlerName="carrerasRowChangeEventHandler" msprop:Generator_RowDeletedName="carrerasRowDeleted" msprop:Generator_RowClassName="carrerasRow" msprop:Generator_UserTableName="carreras" msprop:Generator_RowEvArgName="carrerasRowChangeEvent">
+        <xs:element name="carreras" msprop:Generator_TableClassName="carrerasDataTable" msprop:Generator_TableVarName="tablecarreras" msprop:Generator_TablePropName="carreras" msprop:Generator_RowDeletingName="carrerasRowDeleting" msprop:Generator_RowChangingName="carrerasRowChanging" msprop:Generator_RowEvHandlerName="carrerasRowChangeEventHandler" msprop:Generator_RowDeletedName="carrerasRowDeleted" msprop:Generator_UserTableName="carreras" msprop:Generator_RowChangedName="carrerasRowChanged" msprop:Generator_RowEvArgName="carrerasRowChangeEvent" msprop:Generator_RowClassName="carrerasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCarrera" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCarrera" msprop:Generator_ColumnPropNameInRow="idCarrera" msprop:Generator_ColumnPropNameInTable="idCarreraColumn" msprop:Generator_UserColumnName="idCarrera" type="xs:int" />
@@ -690,7 +489,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_RowClassName="clientesRow" msprop:Generator_UserTableName="clientes" msprop:Generator_RowEvArgName="clientesRowChangeEvent">
+        <xs:element name="clientes" msprop:Generator_TableClassName="clientesDataTable" msprop:Generator_TableVarName="tableclientes" msprop:Generator_TablePropName="clientes" msprop:Generator_RowDeletingName="clientesRowDeleting" msprop:Generator_RowChangingName="clientesRowChanging" msprop:Generator_RowEvHandlerName="clientesRowChangeEventHandler" msprop:Generator_RowDeletedName="clientesRowDeleted" msprop:Generator_UserTableName="clientes" msprop:Generator_RowChangedName="clientesRowChanged" msprop:Generator_RowEvArgName="clientesRowChangeEvent" msprop:Generator_RowClassName="clientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idCliente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidCliente" msprop:Generator_ColumnPropNameInRow="idCliente" msprop:Generator_ColumnPropNameInTable="idClienteColumn" msprop:Generator_UserColumnName="idCliente" type="xs:int" />
@@ -732,7 +531,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="conductores" msprop:Generator_TableClassName="conductoresDataTable" msprop:Generator_TableVarName="tableconductores" msprop:Generator_RowChangedName="conductoresRowChanged" msprop:Generator_TablePropName="conductores" msprop:Generator_RowDeletingName="conductoresRowDeleting" msprop:Generator_RowChangingName="conductoresRowChanging" msprop:Generator_RowEvHandlerName="conductoresRowChangeEventHandler" msprop:Generator_RowDeletedName="conductoresRowDeleted" msprop:Generator_RowClassName="conductoresRow" msprop:Generator_UserTableName="conductores" msprop:Generator_RowEvArgName="conductoresRowChangeEvent">
+        <xs:element name="conductores" msprop:Generator_TableClassName="conductoresDataTable" msprop:Generator_TableVarName="tableconductores" msprop:Generator_TablePropName="conductores" msprop:Generator_RowDeletingName="conductoresRowDeleting" msprop:Generator_RowChangingName="conductoresRowChanging" msprop:Generator_RowEvHandlerName="conductoresRowChangeEventHandler" msprop:Generator_RowDeletedName="conductoresRowDeleted" msprop:Generator_UserTableName="conductores" msprop:Generator_RowChangedName="conductoresRowChanged" msprop:Generator_RowEvArgName="conductoresRowChangeEvent" msprop:Generator_RowClassName="conductoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idConductor" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidConductor" msprop:Generator_ColumnPropNameInRow="idConductor" msprop:Generator_ColumnPropNameInTable="idConductorColumn" msprop:Generator_UserColumnName="idConductor" type="xs:int" />
@@ -782,7 +581,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="suplementos" msprop:Generator_TableClassName="suplementosDataTable" msprop:Generator_TableVarName="tablesuplementos" msprop:Generator_RowChangedName="suplementosRowChanged" msprop:Generator_TablePropName="suplementos" msprop:Generator_RowDeletingName="suplementosRowDeleting" msprop:Generator_RowChangingName="suplementosRowChanging" msprop:Generator_RowEvHandlerName="suplementosRowChangeEventHandler" msprop:Generator_RowDeletedName="suplementosRowDeleted" msprop:Generator_RowClassName="suplementosRow" msprop:Generator_UserTableName="suplementos" msprop:Generator_RowEvArgName="suplementosRowChangeEvent">
+        <xs:element name="suplementos" msprop:Generator_TableClassName="suplementosDataTable" msprop:Generator_TableVarName="tablesuplementos" msprop:Generator_TablePropName="suplementos" msprop:Generator_RowDeletingName="suplementosRowDeleting" msprop:Generator_RowChangingName="suplementosRowChanging" msprop:Generator_RowEvHandlerName="suplementosRowChangeEventHandler" msprop:Generator_RowDeletedName="suplementosRowDeleted" msprop:Generator_UserTableName="suplementos" msprop:Generator_RowChangedName="suplementosRowChanged" msprop:Generator_RowEvArgName="suplementosRowChangeEvent" msprop:Generator_RowClassName="suplementosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idSuplemento" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidSuplemento" msprop:Generator_ColumnPropNameInRow="idSuplemento" msprop:Generator_ColumnPropNameInTable="idSuplementoColumn" msprop:Generator_UserColumnName="idSuplemento" type="xs:int" />
@@ -797,7 +596,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tarifas" msprop:Generator_TableClassName="tarifasDataTable" msprop:Generator_TableVarName="tabletarifas" msprop:Generator_RowChangedName="tarifasRowChanged" msprop:Generator_TablePropName="tarifas" msprop:Generator_RowDeletingName="tarifasRowDeleting" msprop:Generator_RowChangingName="tarifasRowChanging" msprop:Generator_RowEvHandlerName="tarifasRowChangeEventHandler" msprop:Generator_RowDeletedName="tarifasRowDeleted" msprop:Generator_RowClassName="tarifasRow" msprop:Generator_UserTableName="tarifas" msprop:Generator_RowEvArgName="tarifasRowChangeEvent">
+        <xs:element name="tarifas" msprop:Generator_TableClassName="tarifasDataTable" msprop:Generator_TableVarName="tabletarifas" msprop:Generator_TablePropName="tarifas" msprop:Generator_RowDeletingName="tarifasRowDeleting" msprop:Generator_RowChangingName="tarifasRowChanging" msprop:Generator_RowEvHandlerName="tarifasRowChangeEventHandler" msprop:Generator_RowDeletedName="tarifasRowDeleted" msprop:Generator_UserTableName="tarifas" msprop:Generator_RowChangedName="tarifasRowChanged" msprop:Generator_RowEvArgName="tarifasRowChangeEvent" msprop:Generator_RowClassName="tarifasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idTarifa" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidTarifa" msprop:Generator_ColumnPropNameInRow="idTarifa" msprop:Generator_ColumnPropNameInTable="idTarifaColumn" msprop:Generator_UserColumnName="idTarifa" type="xs:int" />
@@ -808,7 +607,7 @@ FROM            carreras LEFT OUTER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_RowClassName="usuariosRow" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowEvArgName="usuariosRowChangeEvent">
+        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_RowEvArgName="usuariosRowChangeEvent" msprop:Generator_RowClassName="usuariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idUsuario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidUsuario" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_UserColumnName="idUsuario" type="xs:int" />
@@ -877,11 +676,11 @@ FROM            carreras LEFT OUTER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="fk2" msdata:parent="carreras" msdata:child="carrera_suplemento" msdata:parentkey="idCarrera" msdata:childkey="idCarrera" msprop:Generator_UserChildTable="carrera_suplemento" msprop:Generator_ChildPropName="Getcarrera_suplementoRows" msprop:Generator_UserRelationName="fk2" msprop:Generator_ParentPropName="carrerasRow" msprop:Generator_RelationVarName="relationfk2" msprop:Generator_UserParentTable="carreras" />
-      <msdata:Relationship name="fk3" msdata:parent="suplementos" msdata:child="carrera_suplemento" msdata:parentkey="idSuplemento" msdata:childkey="idSuplemento" msprop:Generator_UserChildTable="carrera_suplemento" msprop:Generator_ChildPropName="Getcarrera_suplementoRows" msprop:Generator_UserRelationName="fk3" msprop:Generator_ParentPropName="suplementosRow" msprop:Generator_RelationVarName="relationfk3" msprop:Generator_UserParentTable="suplementos" />
-      <msdata:Relationship name="fk1" msdata:parent="tarifas" msdata:child="carreras" msdata:parentkey="idTarifa" msdata:childkey="idTarifa" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk1" msprop:Generator_ParentPropName="tarifasRow" msprop:Generator_RelationVarName="relationfk1" msprop:Generator_UserParentTable="tarifas" />
-      <msdata:Relationship name="fk4" msdata:parent="conductores" msdata:child="carreras" msdata:parentkey="idConductor" msdata:childkey="idConductor" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk4" msprop:Generator_ParentPropName="conductoresRow" msprop:Generator_RelationVarName="relationfk4" msprop:Generator_UserParentTable="conductores" />
-      <msdata:Relationship name="fk5" msdata:parent="clientes" msdata:child="carreras" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk5" msprop:Generator_ParentPropName="clientesRow" msprop:Generator_RelationVarName="relationfk5" msprop:Generator_UserParentTable="clientes" />
+      <msdata:Relationship name="fk2" msdata:parent="carreras" msdata:child="carrera_suplemento" msdata:parentkey="idCarrera" msdata:childkey="idCarrera" msprop:Generator_UserChildTable="carrera_suplemento" msprop:Generator_ChildPropName="Getcarrera_suplementoRows" msprop:Generator_UserRelationName="fk2" msprop:Generator_RelationVarName="relationfk2" msprop:Generator_UserParentTable="carreras" msprop:Generator_ParentPropName="carrerasRow" />
+      <msdata:Relationship name="fk3" msdata:parent="suplementos" msdata:child="carrera_suplemento" msdata:parentkey="idSuplemento" msdata:childkey="idSuplemento" msprop:Generator_UserChildTable="carrera_suplemento" msprop:Generator_ChildPropName="Getcarrera_suplementoRows" msprop:Generator_UserRelationName="fk3" msprop:Generator_RelationVarName="relationfk3" msprop:Generator_UserParentTable="suplementos" msprop:Generator_ParentPropName="suplementosRow" />
+      <msdata:Relationship name="fk1" msdata:parent="tarifas" msdata:child="carreras" msdata:parentkey="idTarifa" msdata:childkey="idTarifa" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk1" msprop:Generator_RelationVarName="relationfk1" msprop:Generator_UserParentTable="tarifas" msprop:Generator_ParentPropName="tarifasRow" />
+      <msdata:Relationship name="fk4" msdata:parent="conductores" msdata:child="carreras" msdata:parentkey="idConductor" msdata:childkey="idConductor" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk4" msprop:Generator_RelationVarName="relationfk4" msprop:Generator_UserParentTable="conductores" msprop:Generator_ParentPropName="conductoresRow" />
+      <msdata:Relationship name="fk5" msdata:parent="clientes" msdata:child="carreras" msdata:parentkey="idCliente" msdata:childkey="idCliente" msprop:Generator_UserChildTable="carreras" msprop:Generator_ChildPropName="GetcarrerasRows" msprop:Generator_UserRelationName="fk5" msprop:Generator_RelationVarName="relationfk5" msprop:Generator_UserParentTable="clientes" msprop:Generator_ParentPropName="clientesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
