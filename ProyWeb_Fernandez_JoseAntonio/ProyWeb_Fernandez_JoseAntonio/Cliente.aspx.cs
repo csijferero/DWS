@@ -8,18 +8,18 @@ using LNegocioyADatos;
 
 namespace ProyWeb_Fernandez_JoseAntonio
 {
-    public partial class Tarifa : System.Web.UI.Page
+    public partial class Cliente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable
 
             dgv.DataBind();
         }
 
-        protected void tsbTarifa_Click(object sender, ImageClickEventArgs e)
+        protected void tsbCliente_Click(object sender, ImageClickEventArgs e)
         {
-            dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
+            dgv.DataSource = LNyAD.TablaClientes(); //Llenamos el DataGridView a partir de un DataTable
 
             dgv.DataBind();
         }
@@ -29,9 +29,9 @@ namespace ProyWeb_Fernandez_JoseAntonio
             Response.Redirect("Conductor.aspx");
         }
 
-        protected void tsbCliente_Click(object sender, ImageClickEventArgs e)
+        protected void tsbTarifa_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Cliente.aspx");
+            Response.Redirect("Tarifa.aspx");
         }
 
         protected void tsbCarrera_Click(object sender, ImageClickEventArgs e)

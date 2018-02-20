@@ -59,6 +59,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="taxiDataSet.cs">
+      <DependentUpon>taxiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="taxiDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -1,12 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tarifa.aspx.cs" Inherits="ProyWeb_Fernandez_JoseAntonio.Tarifa" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Conductor.aspx.cs" Inherits="ProyWeb_Fernandez_JoseAntonio.Conductor" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+
         .auto-style1 {
             width: 971px;
         }
@@ -14,7 +15,7 @@
             width: 969px;
         }
         .auto-style3 {
-            width: 479px;
+            width: 687px;
             height: 133px;
         }
     </style>
@@ -51,13 +52,16 @@
 
         <div style="margin-left:auto;margin-right:auto;" class="auto-style3">
 
-            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="481px">
+            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="684px">
                 <Columns>
-                    <asp:BoundField HeaderText="idTarifa" Visible="False" DataField="idTarifa" />
-                    <asp:BoundField HeaderText="Numero" DataField="numeroTarifa" />
-                    <asp:BoundField HeaderText="Bandera" DataField="precioBandera" />
-                    <asp:BoundField HeaderText="Duración" DataField="precioDuracion" />
-                    <asp:BoundField HeaderText="Metros" DataField="precioMetros" />
+                    <asp:BoundField HeaderText="idConductor" Visible="False" DataField="idConductor" />
+                    <asp:BoundField HeaderText="Nombre" DataField="nombreConductor" />
+                    <asp:BoundField HeaderText="Apellidos" DataField="apellidosConductor" />
+                    <asp:BoundField HeaderText="Dirección" DataField="direccionConductor" />
+                    <asp:BoundField DataField="emailConductor" HeaderText="Email" />
+                    <asp:BoundField HeaderText="DNI" DataField="dniConductor" />
+                    <asp:BoundField DataField="licenciaConductor" HeaderText="Licencia" />
+                    <asp:BoundField DataField="matriculaConductor" HeaderText="Mátricula" />
                 </Columns>
             </asp:GridView>
 
