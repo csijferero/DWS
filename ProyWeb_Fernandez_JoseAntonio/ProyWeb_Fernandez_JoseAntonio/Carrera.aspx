@@ -15,8 +15,8 @@
             width: 969px;
         }
         .auto-style3 {
-            width: 687px;
-            height: 133px;
+            width: 780px;
+            height: 184px;
         }
     </style>
 </head>
@@ -53,8 +53,13 @@
 
         <div style="margin-left:auto;margin-right:auto;" class="auto-style3">
 
-            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="684px">
+            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+                <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
+                    <asp:CommandField ButtonType="Button" EditText="»" ShowEditButton="True">
+                    <ControlStyle BackColor="#0066FF" Font-Bold="True" />
+                    <ItemStyle HorizontalAlign="Center" />
+                    </asp:CommandField>
                     <asp:BoundField HeaderText="idCarrera" Visible="False" DataField="idCarrera" />
                     <asp:BoundField HeaderText="Origen" DataField="origen" />
                     <asp:BoundField HeaderText="Destino" DataField="destino" />
@@ -67,7 +72,20 @@
                     <asp:BoundField DataField="numeroTarifa" HeaderText="Tarifa" />
                     <asp:BoundField DataField="dniConductor" HeaderText="Conductor" />
                     <asp:BoundField DataField="dniCliente" HeaderText="Cliente" />
+                    <asp:CommandField ButtonType="Button" DeleteText="X" ShowDeleteButton="True">
+                    <ControlStyle BackColor="Red" Font-Bold="True" />
+                    <ItemStyle HorizontalAlign="Center" />
+                    </asp:CommandField>
                 </Columns>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+                <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#0000A9" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
 
         </div>

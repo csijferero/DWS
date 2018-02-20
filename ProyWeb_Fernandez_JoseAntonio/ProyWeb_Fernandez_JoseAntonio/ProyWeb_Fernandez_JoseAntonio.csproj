@@ -98,6 +98,7 @@
     <Content Include="Carrera.aspx" />
     <Content Include="Cliente.aspx" />
     <Content Include="Conductor.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -146,6 +147,13 @@
     </Compile>
     <Compile Include="Conductor.aspx.designer.cs">
       <DependentUpon>Conductor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tarifa.aspx.cs">
