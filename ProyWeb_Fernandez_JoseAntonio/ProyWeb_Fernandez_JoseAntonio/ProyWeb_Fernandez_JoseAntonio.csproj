@@ -111,6 +111,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Registro.aspx" />
     <Content Include="Resources\construction_project_plan_building_architect_design_develop-73_icon-icons.com_60243.png" />
     <Content Include="Resources\Data_settings_theapplication_3364.png" />
     <Content Include="Resources\new-file_40454.png" />
@@ -156,6 +157,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tarifa.aspx.cs">
       <DependentUpon>Tarifa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

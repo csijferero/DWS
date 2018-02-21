@@ -27,7 +27,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:ImageButton ID="tsbConductor" runat="server" Height="104px" ImageUrl="~/Resources/taxi_18540.png" Width="90px" OnClick="tsbConductor_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/Resources/taxi-sign-wallpaper-3202-1.jpg" Width="482px" />
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Resources/taxi-sign-wallpaper-3202-1.jpg" PostBackUrl="~/Login.aspx" Width="499px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:ImageButton ID="tsbTarifa" runat="server" Height="104px" ImageUrl="~/Resources/construction_project_plan_building_architect_design_develop-73_icon-icons.com_60243.png" Width="90px" OnClick="tsbTarifa_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;

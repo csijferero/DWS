@@ -37,14 +37,19 @@
             <br />
             <asp:TextBox ID="txbUser" runat="server" Width="160px" placeholder="Usuario"></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator ID="loginVal" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Necesario" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="loginVal2" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Incorrecto" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
             <br />
             <br />
             <asp:TextBox ID="txbPass" runat="server" Width="160px" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="passVal2" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Incorrecta" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
             <br />
-            <asp:Button ID="btnAcceder" runat="server" BackColor="#0099FF" Font-Bold="True" Text="Acceder" Width="75px" ForeColor="White" />
             <br />
+            <asp:Button ID="btnAcceder" runat="server" BackColor="#0099FF" Font-Bold="True" Text="Acceder" Width="75px" ForeColor="White" OnClick="btnAcceder_Click" ValidationGroup="acceder" />
             <br />
+            <asp:CustomValidator ID="actiVal" runat="server" Display="Dynamic" ErrorMessage="Cuenta Pendiente de Activacion" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
             <br />
 
 
@@ -52,7 +57,7 @@
 
         <div style="margin-left:auto;margin-right:auto;text-align: center;" class="auto-style3">
 
-            <asp:Button ID="btnRegistro" runat="server" BackColor="#CC0000" Font-Bold="True" ForeColor="White" Text="Registrarse" Width="166px" />
+            <asp:Button ID="btnRegistro" runat="server" BackColor="#CC0000" Font-Bold="True" ForeColor="White" Text="Registrarse" Width="166px" OnClick="btnRegistro_Click" />
 
         </div>
 
