@@ -16,22 +16,25 @@ namespace ProyWeb_Fernandez_JoseAntonio
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
-                loginVal.IsValid = true;
-                loginVal2.IsValid = true;
-                passVal.IsValid = true;
-                passVal2.IsValid = true;
-                actiVal.IsValid = true;
-                txbPass.Text = String.Empty;
-                txbUser.Text = String.Empty;
+                Session["usuario"] = null;
             }
+
+            //if (!IsPostBack)
+            //{
+            //    loginVal.IsValid = true;
+            //    loginVal2.IsValid = true;
+            //    passVal.IsValid = true;
+            //    passVal2.IsValid = true;
+            //    actiVal.IsValid = true;
+            //    txbPass.Text = String.Empty;
+            //    txbUser.Text = String.Empty;
+            //}
         }
 
         protected void btnAcceder_Click(object sender, EventArgs e)
         {
-            string texto = String.Empty;
-
             if (LNyAD.BuscaLogin(txbUser.Text) == null) //Si NO hay un usuario con dicho nombre doy error
             {
                 loginVal2.IsValid = false;
@@ -47,6 +50,7 @@ namespace ProyWeb_Fernandez_JoseAntonio
                 {
                     txbPass.Text = String.Empty;
                     txbUser.Text = String.Empty;
+                    Session["usuario"] = usu;
                     Response.Redirect("Tarifa.aspx");
                 }
             }

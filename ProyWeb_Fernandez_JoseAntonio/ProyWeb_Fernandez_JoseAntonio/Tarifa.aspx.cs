@@ -12,9 +12,29 @@ namespace ProyWeb_Fernandez_JoseAntonio
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
+            if (!Page.IsPostBack)
+            {
 
-            dgv.DataBind();
+                Usuarios usu = null;
+                if (Session["usuario"] != null)
+                {
+                    usu = (Usuarios)Session["usuario"];
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
+
+                if (usu.AccesoUsuario == 2)
+                {
+                    btnUser.Enabled = false;
+                    btnAñadir.Enabled = false;
+                }
+
+                dgv.DataSource = LNyAD.TablaTarifas(); //Llenamos el DataGridView a partir de un DataTable
+
+                dgv.DataBind();
+            }
         }
 
         protected void tsbTarifa_Click(object sender, ImageClickEventArgs e)
@@ -37,6 +57,17 @@ namespace ProyWeb_Fernandez_JoseAntonio
         protected void tsbCarrera_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("Carrera.aspx");
+        }
+
+        protected void btnAñadir_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void dgv_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Application["edicion"] = LNyAD.ObtenerTarifa(Convert.ToInt32(dgv.Rows[e.NewEditIndex].Cells[1].Text));
+            Response.Redirect("EditarTarifa.aspx");
         }
     }
 }

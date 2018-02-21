@@ -25,7 +25,7 @@
     <div style="margin-left:auto;margin-right:auto;" class="auto-style1">
 
 
-        <asp:Image ID="pictureBox1" runat="server" Height="201px" ImageUrl="~/Resources/Sevitaxi.jpg" Width="201px" />
+        <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False" Height="201px" ImageUrl="~/Resources/Sevitaxi.jpg" PostBackUrl="~/Login.aspx" Width="201px" />
 
 
         <br />
@@ -37,31 +37,33 @@
 
 
             <br />
-            <asp:TextBox ID="txbNewUser" runat="server" Width="160px" placeholder="Usuario"></asp:TextBox>
+            <asp:TextBox ID="txbNewUser" runat="server" Width="160px" placeholder="Usuario" MaxLength="10"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="loginVal" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Usuario Necesario" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="loginVal2" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Incorrecto" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
+            <asp:RequiredFieldValidator ID="loginVal" runat="server" ControlToValidate="txbNewUser" Display="Dynamic" ErrorMessage="Usuario Necesario" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="loginValEx" runat="server" ControlToValidate="txbNewUser" Display="Dynamic" ErrorMessage="Ya existe un login igual" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
             <br />
-            <asp:TextBox ID="txbAlias" runat="server" Width="160px" placeholder="Alias"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="aliasVal" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Alias Necesario" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="loginVal4" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Incorrecto" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
+            <asp:TextBox ID="txbAlias" runat="server" Width="160px" placeholder="Alias" MaxLength="4"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txbNombre" runat="server" Width="160px" placeholder="Nombre"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="nombreVal" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Nombre Necesario" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="loginVal6" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Incorrecto" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
+            <asp:RequiredFieldValidator ID="aliasVal" runat="server" ControlToValidate="txbAlias" Display="Dynamic" ErrorMessage="Alias Necesario" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="aliasValEx" runat="server" ControlToValidate="txbAlias" Display="Dynamic" ErrorMessage="Ya existe un alias igual" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
+            <br />
+            <asp:TextBox ID="txbNombre" runat="server" Width="160px" placeholder="Nombre" MaxLength="50"></asp:TextBox>
+            <br />
+            <asp:RequiredFieldValidator ID="nombreVal" runat="server" ControlToValidate="txbNewUser" Display="Dynamic" ErrorMessage="Nombre Necesario" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <br />
+            <asp:TextBox ID="txbNewPass" runat="server" Width="160px" placeholder="Contraseña" TextMode="Password" MaxLength="10"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txbNewPass" runat="server" Width="160px" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txbNewPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
-            <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="passVal2" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Incorrecta" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
+            <asp:TextBox ID="txbConfirmNewPass" runat="server" Width="160px" placeholder="Confirmar Contraseña" TextMode="Password" MaxLength="10"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="passConfVal" runat="server" ControlToValidate="txbConfirmNewPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txbNewPass" ControlToValidate="txbConfirmNewPass" Display="Dynamic" ErrorMessage="Las contraseñas no coinciden" Font-Bold="True" ForeColor="Red"></asp:CompareValidator>
             <br />
-            <asp:TextBox ID="txbConfirmNewPass" runat="server" Width="160px" placeholder="Confirmar Contraseña" TextMode="Password"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="passConfVal" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
-            <asp:CustomValidator ID="passVal4" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Incorrecta" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
             <br />
             <asp:CheckBox ID="chbTerminos" runat="server" Font-Bold="True" Font-Overline="False" Font-Size="Small" Text="Acepto los Terminos y Condiciones" />
+            <br />
+            <asp:CustomValidator ID="confVal" runat="server" Display="Dynamic" ErrorMessage="Necesita Aceptar" Font-Bold="True" ForeColor="Red"></asp:CustomValidator>
             <br />
 
 

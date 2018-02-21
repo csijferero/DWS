@@ -23,7 +23,7 @@
     <div style="margin-left:auto;margin-right:auto;" class="auto-style1">
 
 
-        <asp:Image ID="pictureBox1" runat="server" Height="201px" ImageUrl="~/Resources/Sevitaxi.jpg" Width="201px" />
+        <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False" Height="201px" ImageUrl="~/Resources/Sevitaxi.jpg" PostBackUrl="~/Login.aspx" Width="201px" />
 
 
         <br />
@@ -35,13 +35,13 @@
 
 
             <br />
-            <asp:TextBox ID="txbUser" runat="server" Width="160px" placeholder="Usuario"></asp:TextBox>
+            <asp:TextBox ID="txbUser" runat="server" Width="160px" placeholder="Usuario" MaxLength="10"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="loginVal" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Necesario" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
             <asp:CustomValidator ID="loginVal2" runat="server" ControlToValidate="txbUser" Display="Dynamic" ErrorMessage="Login Incorrecto" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>
             <br />
             <br />
-            <asp:TextBox ID="txbPass" runat="server" Width="160px" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txbPass" runat="server" Width="160px" placeholder="Contraseña" TextMode="Password" MaxLength="10"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Necesaria" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:RequiredFieldValidator>
             <asp:CustomValidator ID="passVal2" runat="server" ControlToValidate="txbPass" Display="Dynamic" ErrorMessage="Contraseña Incorrecta" Font-Bold="True" ForeColor="Red" ValidationGroup="acceder"></asp:CustomValidator>

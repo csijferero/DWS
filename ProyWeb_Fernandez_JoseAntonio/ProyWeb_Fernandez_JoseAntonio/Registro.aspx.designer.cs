@@ -22,13 +22,13 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control pictureBox1.
+        /// Control ImageButton1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image pictureBox1;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
         /// Control txbNewUser.
@@ -49,13 +49,13 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator loginVal;
         
         /// <summary>
-        /// Control loginVal2.
+        /// Control loginValEx.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator loginVal2;
+        protected global::System.Web.UI.WebControls.CustomValidator loginValEx;
         
         /// <summary>
         /// Control txbAlias.
@@ -76,13 +76,13 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator aliasVal;
         
         /// <summary>
-        /// Control loginVal4.
+        /// Control aliasValEx.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator loginVal4;
+        protected global::System.Web.UI.WebControls.CustomValidator aliasValEx;
         
         /// <summary>
         /// Control txbNombre.
@@ -103,15 +103,6 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator nombreVal;
         
         /// <summary>
-        /// Control loginVal6.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator loginVal6;
-        
-        /// <summary>
         /// Control txbNewPass.
         /// </summary>
         /// <remarks>
@@ -128,15 +119,6 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator passVal;
-        
-        /// <summary>
-        /// Control passVal2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator passVal2;
         
         /// <summary>
         /// Control txbConfirmNewPass.
@@ -157,13 +139,13 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator passConfVal;
         
         /// <summary>
-        /// Control passVal4.
+        /// Control CompareValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator passVal4;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// Control chbTerminos.
@@ -173,6 +155,15 @@ namespace ProyWeb_Fernandez_JoseAntonio {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbTerminos;
+        
+        /// <summary>
+        /// Control confVal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator confVal;
         
         /// <summary>
         /// Control btnRegistro.

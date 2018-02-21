@@ -29,7 +29,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:ImageButton ID="tsbConductor" runat="server" Height="104px" ImageUrl="~/Resources/taxi_18540.png" Width="90px" OnClick="tsbConductor_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Resources/taxi-sign-wallpaper-3202-1.jpg" PostBackUrl="~/Login.aspx" Width="499px" />
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Resources/taxi-sign-wallpaper-3202-1.jpg" PostBackUrl="~/Login.aspx" Width="469px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:ImageButton ID="tsbTarifa" runat="server" Height="104px" ImageUrl="~/Resources/construction_project_plan_building_architect_design_develop-73_icon-icons.com_60243.png" Width="90px" OnClick="tsbTarifa_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -53,7 +53,7 @@
 
         <div style="margin-left:auto;margin-right:auto;" class="auto-style3">
 
-            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowEditing="dgv_RowEditing">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
                     <asp:CommandField ButtonType="Button" EditText="»" ShowEditButton="True">
