@@ -52,14 +52,14 @@
 
         <div style="margin-left:auto;margin-right:auto;" class="auto-style3">
 
-            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowEditing="dgv_RowEditing">
+            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnSelectedIndexChanged="dgv_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" EditText="»" ShowEditButton="True">
-                    <ControlStyle BackColor="#0066FF" Font-Bold="True" />
+                    <asp:CommandField ButtonType="Button" SelectText="»" ShowSelectButton="True">
+                    <ControlStyle BackColor="#3366FF" Font-Bold="True" />
                     <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
-                    <asp:BoundField HeaderText="idConductor" Visible="False" DataField="idConductor" />
+                    <asp:BoundField HeaderText="idConductor" DataField="idConductor" />
                     <asp:BoundField HeaderText="Nombre" DataField="nombreConductor" />
                     <asp:BoundField HeaderText="Apellidos" DataField="apellidosConductor" />
                     <asp:BoundField HeaderText="Dirección" DataField="direccionConductor" />

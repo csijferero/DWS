@@ -32,8 +32,8 @@ namespace ProyWeb_Fernandez_JoseAntonio
                 }
 
                 dgv.DataSource = LNyAD.TablaConductores(); //Llenamos el DataGridView a partir de un DataTable
-
                 dgv.DataBind();
+                dgv.Columns[1].Visible = false;
             }
         }
 
@@ -59,9 +59,9 @@ namespace ProyWeb_Fernandez_JoseAntonio
             Response.Redirect("Carrera.aspx");
         }
 
-        protected void dgv_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void dgv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Application["edicion"] = LNyAD.ObtenerConductor(Convert.ToInt32(dgv.Rows[e.NewEditIndex].Cells[1].Text));
+            Application["edicion"] = LNyAD.ObtenerConductor(Convert.ToInt32(dgv.SelectedRow.Cells[1].Text));
             Response.Redirect("EditarConductor.aspx");
         }
     }

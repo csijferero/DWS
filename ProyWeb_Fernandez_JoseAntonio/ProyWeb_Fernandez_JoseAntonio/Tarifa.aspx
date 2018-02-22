@@ -51,14 +51,14 @@
 
         <div style="margin-left:auto;margin-right:auto;" class="auto-style3">
 
-            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowEditing="dgv_RowEditing">
+            <asp:GridView ID="dgv" runat="server" AutoGenerateColumns="False" Height="96px" Width="780px" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" OnRowDeleting="dgv_RowDeleting" OnSelectedIndexChanged="dgv_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
-                    <asp:CommandField ButtonType="Button" EditText="»" ShowEditButton="True">
+                    <asp:CommandField ButtonType="Button" SelectText="»" ShowSelectButton="True">
                     <ControlStyle BackColor="#3366FF" Font-Bold="True" />
                     <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
-                    <asp:BoundField HeaderText="idTarifa" Visible="False" DataField="idTarifa" />
+                    <asp:BoundField HeaderText="idTarifa" DataField="idTarifa" />
                     <asp:BoundField HeaderText="Numero" DataField="numeroTarifa" />
                     <asp:BoundField HeaderText="Bandera" DataField="precioBandera" />
                     <asp:BoundField HeaderText="Duración" DataField="precioDuracion" />
